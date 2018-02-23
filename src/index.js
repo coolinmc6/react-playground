@@ -22,8 +22,8 @@ ReactDOM.render(
 	<Router>
 		<div>
 			<NavBar />
-			<Route exact path="/" component={App}/>
-			<Route exact path="/about" component={About}/>
+			<Route exact path="/react-playground/" component={App}/>
+			<Route exact path="/react-playground/about" component={About}/>
 		</div>
 	</Router>
 

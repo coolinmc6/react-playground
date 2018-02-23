@@ -8,13 +8,13 @@ class NavBar extends Component {
 			<div>
 			   <nav>
 			       <div className="nav-wrapper">
-			         <a href="/" className="brand-logo">React Playground</a>
+			         <Link to="/react-playground/" className="brand-logo">React Playground</Link>
 			         <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 			         <ul className="right hide-on-med-and-down">
-			           <li><Link to="/about">About</Link></li>
+			           <li><Link to="/react-playground/about">About</Link></li>
 			         </ul>
 			         <ul className="side-nav" id="mobile-demo">
-			           <li><Link to="/about">About</Link></li>
+			           <li><Link to="/react-playground/about">About</Link></li>
 			         </ul>
 			       </div>
 			     </nav>
