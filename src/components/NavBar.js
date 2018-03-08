@@ -12,9 +12,11 @@ class NavBar extends Component {
 			         <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 			         <ul className="right hide-on-med-and-down">
 			           <li><Link to="/react-playground/about">About</Link></li>
+			           <li><Link to="/react-playground/counter">Counter</Link></li>
 			         </ul>
 			         <ul className="side-nav" id="mobile-demo">
 			           <li><Link to="/react-playground/about">About</Link></li>
+			           <li><Link to="/react-playground/counter">Counter</Link></li>
 			         </ul>
 			       </div>
 			     </nav>
