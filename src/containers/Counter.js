@@ -11,10 +11,17 @@ class Counter extends Component {
 
 	render() {
 		return (
-			<div>
-				<h1>{this.props.count}</h1>
-				<button onClick={() => this.add()}>+</button>
-				<button onClick={() => this.props.decrement(this.props.count)}>-</button>
+			<div className='counter-main'>
+				<h1>Counter</h1>
+				<div className="count-parent">
+					<a onClick={() => this.props.decrement(this.props.count)} className="btn-floating btn-large waves-effect waves-light red">
+						<i class="material-icons">expand_more</i>
+					</a>
+					<div className="count">{this.props.count}</div>
+					<a onClick={() => this.add()} className="btn-floating btn-large waves-effect waves-light red">
+						<i class="material-icons">expand_less</i>
+					</a>
+				</div>
 			</div>
 		)
 	}

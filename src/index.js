@@ -23,12 +23,14 @@ import {
   Link
 } from 'react-router-dom'
 
+// CSS
+import './css/styles.css';
+
+
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 
-// CSS
-// import './index.css';
-// import './css/materialize.css';
+
 
 
 
