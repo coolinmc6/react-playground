@@ -13,10 +13,12 @@ class NavBar extends Component {
 			         <ul className="right hide-on-med-and-down">
 			           <li><Link to="/react-playground/about">About</Link></li>
 			           <li><Link to="/react-playground/counter">Counter</Link></li>
+			           <li><Link to="/react-playground/tweets">Tweets</Link></li>
 			         </ul>
 			         <ul className="side-nav" id="mobile-demo">
 			           <li><Link to="/react-playground/about">About</Link></li>
 			           <li><Link to="/react-playground/counter">Counter</Link></li>
+			           <li><Link to="/react-playground/tweets">Tweets</Link></li>
 			         </ul>
 			       </div>
 			     </nav>

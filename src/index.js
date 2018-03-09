@@ -1,11 +1,13 @@
+// React
 import React from 'react';
 import ReactDOM from 'react-dom';
+import registerServiceWorker from './registerServiceWorker';
 
+// Redux
 import { Provider } from 'react-redux';
 import ReduxPromise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
-
 
 // Components
 import NavBar from './components/NavBar';
@@ -16,7 +18,7 @@ import About from './components/About';
 import Counter from './containers/Counter';
 import TweetBox from './containers/TweetBox';
 
-import registerServiceWorker from './registerServiceWorker';
+// React Router
 import {
   BrowserRouter as Router,
   Route,
@@ -26,16 +28,9 @@ import {
 // CSS
 import './css/styles.css';
 
-
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
-
-
-
-
-
-
-
+// Render React App
 ReactDOM.render(
 
 	<Provider store={createStoreWithMiddleware(reducers)}>
