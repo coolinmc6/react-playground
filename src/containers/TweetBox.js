@@ -11,7 +11,8 @@ class TweetBox extends Component {
 	addTweet() {
 		var tweet = {};
 		tweet.text = this.props.tweets.text;
-		tweet.id = Math.floor(Math.random()*1000000);
+		tweet.id = this.props.tweets.count
+		//Math.floor(Math.random()*1000000);
 		// export const generateID = () => Math.floor(Math.random()*1000000);
 		this.props.addTweet(tweet);
 		this.renderTweets();
