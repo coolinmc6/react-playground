@@ -7,7 +7,11 @@ JavaScript Helper State:
 		{
 			term: 'Map',
 			examples: [
-
+				{
+					code: '.....',
+					description: '....',
+					terms: '....'
+				}
 			],
 			summary: '.....'
 		}
