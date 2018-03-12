@@ -1,4 +1,5 @@
 
+// Counter
 .counter-main {
 	padding: 1rem;
 	h1 {
@@ -28,4 +29,64 @@
 			text-align: center;
 		}
 	}	
+}
+
+// Tweets
+
+.tweet-field {
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.tweet-parent {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 1rem;
+	border: 1px solid #eee;
+	border-radius: 2px;
+	.profile-img {
+		display: inline-block;
+		width: 29%;
+		border-radius: 50%;
+		max-height: 50px;
+		max-width: 50px;
+		margin-right: 10px;
+	}
+
+	.tweet-text {
+		display: inline-block;
+		width: 70%;
+		vertical-align: top;
+	}
+
+	.tweet-buttons {
+		
+	}
+}
+
+
+.js-helper-main {
+	// background-color: #FFC600;
+	min-height: 90vh;
+	
+	h1 {
+		margin-top: 0;
+		text-align: center;
+		padding-top: 0.5rem;
+	}
+
+	input.search {
+		margin: 0;
+	    text-align: center;
+	    outline: 0;
+	    border: 10px solid #F7F7F7;
+	    width: 100%;
+	    position: relative;
+	    top: 10px;
+	    z-index: 2;
+	    border-radius: 5px;
+	    font-size: 40px;
+	    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+	    background-color: #fff;
+	}
 }

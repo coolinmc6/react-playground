@@ -17,6 +17,7 @@ import About from './components/About';
 // Containers
 import Counter from './containers/Counter';
 import TweetBox from './containers/TweetBox';
+import JSHelper from './containers/JSHelper';
 
 // React Router
 import {
@@ -41,6 +42,7 @@ ReactDOM.render(
 				<Route path="/react-playground/about" component={About}/>
 				<Route path="/react-playground/counter" component={Counter}/>
 				<Route path="/react-playground/tweets" component={TweetBox}/>
+				<Route path="/react-playground/js-cheat-sheet" component={JSHelper}/>
 			</div>
 		</Router>
 	</Provider>
