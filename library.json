@@ -18,6 +18,6 @@
 	{
 		"id": 4,
 		"term": "indexOf",
-		"definition": "This is a test."
+		"definition": "This is a test.\r\nI believe this is a new line!!\r\n We shall see!!"
 	}
 ]
