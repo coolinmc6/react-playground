@@ -16,9 +16,9 @@ export default function(state = defaultJSNotes, action) {
 			return {
 				search: state.search,
 				list: state.list,
-				library: action.payload
+				library: action.payload.data
 			}
-			break;
+			
 		case UPDATE_SEARCH:
 			// if search term is blank, return empty array (otherwise it returns everything)
 			if(action.payload === '') {
@@ -35,10 +35,10 @@ export default function(state = defaultJSNotes, action) {
 				}
 				return obj;	
 			}
-			break;
+			
 		default:
 			return state;
-	};
+	}
 };
 
 /*

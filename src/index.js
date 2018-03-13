@@ -22,8 +22,8 @@ import JSHelper from './containers/JSHelper';
 // React Router
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
+  // Link
 } from 'react-router-dom'
 
 // CSS

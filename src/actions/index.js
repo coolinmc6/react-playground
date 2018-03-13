@@ -59,7 +59,7 @@ export function updateSearch(text) {
 
 
 export function fetchLibrary()  {
-	const url = '../library.json';
+	const url = 'https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json';
 	const request = axios.get(url);
 
 	return {

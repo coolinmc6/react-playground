@@ -1,18 +1,23 @@
 [
 	{
 		"id": 1,
-		"term": "Map",
+		"term": "map",
 		"definition": "Map is an array helper."
 
 	},
 	{
 		"id": 2,
-		"term": "Filter",
+		"term": "filter",
 		"definition": "Filter is an array helper."
 	},
 	{
 		"id": 3,
-		"term": "Reduce",
+		"term": "reduce",
 		"definition": "Reduce is an array helper."
+	},
+	{
+		"id": 4,
+		"term": "indexOf",
+		"definition": "This is a test. \n Hopefully this is a line break."
 	}
 ]

@@ -25,7 +25,7 @@ class TweetBox extends Component {
 		return this.props.tweets.tweets.map((twt) => {
 			return (
 				<div key={twt.id} className="tweet-parent">
-					<img className="profile-img" src={guy1}/>
+					<img className="profile-img" src={guy1} alt={`This is alt text for tweet #${twt.id}`}/>
 					<div className="tweet-text">{twt.text}</div>					
 				</div>
 			)
