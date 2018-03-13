@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"term": "Map",
+		"definition": "Map is an array helper."
+
+	},
+	{
+		"id": 2,
+		"term": "Filter",
+		"definition": "Filter is an array helper."
+	},
+	{
+		"id": 3,
+		"term": "Reduce",
+		"definition": "Reduce is an array helper."
+	}
+]

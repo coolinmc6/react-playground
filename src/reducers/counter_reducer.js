@@ -7,7 +7,6 @@ export default function(state = 0, action) {
 		case DECREMENT:
 			return action.payload - 1;
 		default:
-			console.log('Reducer default:' + state);
 			return state;
 	}
 }

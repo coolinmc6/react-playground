@@ -2,8 +2,12 @@ import {
 	INCREMENT, 
 	DECREMENT,
 	TWEET_TEXT, 
-	SEND_TWEET 
+	SEND_TWEET,
+	UPDATE_SEARCH, 
+	FETCH_LIBRARY
 } from './types';
+
+import axios from 'axios';
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Counter
@@ -41,3 +45,26 @@ export function addTweet(tweet) {
 		payload: tweet
 	}
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// JavaScript Helper
+
+export function updateSearch(text) {
+	return {
+		type: UPDATE_SEARCH,
+		payload: text
+	}
+}
+
+
+export function fetchLibrary()  {
+	const url = '../library.json';
+	const request = axios.get(url);
+
+	return {
+		type: FETCH_LIBRARY,
+		payload: request
+	}
+}
+

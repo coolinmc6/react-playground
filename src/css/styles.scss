@@ -1,4 +1,18 @@
 
+nav .brand-logo {
+	left: 10px;
+}
+
+@media screen and (max-width: 992px) {
+	nav .brand-logo {
+		left: 80px;
+		width: 100%;
+		font-size: 1.5rem;;
+		transform: initial;
+		text-align: left;
+	}	
+}
+
 // Counter
 .counter-main {
 	padding: 1rem;
