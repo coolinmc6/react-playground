@@ -59,7 +59,8 @@ export function updateSearch(text) {
 
 
 export function fetchLibrary()  {
-	const url = 'https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json';
+	const rand = Math.floor(Math.random()*1000000)
+	const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
 	const request = axios.get(url);
 
 	return {
