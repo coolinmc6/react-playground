@@ -8,7 +8,7 @@ class NavBar extends Component {
 			<div>
 			   <nav>
 			       <div className="nav-wrapper">
-			         <Link to="https://coolinmc6.github.io/react-playground/" className="brand-logo">React Playground</Link>
+			         <a href="https://coolinmc6.github.io/react-playground/" className="brand-logo">React Playground</a>
 			         <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 			         <ul className="right hide-on-med-and-down">
 			           <li><Link to="/react-playground/about">About</Link></li>
