@@ -7,6 +7,7 @@ import '../css/prism.css';
 
 // import Prism from 'prismjs';
 
+
 class JSHelper extends Component {
 	componentDidMount() {
 		this.props.fetchLibrary();
@@ -19,6 +20,25 @@ class JSHelper extends Component {
 	  // <div dangerouslySetInnerHTML={this.createMarkup(html)} />
 	}
 
+	renderCode(codeArray) {
+		return codeArray.map((line) => {
+			return <div key={Math.floor(Math.random()*10000)}>{line}</div>
+		})
+	}
+
+	renderExamples(snippets) {
+
+		return snippets.map((snip) => {
+			return (
+				<div key={Math.floor(Math.random()*10000)}>
+					<pre><code className="language-javascript">
+						{this.renderCode(snip.code)}
+					</code></pre>
+				</div>
+			)
+		})
+	}
+
 	renderSearch() {
 		return this.props.javascript.list.map((item) =>  {
 			
@@ -26,6 +46,7 @@ class JSHelper extends Component {
 				<div key={item.id}>
 					<h3>{item.term}</h3>
 					<p>{item.definition}</p>
+					{this.renderExamples(item.snippets)}
 					
 				</div>
 			)
@@ -44,6 +65,7 @@ class JSHelper extends Component {
 						{this.renderSearch()}
 					</ul>
 				</div>
+
 			</div>
 		);
 	}

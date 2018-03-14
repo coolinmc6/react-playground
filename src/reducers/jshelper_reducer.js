@@ -13,6 +13,7 @@ const defaultJSNotes = {
 export default function(state = defaultJSNotes, action) {
 	switch(action.type) {
 		case FETCH_LIBRARY:
+			console.log(action.payload.data)
 			return {
 				search: state.search,
 				list: state.list,

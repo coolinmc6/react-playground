@@ -28,6 +28,7 @@ import {
 
 // CSS
 import './css/styles.css';
+import './css/prism.css';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
