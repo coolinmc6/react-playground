@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^1.1.0",
+    "prismjs": "^1.12.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",

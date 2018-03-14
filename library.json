@@ -2,22 +2,31 @@
 	{
 		"id": 1,
 		"term": "map",
-		"definition": "Map is an array helper."
+		"definition": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
+		"snippets": [
+			{
+				"tags": [],
+				"code": ["const arr = [1,2,3,4,5]", "const doubled = arr.map(num => num * 2);"]
+			}
+		]
 
 	},
 	{
 		"id": 2,
 		"term": "filter",
-		"definition": "Filter is an array helper."
+		"definition": "Filter is an array helper.",
+		"snippets": []
 	},
 	{
 		"id": 3,
 		"term": "reduce",
-		"definition": "Reduce is an array helper."
+		"definition": "Reduce is an array helper.",
+		"snippets": []
 	},
 	{
 		"id": 4,
 		"term": "indexOf",
-		"definition": "This is a test.\r\nI believe this is a new line!!\r\n We shall see!!"
+		"definition": "This is a test.\r\nI believe this is a new line!!\r\n We shall see!!",
+		"snippets": []
 	}
 ]
