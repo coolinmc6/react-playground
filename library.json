@@ -23,10 +23,11 @@
 		"snippets": [
 			{
 				"tags": [],
-				"code": ["var products = [", "  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },", 
-					"    { name: 'banana', type: 'fruit', quantity: 10, price: 5 },", 
-					"    { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },", 
-					"    { name: 'orange', type: 'fruit', quantity: 20, price: 14 },", 
+				"code": ["var products = [", 
+					"  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },", 
+					"  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },", 
+					"  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },", 
+					"  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },", 
 					"  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }", 
 					"];", 
 					"", 
@@ -43,11 +44,27 @@
 		"snippets": [
 			{
 				"tags": [],
-				"code": ["var numbers = [10,20,30];", "// ES6", "var total = numbers.reduce((acc, num) => acc + num);", "// ES5", "var total2 = numbers.reduce(function(acc, sum) {", "  return sum + acc;", "},0);","// both return 60"]
+				"code": ["var numbers = [10,20,30];", "// ES6", 
+					"var total = numbers.reduce((acc, num) => acc + num);", 
+					"// ES5", 
+					"var total2 = numbers.reduce(function(acc, sum) {", 
+					"  return sum + acc;", 
+					"},0);","// both return 60"]
 			},
 			{
 				"tags": [],
-				"code": ["var primaryColors = [", "  { color: 'red' },", "  { color: 'yellow' },", "  { color: 'blue' }", "];", "", "var colors = primaryColors.reduce(function(previous, color) {", "  previous.push(color.color);", "  return previous;", "}, [])", "// ['red', 'yellow', 'blue']"]
+				"code": ["var primaryColors = [", 
+					"  { color: 'red' },", 
+					"  { color: 'yellow' },", 
+					"  { color: 'blue' }", 
+					"];", 
+					"", 
+					"var colors = primaryColors.reduce(function(previous, color) {", 
+					"  previous.push(color.color);", 
+					"  return previous;", 
+					"}, [])", 
+					"// ['red', 'yellow', 'blue']"
+				]
 			}
 		]
 	},
@@ -58,7 +75,19 @@
 		"snippets": [
 			{
 				"tags": [],
-				"code": ["var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];", "", "console.log(beasts.indexOf('bison'));", "// expected output: 1", "", "// start from index 2", "console.log(beasts.indexOf('bison', 2));", "// expected output: 4", "", "console.log(beasts.indexOf('giraffe'));", "// expected output: -1"]
+				"code": [
+					"var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];", 
+					"", 
+					"console.log(beasts.indexOf('bison'));", 
+					"// expected output: 1", 
+					"", 
+					"// start from index 2", 
+					"console.log(beasts.indexOf('bison', 2));", 
+					"// expected output: 4", 
+					"", 
+					"console.log(beasts.indexOf('giraffe'));", 
+					"// expected output: -1"
+				]
 			}
 		]
 	},
