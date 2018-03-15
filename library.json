@@ -30,7 +30,9 @@
 					"  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }", 
 					"];", 
 					"", 
-					"var filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10)"]
+					"var filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);",
+					"",
+					" // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}]"]
 			}
 		]
 	},

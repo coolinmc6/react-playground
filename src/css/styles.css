@@ -87,7 +87,7 @@ nav .brand-logo {
   padding-top: 1.5rem; }
 
 .js-helper-main .results .search-result {
-  border: 1px solid black;
+  border-bottom: 2px solid #eee;
   padding: 0.5rem; }
 
 .js-helper-main .results .search-result .code-examples .code-block {
