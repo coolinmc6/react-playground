@@ -13,7 +13,6 @@ const defaultJSNotes = {
 export default function(state = defaultJSNotes, action) {
 	switch(action.type) {
 		case FETCH_LIBRARY:
-			console.log(action.payload.data)
 			return {
 				search: state.search,
 				list: state.list,
@@ -31,7 +30,7 @@ export default function(state = defaultJSNotes, action) {
 			} else {
 				const obj = {
 					search: action.payload, 
-					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase())), 
+					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase())  && obj.term.toLowerCase() !== "template"), 
 					library: state.library
 				}
 				return obj;	
