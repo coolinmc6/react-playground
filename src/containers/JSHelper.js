@@ -34,7 +34,7 @@ class JSHelper extends Component {
 
 		return snippets.map((snip) => {
 			return (
-				<div key={Math.floor(Math.random()*10000)}>
+				<div key={Math.floor(Math.random()*10000)} className="code-block">
 					<pre><code className="language-javascript">
 						{this.renderCode(snip.code)}
 					</code></pre>
@@ -43,15 +43,17 @@ class JSHelper extends Component {
 		})
 	}
 
+	// Renders the search results
 	renderSearch() {
 		return this.props.javascript.list.map((item) =>  {
 			
 			return (
-				<div key={item.id}>
+				<div className="search-result" key={item.id}>
 					<h3>{item.term}</h3>
 					<p>{item.definition}</p>
-					{this.renderExamples(item.snippets)}
-					
+					<div className="code-examples">
+						{this.renderExamples(item.snippets)}
+					</div>
 				</div>
 			)
 		});
@@ -65,9 +67,9 @@ class JSHelper extends Component {
 					<input type="text" className="search" placeholder="JavaScript concept or function" 
 						value={this.props.javascript.search}
 						onChange={(e) => this.props.updateSearch(e.target.value)}/>
-					<ul className="results">
+					<div className="results">
 						{this.renderSearch()}
-					</ul>
+					</div>
 				</div>
 
 			</div>

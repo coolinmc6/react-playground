@@ -6,7 +6,12 @@
 		"snippets": [
 			{
 				"tags": [],
-				"code": ["const arr = [1,2,3,4,5]", "const doubled = arr.map(num => num * 2); //[2, 4, 6, 8, 10]"]
+				"code": ["const arr = [1,2,3,4,5]", "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]"]
+			},
+			{
+				"tags": [],
+				"code": ["var cars = [", "  { model: 'Buick', price: 'CHEAP' },", "  { model: 'Camaro', price: 'expensive' },", 
+						" ]", " ", "const prices = cars.map(car => car.price);", "console.log(prices); // ['CHEAP', 'expensive']"]	
 			}
 		]
 

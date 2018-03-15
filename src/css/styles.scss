@@ -78,6 +78,7 @@ nav .brand-logo {
 	}
 }
 
+// JavaScript Cheat Sheet
 
 .js-helper-main {
 	// background-color: #FFC600;
@@ -102,5 +103,31 @@ nav .brand-logo {
 	    font-size: 40px;
 	    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
 	    background-color: #fff;
+	}
+	
+	// .results > .search-result > (term + definition + tags + code array)
+	// .code-examples > .code-block 
+	.results {
+		padding-top: 1.5rem;
+		.search-result {
+			border: 1px solid black;
+			padding: 0.5rem;
+			
+
+
+			.code-examples {
+				
+				.code-block {
+					padding: 1rem 3rem;
+					border: 2px solid #90caf9;
+					border-radius: 4px;
+				}
+			}
+		}
+
+
+
+
+
 	}
 }
