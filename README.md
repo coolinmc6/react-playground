@@ -7,8 +7,10 @@
 **Mar 15, 2018**
 
 - I can now show the syntax-highlighted code. The filter works and shows nice little blocks of code.
-- I have a couple more steps like not showing an entire "result" page with every click and instead show 
-the full thing ONLY when someone clicks on it.
+- I have a couple more steps like not showing an entire "result" page with every key press and instead show 
+the full page ONLY when someone clicks on it.
+- I need to add at least two full blocks (term, definition, code examples) each day until this thing is truly
+useful
 
 **Mar 14, 2018**
 
