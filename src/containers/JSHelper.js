@@ -5,7 +5,7 @@ import { updateSearch, fetchLibrary } from '../actions/index';
 
 import '../css/prism.css';
 
-// import Prism from 'prismjs';
+import Prism from 'prismjs';
 
 
 class JSHelper extends Component {
@@ -22,7 +22,11 @@ class JSHelper extends Component {
 
 	renderCode(codeArray) {
 		return codeArray.map((line) => {
-			return <div key={Math.floor(Math.random()*10000)}>{line}</div>
+			const html = Prism.highlight(line, Prism.languages.javascript);
+			return (
+				<div key={Math.floor(Math.random()*10000)}
+					dangerouslySetInnerHTML={this.createMarkup(html)}></div>
+			);
 		})
 	}
 
