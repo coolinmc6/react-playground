@@ -19,7 +19,7 @@
 	{
 		"id": 2,
 		"term": "filter",
-		"definition": "Filter is an array helper.",
+		"definition": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
 		"snippets": [
 			{
 				"tags": [],
@@ -39,8 +39,17 @@
 	{
 		"id": 3,
 		"term": "reduce",
-		"definition": "Reduce is an array helper.",
-		"snippets": []
+		"definition": "The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
+		"snippets": [
+			{
+				"tags": [],
+				"code": ["var numbers = [10,20,30];", "// ES6", "var total = numbers.reduce((acc, num) => acc + num);", "// ES5", "var total2 = numbers.reduce(function(acc, sum) {", "  return sum + acc;", "},0);","// both return 60"]
+			},
+			{
+				"tags": [],
+				"code": ["var primaryColors = [", "  { color: 'red' },", "  { color: 'yellow' },", "  { color: 'blue' }", "];", "", "var colors = primaryColors.reduce(function(previous, color) {", "  previous.push(color.color);", "  return previous;", "}, [])", "// ['red', 'yellow', 'blue']"]
+			}
+		]
 	},
 	{
 		"id": 4,
