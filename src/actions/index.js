@@ -4,7 +4,8 @@ import {
 	TWEET_TEXT, 
 	SEND_TWEET,
 	UPDATE_SEARCH, 
-	FETCH_LIBRARY
+	FETCH_LIBRARY,
+	CHANGE_PAGE
 } from './types';
 
 import axios from 'axios';
@@ -69,3 +70,9 @@ export function fetchLibrary()  {
 	}
 }
 
+export function changePage(id) {
+	return {
+		type: CHANGE_PAGE,
+		payload: id
+	}
+}

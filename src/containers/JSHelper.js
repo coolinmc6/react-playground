@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { updateSearch, fetchLibrary } from '../actions/index';
+import { updateSearch, fetchLibrary, changePage } from '../actions/index';
 
 import '../css/prism.css';
 
@@ -48,15 +48,29 @@ class JSHelper extends Component {
 		return this.props.javascript.list.map((item) =>  {
 			
 			return (
-				<div className="search-result" key={item.id}>
+				<div className="search-result" key={item.id} onClick={() => this.props.changePage(item.id)}>
+					<h3>{item.term}</h3>
+				</div>
+			)
+		});
+	}
+
+	renderPage() {
+		
+		if(this.props.javascript.page.length > 0) {
+			const item = this.props.javascript.page[0]
+			return (
+				<div className="concept-page">
 					<h3>{item.term}</h3>
 					<p>{item.definition}</p>
 					<div className="code-examples">
 						{this.renderExamples(item.snippets)}
 					</div>
 				</div>
-			)
-		});
+			)	
+		}
+
+		
 	}
 
 	render() {
@@ -70,8 +84,10 @@ class JSHelper extends Component {
 					<div className="results">
 						{this.renderSearch()}
 					</div>
+					<div>
+						{this.renderPage()}
+					</div>	
 				</div>
-
 			</div>
 		);
 	}
@@ -86,7 +102,7 @@ function mapStateToProps(state) {
 };
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ updateSearch, fetchLibrary }, dispatch);
+	return bindActionCreators({ updateSearch, fetchLibrary, changePage }, dispatch);
 }
 
 

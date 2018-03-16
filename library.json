@@ -196,7 +196,7 @@
 		"definition": "Just random bits of code that I like.",
 		"snippets": [
 			{
-				"tags": ["random-color-generator"],
+				"tags": ["random color generator"],
 				"code": ["function randomColor() {  ", "    var rand = '#' + Math.random().toString(16).slice(2,8);", " return rand", "}"]
 			}
 		]

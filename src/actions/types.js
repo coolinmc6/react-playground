@@ -9,3 +9,4 @@ export const SEND_TWEET = 'SEND_TWEET';
 // JavaScript Helper
 export const UPDATE_SEARCH = 'UPDATE_SEARCH';
 export const FETCH_LIBRARY = 'FETCH_LIBRARY';
+export const CHANGE_PAGE = 'CHANGE_PAGE';

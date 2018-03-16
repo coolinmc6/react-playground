@@ -1,12 +1,15 @@
 import {
 	UPDATE_SEARCH, 
-	FETCH_LIBRARY
+	FETCH_LIBRARY,
+	CHANGE_PAGE
 } from '../actions/types';
 
 const defaultJSNotes = {
-	search: '',
+	keywords: [],
+	library: [],
 	list: [],
-	library: []
+	page: [],
+	search: ''
 };
 
 
@@ -14,28 +17,46 @@ export default function(state = defaultJSNotes, action) {
 	switch(action.type) {
 		case FETCH_LIBRARY:
 			return {
-				search: state.search,
-				list: state.list,
-				library: action.payload.data
+				...state,
+				library: [...action.payload.data]
 			}
 			
 		case UPDATE_SEARCH:
 			// if search term is blank, return empty array (otherwise it returns everything)
 			if(action.payload === '') {
 				return {
-					search: '',
+					...state, 
 					list: [],
-					library: state.library
+					search: ''
 				};
 			} else {
+				
+
+				// state.library.filter(obj => obj.snippets.filter(item => item.tags.includes(action.payload.toLowerCase()))),
 				const obj = {
-					search: action.payload, 
-					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase())  && obj.term.toLowerCase() !== "template"), 
-					library: state.library
+					...state,
+					keywords: [],
+					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase()) && obj.term.toLowerCase() !== "template"), 
+					search: action.payload 
 				}
+				console.log(obj)
 				return obj;	
 			}
-			
+		case CHANGE_PAGE:
+			if(action.payload === 0) {
+				return {
+					...state,
+					page: [],
+					search: ''
+				}
+			} else {
+				return {
+					...state,
+					keywords: [],
+					list: [],
+					page: state.library.filter(obj => obj.id === action.payload)
+				}
+			}
 		default:
 			return state;
 	}
