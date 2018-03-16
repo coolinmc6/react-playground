@@ -92,6 +92,513 @@
 		]
 	},
 	{
+		"id": 5,
+		"term": "substr",
+		"definition": "The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 6,
+		"term": "forEach",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 7,
+		"term": "sort",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 8,
+		"term": "reverse",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9,
+		"term": "join",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 10,
+		"term": "shift",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 11,
+		"term": "unshift",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 12,
+		"term": "slice",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 13,
+		"term": "splice",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 31415926535897932384626433832795028841971693,
+		"term": "Cool Code",
+		"definition": "Just random bits of code that I like.",
+		"snippets": [
+			{
+				"tags": ["random-color-generator"],
+				"code": ["function randomColor() {  ", "    var rand = '#' + Math.random().toString(16).slice(2,8);", " return rand", "}"]
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	
+	{
 		"id": 999999999999,
 		"term": "Template",
 		"definition": "",
