@@ -83,7 +83,7 @@
 	},
 	{
 		"id": 4,
-		"term": "indexOf",
+		"term": "indexOf (Arrays)",
 		"definition": "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.",
 		"snippets": [
 			{
@@ -282,9 +282,9 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
+		"id": 20,
+		"term": "indexOf (Strings)",
+		"definition": "The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string. It is NOT the same as search() because it cannot take regular expressions.",
 		"snippets": [
 			{
 				"tags": [],
