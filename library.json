@@ -65,7 +65,20 @@
 					"}, [])", 
 					"// ['red', 'yellow', 'blue']"
 				]
+			},
+			{  
+			   "tags":[  
+			      ""
+			   ],
+			   "code":[  
+			      "let array = [1,2,3,4,5]\t",
+			      "let sum = array.reduce((all,item,index) => {\t",
+			      "\tall += item;",
+			      "\treturn all;",
+			      "}, 0);\t"
+			   ]
 			}
+
 		]
 	},
 	{
@@ -236,8 +249,8 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 17,
+		"term": "fetch",
 		"definition": "",
 		"snippets": [
 			{
@@ -247,20 +260,20 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
+		"id": 18,
+		"term": "find",
+		"definition": "The find() method is like filter but returns only one result and not an array of results that may fit the conditional.",
 		"snippets": [
 			{
 				"tags": [],
-				"code": []
+				"code": ["const comment = comments.find((comment) => comment.id === 823423);"]
 			}
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
+		"id": 19,
+		"term": "Immutability",
+		"definition": "The snippets below are examples of changing arrays or objects without mutating the original.",
 		"snippets": [
 			{
 				"tags": [],
