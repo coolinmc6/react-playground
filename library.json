@@ -77,6 +77,10 @@
 			      "\treturn all;",
 			      "}, 0);\t"
 			   ]
+			},
+			{
+				"tags": ["Reverse a string using reduce"],
+				"code": ["return str.split('').reduce((rev, char) => char + rev, '');"]
 			}
 
 		]
@@ -293,35 +297,45 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
+		"id": 21,
+		"term": "split",
+		"definition": "The split() method is used to split a string into an array of substrings, and returns the new array. If an empty string ('') is used as a separator, the string is split between each character.",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags": ["reverse a string using split"],
+				"code": ["return str.split('').reverse().join('');"]
 			}
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
+		"id": 22,
+		"term": "Random Algorithms",
+		"definition": "Random algorithms that I've seen or learned. Each algorithm has relevant tags.",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
+				"tags":["palindrome function","use split reverse and join to determine if palindrome"],
+				"code":["// The Palindrome function takes a string and can return true/false successfully in any of the below",
+					"// return statements",
+					"function palindrome(str) {",
+					"\t//// CM Solution #1",
+					"\treturn str.split('').reverse().join('') == str ? true : false;",
+					"",
+					"\t//// CM Solution #2: I can just return the conditional; the ternary above is excess logic",
+					"\treturn str.split('').reverse().join('') === str;",
+					"",
+					"\t//// Solution #1",
+					"\tconst reversed = str.split('').reverse().join('');",
+					"\treturn str === reversed;",
+					"",
+					"\t//// Solution #2",
+					"\t// one problem it has is that it compares the same two elements twice; the double comparison problem",
+					"\t// NOTICE: I don't have to set str.split('') to an array. I can just call str",
+					"\treturn str.split('').every((char, i) => {",
+					"\t\treturn char === str[str.length -i - 1];",
+					"\t});",
+					"",
+					"}"
+				]
 			}
 		]
 	},
