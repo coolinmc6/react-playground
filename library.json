@@ -202,7 +202,41 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 14,
+		"term": "Detecting Properties on Objects",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": ["hasOwnProperty"],
+				"code": []
+			}
+
+		]
+	},
+	{
+		"id": 15,
+		"term": "Immediately Invoked Function Expressions (IIFEs)",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 16,
+		"term": "Recursion",
+		"definition": "Examples of recursive functions.",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -213,7 +247,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -224,7 +258,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -235,7 +269,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -246,7 +280,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -257,7 +291,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -268,7 +302,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -279,7 +313,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -290,7 +324,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -301,7 +335,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -312,7 +346,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -323,7 +357,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -334,7 +368,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -345,7 +379,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -356,238 +390,7 @@
 		]
 	},
 	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 999999999999,
+		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
 		"snippets": [
@@ -598,15 +401,5 @@
 		]
 	},
 	
-	{
-		"id": 999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	}
+
 ]
