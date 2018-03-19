@@ -42,8 +42,6 @@ export default function(state = defaultJSNotes, action) {
 						});
 					});
 				});
-
-				// state.library.filter(obj => obj.snippets.filter(item => item.tags.includes(action.payload.toLowerCase()))),
 				const obj = {
 					...state,
 					keywords: keywords.slice(0,5),
