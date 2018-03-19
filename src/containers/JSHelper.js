@@ -53,7 +53,7 @@ class JSHelper extends Component {
 	// Renders search results block
 
 	renderAllSearch() {
-		if(this.props.javascript.search == '') {
+		if(this.props.javascript.search === '') {
 			return <div>Enter a JavaScript function, concept, or keyword above</div>
 		}
 		return (
@@ -68,9 +68,9 @@ class JSHelper extends Component {
 
 	// Renders Concept search results
 	renderSearch() {
-		if(this.props.javascript.search == '') {
+		if(this.props.javascript.search === '') {
 			return <div>Enter a search term above</div>
-		} else if(this.props.javascript.list.length == 0) {
+		} else if(this.props.javascript.list.length === 0) {
 			return <div>0 Results</div>
 		}
 		return this.props.javascript.list.map((item) =>  {
@@ -87,9 +87,9 @@ class JSHelper extends Component {
 
 	// Renders Keyword & Tag search results
 	renderKeywords() {
-		if(this.props.javascript.search == '') {
+		if(this.props.javascript.search === '') {
 			return;
-		} else if(this.props.javascript.keywords.length == 0) {
+		} else if(this.props.javascript.keywords.length === 0) {
 			return <div>0 Results</div>
 		}
 		return this.props.javascript.keywords.map(item => {
