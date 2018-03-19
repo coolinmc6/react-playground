@@ -278,8 +278,16 @@
 		"definition": "The snippets below are examples of changing arrays or objects without mutating the original.",
 		"snippets": [
 			{
+				"tags": ["spreads all the object properties into the new object but then reverses the 'isComplete' property", "toggle an object"],
+				"code": ["export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});"]
+			},
+			{
+				"tags": ["add item to an array without mutating original using spread operator"],
+				"code": ["export const addTodo = (list, item) => [...list, item];"]
+			},
+			{
 				"tags": [],
-				"code": []
+				"code": ["export const updateTodo = (list, updated) => {","\tconst updatedIndex = list.findIndex(item => item.id === updated.id)","","\t// the return statement slices the array from 0 to the item in the array we are updating, ","\t// puts in the updated item, 'updated', and then adds the rest of the array using the ","\t// spread operator that starts from 1 after the updated array's location to the end","\treturn [","\t\t...list.slice(0,updatedIndex),","\t\tupdated,","\t\t...list.slice(updatedIndex+1)","\t]","}"]
 			}
 		]
 	},
@@ -338,8 +346,8 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 23,
+		"term": "Regular Expressions",
 		"definition": "",
 		"snippets": [
 			{
