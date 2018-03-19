@@ -186,11 +186,15 @@
 	{
 		"id": 12,
 		"term": "slice",
-		"definition": "",
+		"definition": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end. The original array will not be modified.",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags": ["basic slice example"],
+				"code": ["var array = [1,2,3,4,5]","var sub = array.slice(0, 3);","console.log(array); // [1,2,3,4,5]","console.log(sub) // [1,2,3]"]
+			},
+			{
+				"tags":["copy an array using slice"],
+				"code":["var array = [1,2,3,4,5]","var copy = array.slice();","console.log(array)\t// [1,2,3,4,5]","console.log(copy)\t // [1,2,3,4,5]"]
 			}
 		]
 	},
