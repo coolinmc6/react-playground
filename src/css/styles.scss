@@ -104,18 +104,29 @@ nav .brand-logo {
 	    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
 	    background-color: #fff;
 	}
+
+	.search-header {
+		background-color: #bbdefb;
+		padding: 0.5rem;
+		font-size: 1.1rem;;
+	}
+
+	.special {
+		background-color: #ffcc00;
+	}
 	
 	// .results > .search-result > (term + definition + tags + code array)
 	// .code-examples > .code-block 
 	.results {
 		padding-top: 1.5rem;
 		.search-result {
-			border-bottom: 2px solid #eee;
-			padding: 0.5rem;
-			
-
-
-			
+			border-bottom: 1px solid #eee;
+			padding: 0.15rem;
+			cursor: pointer;
+			font-size: 1.4rem;
+			&:hover {
+				background-color: #f7f7f7;
+			}
 		}
 	}
 	.concept-page {
@@ -125,6 +136,16 @@ nav .brand-logo {
 				border: 2px solid #90caf9;
 				border-radius: 4px;
 				margin-bottom: 0.5rem;
+			}
+
+			.code-tag {
+				font-size: 0.9rem;
+				background-color: #F44336;
+				color: white;
+				border-radius: 2px;
+				display: inline-block;
+				padding: 0.1rem 0.2rem;
+				margin: 0.5rem 0.3rem;
 			}
 		}
 	}

@@ -26,17 +26,28 @@ export default function(state = defaultJSNotes, action) {
 			if(action.payload === '') {
 				return {
 					...state, 
+					keywords: [],
 					list: [],
 					search: ''
 				};
 			} else {
-				
+				const keywords = [];
+				state.library.map(parent => {
+					parent.snippets.map(block => {
+						block.tags.map(tag => {
+							if(tag.toLowerCase().includes(action.payload)) {
+								var obj = {id: parent.id, tag: tag}
+								keywords.push(obj)		
+							}
+						});
+					});
+				});
 
 				// state.library.filter(obj => obj.snippets.filter(item => item.tags.includes(action.payload.toLowerCase()))),
 				const obj = {
 					...state,
-					keywords: [],
-					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase()) && obj.term.toLowerCase() !== "template"), 
+					keywords: keywords.slice(0,5),
+					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase()) && obj.term.toLowerCase() !== "template").slice(0,5), 
 					search: action.payload 
 				}
 				console.log(obj)

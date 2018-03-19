@@ -30,11 +30,18 @@ class JSHelper extends Component {
 		})
 	}
 
+	renderTags(tags) {
+		return tags.map(tag => {
+			return <div className="code-tag">{tag}</div>
+		})
+	}
+
 	renderExamples(snippets) {
 
 		return snippets.map((snip) => {
 			return (
 				<div key={Math.floor(Math.random()*10000)} className="code-block">
+					<div className="code-tags">{this.renderTags(snip.tags)}</div>
 					<pre><code className="language-javascript">
 						{this.renderCode(snip.code)}
 					</code></pre>
@@ -43,35 +50,79 @@ class JSHelper extends Component {
 		})
 	}
 
-	// Renders the search results
+	// Renders search results block
+
+	renderAllSearch() {
+		if(this.props.javascript.search == '') {
+			return <div>Enter a JavaScript function, concept, or keyword above</div>
+		}
+		return (
+			<div>
+				<h6 className="search-header">Concepts and Methods</h6>
+				<div>{this.renderSearch()}</div>
+				<h6 className="search-header">Tags and Descriptors</h6>
+				<div>{this.renderKeywords()}</div>
+			</div>
+		)
+	}
+
+	// Renders Concept search results
 	renderSearch() {
+		if(this.props.javascript.search == '') {
+			return <div>Enter a search term above</div>
+		} else if(this.props.javascript.list.length == 0) {
+			return <div>0 Results</div>
+		}
 		return this.props.javascript.list.map((item) =>  {
-			
+			const regex = new RegExp(this.props.javascript.search, 'gi');
+			const final = item.term.replace(regex, `<span class="special">${this.props.javascript.search}</span>`)
 			return (
-				<div className="search-result" key={item.id} onClick={() => this.props.changePage(item.id)}>
-					<h3>{item.term}</h3>
+				<div dangerouslySetInnerHTML={{__html: final}} 
+					className="search-result" key={item.id} 
+					onClick={() => this.props.changePage(item.id)}>
 				</div>
 			)
 		});
 	}
 
+	// Renders Keyword & Tag search results
+	renderKeywords() {
+		if(this.props.javascript.search == '') {
+			return;
+		} else if(this.props.javascript.keywords.length == 0) {
+			return <div>0 Results</div>
+		}
+		return this.props.javascript.keywords.map(item => {
+			const regex = new RegExp(this.props.javascript.search, 'gi');
+			const final = item.tag.replace(regex, `<span class="special">${this.props.javascript.search}</span>`);
+			const rand = Math.floor(Math.random()*1000000)
+			return (
+				<div className="search-result" key={rand} 
+					onClick={() => this.props.changePage(item.id)}
+					dangerouslySetInnerHTML={{__html: final}}></div>
+			)
+		})
+	}
+
+
+	// Renders the term or concept, definition, and code examples
 	renderPage() {
 		
 		if(this.props.javascript.page.length > 0) {
 			const item = this.props.javascript.page[0]
 			return (
 				<div className="concept-page">
-					<h3>{item.term}</h3>
-					<p>{item.definition}</p>
+					<h4>{item.term}</h4>
+					<p class="term-definition">{item.definition}</p>
 					<div className="code-examples">
 						{this.renderExamples(item.snippets)}
 					</div>
 				</div>
 			)	
 		}
-
-		
 	}
+
+
 
 	render() {
 		return (
@@ -82,7 +133,7 @@ class JSHelper extends Component {
 						value={this.props.javascript.search}
 						onChange={(e) => this.props.updateSearch(e.target.value)}/>
 					<div className="results">
-						{this.renderSearch()}
+						{this.renderAllSearch()}
 					</div>
 					<div>
 						{this.renderPage()}

@@ -67,9 +67,7 @@
 				]
 			},
 			{  
-			   "tags":[  
-			      ""
-			   ],
+			   "tags":[],
 			   "code":[  
 			      "let array = [1,2,3,4,5]\t",
 			      "let sum = array.reduce((all,item,index) => {\t",
@@ -208,7 +206,7 @@
 		]
 	},
 	{
-		"id": 31415926535897932384626433832795028841971693,
+		"id": 3141592653,
 		"term": "Cool Code",
 		"definition": "Just random bits of code that I like.",
 		"snippets": [

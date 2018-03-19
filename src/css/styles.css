@@ -83,15 +83,37 @@ nav .brand-logo {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
   background-color: #fff; }
 
+.js-helper-main .search-header {
+  background-color: #bbdefb;
+  padding: 0.5rem;
+  font-size: 1.1rem; }
+
+.js-helper-main .special {
+  background-color: #ffcc00; }
+
 .js-helper-main .results {
   padding-top: 1.5rem; }
 
 .js-helper-main .results .search-result {
-  border-bottom: 2px solid #eee;
-  padding: 0.5rem; }
+  border-bottom: 1px solid #eee;
+  padding: 0.15rem;
+  cursor: pointer;
+  font-size: 1.4rem; }
+
+.js-helper-main .results .search-result:hover {
+  background-color: #f7f7f7; }
 
 .js-helper-main .concept-page .code-examples .code-block {
   padding: 1rem 3rem;
   border: 2px solid #90caf9;
   border-radius: 4px;
   margin-bottom: 0.5rem; }
+
+.js-helper-main .concept-page .code-examples .code-tag {
+  font-size: 0.9rem;
+  background-color: #F44336;
+  color: white;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0.1rem 0.2rem;
+  margin: 0.5rem 0.3rem; }
