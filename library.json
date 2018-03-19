@@ -213,6 +213,10 @@
 			{
 				"tags": ["random color generator"],
 				"code": ["function randomColor() {  ", "    var rand = '#' + Math.random().toString(16).slice(2,8);", " return rand", "}"]
+			},
+			{
+				"tags": ["random number generator function"],
+				"code": ["export const generateID = () => Math.floor(Math.random()*1000000);"]
 			}
 		]
 	},
@@ -288,7 +292,12 @@
 			{
 				"tags": ["update object in an array without mutating original array"],
 				"code": ["export const updateTodo = (list, updated) => {","\tconst updatedIndex = list.findIndex(item => item.id === updated.id)","","\t// the return statement slices the array from 0 to the item in the array we are updating, ","\t// puts in the updated item, 'updated', and then adds the rest of the array using the ","\t// spread operator that starts from 1 after the updated array's location to the end","\treturn [","\t\t...list.slice(0,updatedIndex),","\t\tupdated,","\t\t...list.slice(updatedIndex+1)","\t]","}"]
+			},
+			{
+				"tags":["remove item from an array without mutating array"],
+				"code":["export const removeTodo = (list, id) => {", "// find the index of the item you want to remove", "\tconst removeIndex = list.findIndex(item => item.id === id)","\treturn [","\t\t...list.slice(0, removeIndex),","\t\t...list.slice(removeIndex+1)","\t]","}"]
 			}
+
 		]
 	},
 	{
