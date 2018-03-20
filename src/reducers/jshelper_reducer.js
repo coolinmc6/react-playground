@@ -37,7 +37,7 @@ export default function(state = defaultJSNotes, action) {
 				state.library.map(parent => {
 					parent.snippets.map(block => {
 						block.tags.map(tag => {
-							if(tag.toLowerCase().includes(action.payload)) {
+							if(tag.toLowerCase().includes(action.payload.toLowerCase())) {
 								var obj = {id: parent.id, tag: tag}
 								keywords.push(obj)		
 							}
