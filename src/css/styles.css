@@ -103,6 +103,24 @@ nav .brand-logo {
 .js-helper-main .results .search-result:hover {
   background-color: #f7f7f7; }
 
+.js-helper-main .concept-page {
+  position: relative;
+  border-radius: 2px;
+  padding: 1rem; }
+
+.js-helper-main .concept-page .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #999;
+  cursor: pointer;
+  font-family: monospace;
+  transition: 0.25s all ease-in; }
+
+.js-helper-main .concept-page .close:hover {
+  color: #444; }
+
 .js-helper-main .concept-page .code-examples .code-block {
   padding: 1rem 3rem;
   border: 2px solid #90caf9;

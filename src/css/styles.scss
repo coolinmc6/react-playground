@@ -130,6 +130,23 @@ nav .brand-logo {
 		}
 	}
 	.concept-page {
+		position: relative;
+		// border: 1px solid black;
+		border-radius: 2px;
+		padding: 1rem;
+		.close {
+			position: absolute;
+			top: 0.5rem;
+			right: 2rem;
+			font-size: 3rem;
+			color: #999;
+			cursor: pointer;
+			font-family: monospace;
+			transition: 0.25s all ease-in;
+			&:hover {
+				color: #444;
+			}
+		}
 		.code-examples {
 			.code-block {
 				padding: 1rem 3rem;

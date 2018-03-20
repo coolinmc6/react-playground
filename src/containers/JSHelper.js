@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { updateSearch, fetchLibrary, changePage } from '../actions/index';
+import { updateSearch, fetchLibrary, changePage, changeFocus } from '../actions/index';
 
 import '../css/prism.css';
 
@@ -20,6 +20,8 @@ class JSHelper extends Component {
 	  // <div dangerouslySetInnerHTML={this.createMarkup(html)} />
 	}
 
+
+
 	renderCode(codeArray) {
 		return codeArray.map((line) => {
 			const html = Prism.highlight(line, Prism.languages.javascript);
@@ -32,7 +34,7 @@ class JSHelper extends Component {
 
 	renderTags(tags) {
 		return tags.map(tag => {
-			return <div className="code-tag">{tag}</div>
+			return <div className="code-tag" key={Math.floor(Math.random()*10000)}>{tag}</div>
 		})
 	}
 
@@ -55,6 +57,9 @@ class JSHelper extends Component {
 	renderAllSearch() {
 		if(this.props.javascript.search === '') {
 			return <div>Enter a JavaScript function, concept, or keyword above</div>
+		} 
+		else if(!this.props.javascript.focus) {
+			return;
 		}
 		return (
 			<div>
@@ -73,9 +78,13 @@ class JSHelper extends Component {
 		} else if(this.props.javascript.list.length === 0) {
 			return <div>0 Results</div>
 		}
+		// else if(!this.props.javascript.focus) {
+		// 	return;
+		// }
 		return this.props.javascript.list.map((item) =>  {
 			const regex = new RegExp(this.props.javascript.search, 'gi');
 			const final = item.term.replace(regex, `<span class="special">${this.props.javascript.search}</span>`)
+			const rand = Math.floor(Math.random()*1000000)
 			return (
 				<div dangerouslySetInnerHTML={{__html: final}} 
 					className="search-result" key={item.id} 
@@ -91,7 +100,10 @@ class JSHelper extends Component {
 			return;
 		} else if(this.props.javascript.keywords.length === 0) {
 			return <div>0 Results</div>
-		}
+		} 
+		// else if(!this.props.javascript.focus) {
+		// 	return;
+		// }
 		return this.props.javascript.keywords.map(item => {
 			const regex = new RegExp(this.props.javascript.search, 'gi');
 			const final = item.tag.replace(regex, `<span class="special">${this.props.javascript.search}</span>`);
@@ -111,15 +123,20 @@ class JSHelper extends Component {
 		if(this.props.javascript.page.length > 0) {
 			const item = this.props.javascript.page[0]
 			return (
-				<div className="concept-page">
+				<div className="concept-page" key={item.id}>
+					<span className="close" onClick={() => this.props.changePage(0)}>&times;</span>
 					<h4>{item.term}</h4>
-					<p class="term-definition">{item.definition}</p>
+					<p className="term-definition">{item.definition}</p>
 					<div className="code-examples">
 						{this.renderExamples(item.snippets)}
 					</div>
 				</div>
 			)	
 		}
+	}
+
+	setDelay(fn, val) {
+		setTimeout(fn(val), 250);
 	}
 
 
@@ -131,7 +148,11 @@ class JSHelper extends Component {
 				<div className="container">
 					<input type="text" className="search" placeholder="JavaScript concept or function" 
 						value={this.props.javascript.search}
-						onChange={(e) => this.props.updateSearch(e.target.value)}/>
+						onChange={(e) => this.props.updateSearch(e.target.value)}
+						// onFocus={() => this.props.changeFocus(true)}
+						onFocus={() => setTimeout(() => this.props.changeFocus(true), 50)}
+						// onBlur={() => this.props.changeFocus(false)}
+						onBlur={() => setTimeout(() => this.props.changeFocus(false), 150)}/>
 					<div className="results">
 						{this.renderAllSearch()}
 					</div>
@@ -153,7 +174,7 @@ function mapStateToProps(state) {
 };
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ updateSearch, fetchLibrary, changePage }, dispatch);
+	return bindActionCreators({ updateSearch, fetchLibrary, changePage, changeFocus }, dispatch);
 }
 
 

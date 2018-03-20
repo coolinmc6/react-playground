@@ -5,7 +5,8 @@ import {
 	SEND_TWEET,
 	UPDATE_SEARCH, 
 	FETCH_LIBRARY,
-	CHANGE_PAGE
+	CHANGE_PAGE,
+	CHANGE_FOCUS
 } from './types';
 
 import axios from 'axios';
@@ -74,5 +75,12 @@ export function changePage(id) {
 	return {
 		type: CHANGE_PAGE,
 		payload: id
+	}
+}
+
+export function changeFocus(bool) {
+	return {
+		type: CHANGE_FOCUS,
+		payload: bool
 	}
 }

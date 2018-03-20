@@ -1,10 +1,12 @@
 import {
 	UPDATE_SEARCH, 
 	FETCH_LIBRARY,
-	CHANGE_PAGE
+	CHANGE_PAGE,
+	CHANGE_FOCUS
 } from '../actions/types';
 
 const defaultJSNotes = {
+	focus: false,
 	keywords: [],
 	library: [],
 	list: [],
@@ -48,22 +50,30 @@ export default function(state = defaultJSNotes, action) {
 					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase()) && obj.term.toLowerCase() !== "template").slice(0,5), 
 					search: action.payload 
 				}
-				console.log(obj)
 				return obj;	
 			}
 		case CHANGE_PAGE:
 			if(action.payload === 0) {
 				return {
 					...state,
-					page: [],
-					search: ''
+					page: []
 				}
 			} else {
 				return {
 					...state,
-					keywords: [],
-					list: [],
 					page: state.library.filter(obj => obj.id === action.payload)
+				}
+			}
+		case CHANGE_FOCUS:
+			if (action.payload === true) {
+				return {
+					...state,
+					focus: true
+				}
+			} else {
+				return {
+					...state, 
+					focus: false
 				}
 			}
 		default:
