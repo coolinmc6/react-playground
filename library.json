@@ -298,7 +298,7 @@
 				"code": ["export const updateTodo = (list, updated) => {","\tconst updatedIndex = list.findIndex(item => item.id === updated.id)","","\t// the return statement slices the array from 0 to the item in the array we are updating, ","\t// puts in the updated item, 'updated', and then adds the rest of the array using the ","\t// spread operator that starts from 1 after the updated array's location to the end","\treturn [","\t\t...list.slice(0,updatedIndex),","\t\tupdated,","\t\t...list.slice(updatedIndex+1)","\t]","}"]
 			},
 			{
-				"tags":["remove item from an array without mutating array"],
+				"tags":["remove item from an array without mutating array", "remove nth item from array without mutating"],
 				"code":["export const removeTodo = (list, id) => {", "// find the index of the item you want to remove", "\tconst removeIndex = list.findIndex(item => item.id === id)","\treturn [","\t\t...list.slice(0, removeIndex),","\t\t...list.slice(removeIndex+1)","\t]","}"]
 			}
 
@@ -355,6 +355,34 @@
 					"",
 					"}"
 				]
+			},
+			{
+				"tags":["capitalize the first letter of each word using split","slice","and join"],
+				"code":["function capitalize(str) {","","\tvar words = str.split(' ');","","\tvar capitalized = words.map((word) => {","\t\tvar newWord = word[0].toUpperCase() + word.slice(1);","\t\treturn newWord;","\t})","\treturn capitalized.join(' ');","}"]
+			},
+			{
+				"tags":["Determine if two strings are anagrams of each other"],
+				"code":["function anagrams(stringA, stringB) {\t","\tvar strA = stringA.replace(/[^\\w]/g, \"\").toLowerCase().split(\"\").sort().join(\"\");","\tvar strB = stringB.replace(/[^\\w]/g, \"\").toLowerCase().split(\"\").sort().join(\"\");","\treturn strA === strB;","}"]
+			},
+			{
+				"tags":["Determine if two strings are anagrams of each other"],
+				"code":["function anagrams(stringA, stringB) {","\treturn cleanString(stringA) === cleanString(stringB);","}","","function cleanString(str) {","\treturn str.replace(/[^\\w]/g, \"\").toLowerCase().split('').sort().join('');","}"]
+			},
+			{
+				"tags":["BubbleSort"],
+				"code":["function bubbleSort(arr) {","\tfor(let i = 0; i < arr.length; i++) {","\t\tfor(let j = 0; j < (arr.length - i - 1); j++) {","\t\t\tif(arr[j] > arr[j+1]) {","\t\t\t\tconst lesser = arr[j+1];","\t\t\t\tarr[j+1] = arr[j];","\t\t\t\tarr[j] = lesser;","\t\t\t}","\t\t}","\t}","\treturn arr;","}"]
+			},
+			{
+				"tags":["Selection Sort"],
+				"code":["function selectionSort(arr) {","\tfor(let i = 0; i < arr.length; i++) {","\t\tlet indexOfMin = i;","\t\tfor(let j = i + 1; j < arr.length; j++) {","\t\t\tif(arr[j] < arr[indexOfMin]) {","\t\t\t\tindexOfMin = j;","\t\t\t}\t","\t\t}","\t\tif(indexOfMin !== i) {","\t\t\tlet lesser = arr[indexOfMin];","\t\t\tarr[indexOfMin] = arr[i];","\t\t\tarr[i] = lesser;","\t\t}","\t}","\treturn arr;","}"]
+			},
+			{
+				"tags":["Marge Sort"],
+				"code":["function mergeSort(arr) {","\tif(arr.length === 1) {","\t\treturn arr;","\t}","\tconst center = Math.floor(arr.length / 2);","\tconst left = arr.slice(0,center);","\tconst right = arr.slice(center);","\treturn merge(mergeSort(left), mergeSort(right));","}","","function merge(left, right) {","\tconst results = [];","\twhile(left.length && right.length) {","\t\tif(left[0] < right[0]) {","\t\t\tresults.push(left.shift())","\t\t} else {","\t\t\tresults.push(right.shift())","\t\t}","\t}","\treturn [...results, ...left, ...right];","}"]
+			},
+			{
+				"tags":["count the number of vowels in a string"],
+				"code":["function vowels(str) {","\tconst matches = str.match(/[aeiou]/gi);","\treturn matches ? matches.length : 0;","}"]
 			}
 		]
 	},
