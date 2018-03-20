@@ -242,8 +242,8 @@
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["basic IIFE example"],
+				"code":["(function() {"," var thing = {'hello': 'other'};"," console.log('other: ', thing);","})();"]
 			}
 		]
 	},
@@ -398,8 +398,19 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 24,
+		"term": "Use Strict",
+		"definition": "see Advanced Javascript (AJ) Notes",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 25,
+		"term": "NaN (Not a Number, Not-A-Number)",
 		"definition": "",
 		"snippets": [
 			{
@@ -409,8 +420,8 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 26,
+		"term": "Call, Bind and Apply Comparison",
 		"definition": "",
 		"snippets": [
 			{
@@ -420,19 +431,8 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
-		"snippets": [
-			{
-				"tags": [],
-				"code": []
-			}
-		]
-	},
-	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 27,
+		"term": "Constructor Pattern",
 		"definition": "",
 		"snippets": [
 			{
