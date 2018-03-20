@@ -442,13 +442,13 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 28,
+		"term": "Objects",
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags": ["deep copy of an object", "copy object values and not references"],
+				"code": ["var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));"]
 			}
 		]
 	},
