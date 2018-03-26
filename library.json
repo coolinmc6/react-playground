@@ -453,9 +453,9 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
-		"definition": "",
+		"id": 29,
+		"term": "Loops",
+		"definition": "JavaScript loops",
 		"snippets": [
 			{
 				"tags": [],

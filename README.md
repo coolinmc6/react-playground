@@ -4,6 +4,11 @@
 - Read the library.json file for tips on what to add next. Use Udemy courses for content and examples of
 code that would work
 
+## Sources
+
+- [http://htmlcheatsheet.com/js/](http://htmlcheatsheet.com/js/)
+- 
+
 ## Updates
 
 **Mar 26, 2018**
