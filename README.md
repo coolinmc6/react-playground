@@ -1,6 +1,8 @@
 # README
 
 - When finished, do `npm run deploy`
+- Read the library.json file for tips on what to add next. Use Udemy courses for content and examples of
+code that would work
 
 ## Updates
 
