@@ -156,8 +156,8 @@
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["basic join examples"],
+				"code":["var newString = arr1.join(' - ');","// stuff - cookie - food","var newString = arr1.join();","// stuff,cookie,food","var newString = arr1.join('');","// stuffcookiefood"]
 			}
 		]
 	},
