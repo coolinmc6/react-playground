@@ -84,3 +84,13 @@ export function changeFocus(bool) {
 		payload: bool
 	}
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// World Cup 2018
+
+export function fetchTeams() {
+	const rand = Math.floor(Math.random()*1000000)
+	// const ur
+}
+

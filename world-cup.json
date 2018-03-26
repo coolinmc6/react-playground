@@ -1,0 +1,24 @@
+[
+	{
+		"Name": "Russia",
+		"Flag": "../_artwork/russia-flag.png",
+		"Group": {
+			"GroupName": "A",
+			"GroupStage": [
+				{
+					"matchID": 1,
+					"home": "home"
+				},
+				{
+					"matchID": 17,
+					"home": "home"
+				},
+				{
+					"matchID": 34,
+					"home": "away"
+				}
+			]	
+		},
+		"OtherData": {}
+	}
+]

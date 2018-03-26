@@ -24,11 +24,58 @@ code that would work
 - Comparison Sites:
 	+ [https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/](https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/)
 - List of Games:
-	+ [https://en.wikipedia.org/wiki/2018_FIFA_World_Cup](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup)
+	[https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage)
 		* great list of all the games
 - Wireframes:
 	+ [https://wireframe.cc/9d1msX](https://wireframe.cc/9d1msX)
 	+ 
+- Data Structure
+  - I want to save all my info into a `world-cup.json` file. It will have one big array of countries
+  - Each country is an object that has the following properties
+  	+ Country Name
+  	+ Country Flag image => I can grab these from Wikipedia
+  	+ Group
+  		+ Group Name
+  		+ Group Stage Matches
+  			* { matchID: 1, home: home, country: Russia}
+  			* { matchID: 17: home: home, country: Russia}
+  			* { matchID: 33: home: away, country: Russia}
+  			* With this structure, I should be able to match up by matchID
+  	- Other Data
+  		+ This will be an object that holds all the other data that I would want to show later
+  - Knockout Stage Data
+  	+ this doesn't need to be recorded and is completely dependent upon
+  - Reducer
+  	+ 
+
+```json
+[
+	{
+		"Name": "Russia",
+		"Flag": "../_artwork/russia-flag.png",
+		"Group": {
+			"GroupName": "A",
+			"GroupStage": [
+				{
+					"matchID": 1,
+					"home": "home"
+				},
+				{
+					"matchID": 17,
+					"home": "home"
+				},
+				{
+					"matchID": 34,
+					"home": "away"
+				}
+			]	
+		},
+		"OtherData": {}
+	}
+]
+
+```
+
 - Next Steps
 	+ build out wireframes and get the basic look
 	+ get some expert opinion sites
