@@ -34,7 +34,7 @@ class JSHelper extends Component {
 
 	renderTags(tags) {
 		return tags.map(tag => {
-			return <div className="code-tag" key={Math.floor(Math.random()*10000)}>{tag}</div>
+			return <div className="chip" key={Math.floor(Math.random()*10000)}>{tag}</div>
 		})
 	}
 
