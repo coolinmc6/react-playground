@@ -11,3 +11,6 @@ export const UPDATE_SEARCH = 'UPDATE_SEARCH';
 export const FETCH_LIBRARY = 'FETCH_LIBRARY';
 export const CHANGE_PAGE = 'CHANGE_PAGE';
 export const CHANGE_FOCUS = 'CHANGE_FOCUS';
+
+// World Cup 2018
+export const FETCH_TEAMS = 'FETCH_TEAMS';

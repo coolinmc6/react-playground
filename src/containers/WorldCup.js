@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { fetchTeams } from '../actions/index';
 
 class WorldCup extends Component {
+	componentDidMount() {
+		this.props.fetchTeams();
+	}
 
 	render() {
 		return (
@@ -14,10 +18,14 @@ class WorldCup extends Component {
 
 }
 
-// function mapStateToProps(state) {
-// 	return {
-		
-// 	}
-// }
+function mapStateToProps(state) {
+	return {
+		worldcup: state.worldcup
+	}
+}
 
-export default WorldCup;
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({ fetchTeams }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WorldCup);

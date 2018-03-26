@@ -6,7 +6,8 @@ import {
 	UPDATE_SEARCH, 
 	FETCH_LIBRARY,
 	CHANGE_PAGE,
-	CHANGE_FOCUS
+	CHANGE_FOCUS,
+	FETCH_TEAMS
 } from './types';
 
 import axios from 'axios';
@@ -91,6 +92,12 @@ export function changeFocus(bool) {
 
 export function fetchTeams() {
 	const rand = Math.floor(Math.random()*1000000)
-	// const ur
+	const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/world-cup.json?${rand}`;
+	const request = axios.get(url);
+
+	return {
+		type: FETCH_TEAMS,
+		payload: request
+	}
 }
 

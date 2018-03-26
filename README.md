@@ -12,6 +12,10 @@ code that would work
 ## Updates
 
 **Mar 26, 2018**
+- `world-cup.json` file created and imported
+- Reducer and Action Creator built
+
+**Mar 26, 2018**
  
 - World Cup 2018 predictor
 - Gather scores from each game
