@@ -357,7 +357,7 @@
 				]
 			},
 			{
-				"tags":["capitalize the first letter of each word using split","slice","and join"],
+				"tags":["capitalize the first letter of each word using split, slice, and join"],
 				"code":["function capitalize(str) {","","\tvar words = str.split(' ');","","\tvar capitalized = words.map((word) => {","\t\tvar newWord = word[0].toUpperCase() + word.slice(1);","\t\treturn newWord;","\t})","\treturn capitalized.join(' ');","}"]
 			},
 			{
