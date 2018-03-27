@@ -17,6 +17,7 @@ export default function(state = {}, action) {
 				test: [...action.payload.data]
 			}
 		case FETCH_GAMES:
+			console.log(action.payload.data)
 			return {
 				...state, 
 				games: [...action.payload.data]

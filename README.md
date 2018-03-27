@@ -18,7 +18,36 @@ code that would work
 	Winner C with Runner-up D, etc. for all 8 games in the ROund of 16
 	+ I could then have a separate key for the Quarter Finals that manually pairs winner of Match 49 with Match 50, Winner Match 53 with Match 54, etc.
 - Re-thinking my data structure: I think I should have a teams list without any info about the Group Stage
-besides the Group Name. I then need a separate json file of all the games that can then draw in the teams
+besides the Group Name. I then need a separate json file of all the games that can then grab the teams
+- Next Steps:
+	+ I need to do a few more tests and see how it feels to sort the groups
+	+ Another thing to think about is that I don't really need to achieve perfection with this data - so what
+	if it repeats? I shuold take a look at my wireframe and see what I want to build and what would be the best
+	data structure to achieve that.
+- **Building the Group Stage**
+	+ I want to show the six games for each group. Each game has a particular number (and match time, stadium, etc) along with the countries involved, their flags, and a place to input the score
+	+ I also want to calculate the important stats for each team: Wins, Losses, Draws, Points, GF, GA, GD
+	+ here is one way it could look:
+	
+```json
+[
+	{
+		"id": 1, 
+		"home": "Russia", 
+		"home-score": 2,
+		"away": "Saudia Arabia",
+		"away-score": 1
+
+	}
+]
+
+```
+
+  - Each game is an object that allows me to add more data about it later
+  - I can get the totals for each team
+  - Wins, Losses and Draws can be determined as well
+
+
 
 **Mar 26, 2018**
 - `world-cup.json` file created and imported
