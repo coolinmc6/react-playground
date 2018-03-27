@@ -7,7 +7,9 @@ import {
 	FETCH_LIBRARY,
 	CHANGE_PAGE,
 	CHANGE_FOCUS,
-	FETCH_TEAMS
+	FETCH_TEAMS,
+	FETCH_TEST,
+	FETCH_GAMES
 } from './types';
 
 import axios from 'axios';
@@ -97,6 +99,28 @@ export function fetchTeams() {
 
 	return {
 		type: FETCH_TEAMS,
+		payload: request
+	}
+}
+
+export function fetchTest() {
+	const rand = Math.floor(Math.random()*1000000)
+	const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/test.json?${rand}`;
+	const request = axios.get(url);
+
+	return {
+		type: FETCH_TEST,
+		payload: request
+	}
+}
+
+export function fetchGames() {
+	const rand = Math.floor(Math.random()*1000000)
+	const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/games.json?${rand}`;
+	const request = axios.get(url);
+
+	return {
+		type: FETCH_GAMES,
 		payload: request
 	}
 }

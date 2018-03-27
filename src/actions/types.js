@@ -14,3 +14,5 @@ export const CHANGE_FOCUS = 'CHANGE_FOCUS';
 
 // World Cup 2018
 export const FETCH_TEAMS = 'FETCH_TEAMS';
+export const FETCH_TEST = 'FETCH_TEST';
+export const FETCH_GAMES = 'FETCH_GAMES';
