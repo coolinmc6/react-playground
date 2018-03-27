@@ -1,0 +1,56 @@
+{
+	"Group-Stage": [
+		{
+			"matchID": 1,
+			"home": "",
+			"home-score": 0,
+			"away": "",
+			"away-score": 0
+		}
+	],
+	"Round-of-16": [
+		{
+			"matchID": 1,
+			"home": "",
+			"home-score": 0,
+			"away": "",
+			"away-score": 0
+		}
+	],
+	"Quarter-finals": [
+		{
+			"matchID": 1,
+			"home": "",
+			"home-score": 0,
+			"away": "",
+			"away-score": 0
+		}
+	],
+	"Semi-finals": [
+		{
+			"matchID": 1,
+			"home": "",
+			"home-score": 0,
+			"away": "",
+			"away-score": 0
+		}
+	],
+	"Third-Place": [
+		{
+			"matchID": 1,
+			"home": "",
+			"home-score": 0,
+			"away": "",
+			"away-score": 0
+		}
+	],
+	"Final": [
+		{
+			"matchID": 1,
+			"home": "",
+			"home-score": 0,
+			"away": "",
+			"away-score": 0
+		}
+	]
+}

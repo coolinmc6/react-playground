@@ -10,8 +10,12 @@ class WorldCup extends Component {
 
 	render() {
 		return (
-			<div className="container">
-				WorldCup
+			<div className="container world-cup-main">
+				<div className="stage-parent">Group Stage</div>
+				<div className="stage-parent">Round of 16</div>
+				<div className="stage-parent">Quarter-finals</div>
+				<div className="stage-parent">Semi-finals</div>
+				<div className="stage-parent">Final</div>
 			</div>
 		)
 	}

@@ -11,6 +11,15 @@ code that would work
 
 ## Updates
 
+**Mar 27, 2018**
+- Coding the KnockOut stage order will be tough; I'm not entirely sure how to do it
+- One Way
+	+ I could have a separate key on the world cup reducer that will manually pair Winner A with Runner-up B, 
+	Winner C with Runner-up D, etc. for all 8 games in the ROund of 16
+	+ I could then have a separate key for the Quarter Finals that manually pairs winner of Match 49 with Match 50, Winner Match 53 with Match 54, etc.
+- Re-thinking my data structure: I think I should have a teams list without any info about the Group Stage
+besides the Group Name. I then need a separate json file of all the games that can then draw in the teams
+
 **Mar 26, 2018**
 - `world-cup.json` file created and imported
 - Reducer and Action Creator built
