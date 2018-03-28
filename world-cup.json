@@ -1,7 +1,7 @@
 [
 	{
 		"Name": "Russia",
-		"Flag": "../_artwork/russia-flag.png",
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png",
 		"Group": "A",
 		"OtherData": {}
 	},
