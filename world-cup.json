@@ -33,7 +33,7 @@
 	{
 		"Name":"Poland",
 		"Group": "H",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Poland.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/46px-Flag_of_Poland.svg.png?raw=true"
 	},
 	{
 		"Name":"France",
@@ -93,12 +93,12 @@
 	{
 		"Name":"Costa Rica",
 		"Group": "E",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Costa_Rica.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/46px-Flag_of_Costa_Rica.svg.png?raw=true"
 	},
 	{
 		"Name":"Sweden",
 		"Group": "F",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Sweden.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/46px-Flag_of_Sweden.svg.png?raw=true"
 	},
 	{
 		"Name":"Tunisia",
