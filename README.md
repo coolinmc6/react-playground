@@ -12,6 +12,8 @@ code that would work
 	+ [https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/](https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/)
 - List of Games:
 	[https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage)
+- Wireframes:
+	+ [https://wireframe.cc/9d1msX](https://wireframe.cc/9d1msX)
 
 ## Updates
 
@@ -72,8 +74,7 @@ besides the Group Name. I then need a separate json file of all the games that c
 	+ Finals: 2 Teams ==> 1 Game -> 63 Games played
 
 		* great list of all the games
-- Wireframes:
-	+ [https://wireframe.cc/9d1msX](https://wireframe.cc/9d1msX)
+
 	+ 
 - Data Structure
   - I want to save all my info into a `world-cup.json` file. It will have one big array of countries
