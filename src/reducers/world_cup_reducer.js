@@ -2,13 +2,32 @@ import {
 	FETCH_TEAMS, FETCH_TEST, FETCH_GAMES
 } from '../actions/types';
 
-export default function(state = {}, action) {
+const defaultWorldCupState = {
+	GroupA: [],
+	GroupB: [],
+	GroupC: [],
+	GroupD: [],
+	GroupE: [],
+	GroupF: [],
+	GroupG: [],
+	GroupH: [],
+	Round16: [],
+	Quarters: [],
+	Semis: [],
+	Final: [],
+	team: [],
+	test: [],
+	games: []
+}
+
+export default function(state = defaultWorldCupState, action) {
 	switch(action.type) {
 		case FETCH_TEAMS:
-			console.log(action.payload.data)
+			console.log('FETCH_TEAMS:', action.payload.data)
 			return {
 				...state,
-				team: [...action.payload.data]
+				team: [...action.payload.data],
+				GroupA: [...action.payload.data.filter(team => team.Group == "A")]
 			}
 		case FETCH_TEST:
 			console.log(action.payload.data)
