@@ -13,17 +13,17 @@
 	{
 		"Name":"Brazil",
 		"Group": "E",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Brazil.svg.png?raw=true"
 	},
 	{
 		"Name":"Portugal",
 		"Group": "B",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Portugal.svg.png?raw=true"
 	},
 	{
 		"Name":"Argentina",
 		"Group": "D",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Argentina.svg.png?raw=true"
 	},
 	{
 		"Name":"Belgium",
@@ -33,72 +33,72 @@
 	{
 		"Name":"Poland",
 		"Group": "H",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Poland.svg.png?raw=true"
 	},
 	{
 		"Name":"France",
 		"Group": "C",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_France.svg.png?raw=true"
 	},
 	{
 		"Name":" Spain",
 		"Group": "B",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Spain.svg.png?raw=true"
 	},
 	{
 		"Name":"Peru",
 		"Group": "C",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Peru.svg.png?raw=true"
 	},
 	{
 		"Name":" Switzerland",
 		"Group": "E",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Switzerland.svg.png?raw=true"
 	},
 	{
 		"Name":"England",
 		"Group": "G",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_England.svg.png?raw=true"
 	},
 	{
 		"Name":"Colombia",
 		"Group": "H",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Colombia.svg.png?raw=true"
 	},
 	{
 		"Name":"Mexico",
 		"Group": "F",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Mexico.svg.png?raw=true"
 	},
 	{
 		"Name":"Uruguay",
 		"Group": "A",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Uruguay.svg.png?raw=true"
 	},
 	{
 		"Name":"Croatia",
 		"Group": "D",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Croatia.svg.png?raw=true"
 	},
 	{
 		"Name":" Denmark",
 		"Group": "C",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Denmark.svg.png?raw=true"
 	},
 	{
 		"Name":"Iceland",
 		"Group": "D",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Iceland.svg.png?raw=true"
 	},
 	{
 		"Name":"Costa Rica",
 		"Group": "E",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Costa_Rica.svg.png?raw=true"
 	},
 	{
 		"Name":"Sweden",
 		"Group": "F",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Russia.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Sweden.svg.png?raw=true"
 	},
 	{
 		"Name":"Tunisia",
