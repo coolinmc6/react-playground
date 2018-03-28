@@ -16,7 +16,9 @@ class WorldCup extends Component {
 				{this.props.worldcup[group].map(team => {
 
 					return (
-						<div className="country" key={team.Name}>{team.Name}</div>
+						<div className="country" key={team.Name}>{team.Name}
+							<img src={team.Flag}/>
+						</div>
 					)
 				})}
 			</div>
