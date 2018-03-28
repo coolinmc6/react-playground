@@ -10,10 +10,35 @@ class WorldCup extends Component {
 		this.props.fetchGames();
 	}
 
+	renderSingleGroup(group) {
+		return (
+			<div className="group-parent" key={group}>
+				{this.props.worldcup[group].map(team => {
+
+					return (
+						<div className="country" key={team.Name}>{team.Name}</div>
+					)
+				})}
+			</div>
+		);
+	}
+
+	renderAllGroups() {
+		const groups = ["GroupA", "GroupB","GroupC","GroupD","GroupE","GroupF","GroupG","GroupH"];
+		return groups.map(group => {
+			return this.renderSingleGroup(group);
+		})
+	}
+
 	render() {
 		return (
 			<div className="container world-cup-main">
-				<div className="stage-parent">Group Stage</div>
+				<div className="stage-parent">
+					<h2>Group Stage</h2>
+					<div className="all-groups-parent">
+						{this.renderAllGroups()}
+					</div>
+				</div>
 				<div className="stage-parent">Round of 16</div>
 				<div className="stage-parent">Quarter-finals</div>
 				<div className="stage-parent">Semi-finals</div>

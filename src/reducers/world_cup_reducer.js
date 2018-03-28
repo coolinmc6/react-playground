@@ -27,7 +27,14 @@ export default function(state = defaultWorldCupState, action) {
 			return {
 				...state,
 				team: [...action.payload.data],
-				GroupA: [...action.payload.data.filter(team => team.Group == "A")]
+				GroupA: [...action.payload.data.filter(team => team.Group == "A")],
+				GroupB: [...action.payload.data.filter(team => team.Group == "B")],
+				GroupC: [...action.payload.data.filter(team => team.Group == "C")],
+				GroupD: [...action.payload.data.filter(team => team.Group == "D")],
+				GroupE: [...action.payload.data.filter(team => team.Group == "E")],
+				GroupF: [...action.payload.data.filter(team => team.Group == "F")],
+				GroupG: [...action.payload.data.filter(team => team.Group == "G")],
+				GroupH: [...action.payload.data.filter(team => team.Group == "H")]
 			}
 		case FETCH_TEST:
 			console.log(action.payload.data)
