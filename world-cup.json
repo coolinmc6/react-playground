@@ -7,7 +7,8 @@
 	},
 	{
 		"Name":"Germany",
-		"Group": "F"
+		"Group": "F",
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Germany.svg.png?raw=true",
 	},
 	{
 		"Name":"Brazil",
