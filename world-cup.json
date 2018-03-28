@@ -13,7 +13,7 @@
 	{
 		"Name":"Brazil",
 		"Group": "E",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Brazil.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/43px-Flag_of_Brazil.svg.png?raw=true"
 	},
 	{
 		"Name":"Portugal",
@@ -53,7 +53,7 @@
 	{
 		"Name":" Switzerland",
 		"Group": "E",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Switzerland.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/32px-Flag_of_Switzerland.svg.png?raw=true"
 	},
 	{
 		"Name":"England",
@@ -83,12 +83,12 @@
 	{
 		"Name":" Denmark",
 		"Group": "C",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Denmark.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/40px-Flag_of_Denmark.svg.png?raw=true"
 	},
 	{
 		"Name":"Iceland",
 		"Group": "D",
-		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/45px-Flag_of_Iceland.svg.png?raw=true"
+		"Flag": "https://github.com/coolinmc6/react-playground/blob/master/src/artwork/42px-Flag_of_Iceland.svg.png?raw=true"
 	},
 	{
 		"Name":"Costa Rica",
