@@ -7,7 +7,11 @@ code that would work
 ## Sources
 
 - [http://htmlcheatsheet.com/js/](http://htmlcheatsheet.com/js/)
-- 
+
+- Comparison Sites:
+	+ [https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/](https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/)
+- List of Games:
+	[https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage)
 
 ## Updates
 
@@ -66,10 +70,7 @@ besides the Group Name. I then need a separate json file of all the games that c
 	+ Quarter-finals: 8 Teams ==> 4 Games -> 60 Games played
 	+ Semi-finals: 4 Teams ==> 2 Games -> 62 Games played
 	+ Finals: 2 Teams ==> 1 Game -> 63 Games played
-- Comparison Sites:
-	+ [https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/](https://www.telegraph.co.uk/football/world-cup-2018-wallchart-predictor/)
-- List of Games:
-	[https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage](https://en.wikipedia.org/wiki/2018_FIFA_World_Cup#Group_stage)
+
 		* great list of all the games
 - Wireframes:
 	+ [https://wireframe.cc/9d1msX](https://wireframe.cc/9d1msX)

@@ -4,5 +4,129 @@
 		"Flag": "../_artwork/russia-flag.png",
 		"Group": "A",
 		"OtherData": {}
+	},
+	{
+		"Name":"Germany",
+		"Group": "F"
+	},
+	{
+		"Name":"Brazil",
+		"Group": "E"
+	},
+	{
+		"Name":"Portugal",
+		"Group": "B"
+	},
+	{
+		"Name":"Argentina",
+		"Group": "D"
+	},
+	{
+		"Name":"Belgium",
+		"Group": "G"
+	},
+	{
+		"Name":"Poland",
+		"Group": "H"
+	},
+	{
+		"Name":"France",
+		"Group": "C"
+	},
+	{
+		"Name":" Spain",
+		"Group": "B"
+	},
+	{
+		"Name":"Peru",
+		"Group": "C"
+	},
+	{
+		"Name":" Switzerland",
+		"Group": "E"
+	},
+	{
+		"Name":"England",
+		"Group": "G"
+	},
+	{
+		"Name":"Colombia",
+		"Group": "H"
+	},
+	{
+		"Name":"Mexico",
+		"Group": "F"
+	},
+	{
+		"Name":"Uruguay",
+		"Group": "A"
+	},
+	{
+		"Name":"Croatia",
+		"Group": "D"
+	},
+	{
+		"Name":" Denmark",
+		"Group": "C"
+	},
+	{
+		"Name":"Iceland",
+		"Group": "D"
+	},
+	{
+		"Name":"Costa Rica",
+		"Group": "E"
+	},
+	{
+		"Name":"Sweden",
+		"Group": "F"
+	},
+	{
+		"Name":"Tunisia",
+		"Group": "G"
+	},
+	{
+		"Name":"Egypt",
+		"Group": "A"
+	},
+	{
+		"Name":"Senegal",
+		"Group": "H"
+	},
+	{
+		"Name":"Iran",
+		"Group": "B"
+	},
+	{
+		"Name":" Serbia",
+		"Group": "E"
+	},
+	{
+		"Name":"Nigeria",
+		"Group": "D"
+	},
+	{
+		"Name":"Australia",
+		"Group": "C"
+	},
+	{
+		"Name":"Japan",
+		"Group": "H"
+	},
+	{
+		"Name":"Morocco",
+		"Group": "B"
+	},
+	{
+		"Name":"Panama",
+		"Group": "G"
+	},
+	{
+		"Name":"South Korea",
+		"Group": "F"
+	},
+	{
+		"Name":"Saudi Arabia",
+		"Group": "A"
 	}
 ]
