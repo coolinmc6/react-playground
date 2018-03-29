@@ -15,10 +15,10 @@ class WorldCup extends Component {
 		return (
 			<div className="games-list">
 			{games.map(game => {
-				const hFlag = this.props.worldcup.teams && this.props.worldcup.teams.filter(tm => tm.Name == game.home)['Flag']
-
+				
+				console.log(game);
 				return (
-					<div key={game.matchID}>______ {game.home}<img src={hFlag}/> vs. {game.away} ______</div>
+					<div key={game.matchID}><input className="score-input"/> {game.home.Name} <img src={game.home.Flag}/> vs. <img src={game.away.Flag}/>{game.away.Name} <input className="score-input"/></div>
 				)
 			})}
 
@@ -40,7 +40,9 @@ class WorldCup extends Component {
 		console.log(gameFlags)
 		return (
 			<div className="group-parent" key={group}>
-				{games && this.renderGroupGames(games)}
+				<h4>{`Group ${group.charAt(5)}`}</h4>
+				{gameFlags && this.renderGroupGames(gameFlags)}
+				
 			</div>
 		);
 	}
@@ -56,7 +58,7 @@ class WorldCup extends Component {
 		return (
 			<div className="container world-cup-main">
 				<div className="stage-parent">
-					<h2>Group Stage</h2>
+					<h3>Group Stage</h3>
 					<div className="all-groups-parent">
 						{this.renderAllGroups()}
 					</div>
