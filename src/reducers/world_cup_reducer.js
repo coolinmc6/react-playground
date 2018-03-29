@@ -37,13 +37,11 @@ export default function(state = defaultWorldCupState, action) {
 				GroupH: [...action.payload.data.filter(team => team.Group === "H")]
 			}
 		case FETCH_TEST:
-			console.log(action.payload.data)
 			return {
 				...state, 
 				test: [...action.payload.data]
 			}
 		case FETCH_GAMES:
-			console.log(action.payload.data)
 			return {
 				...state, 
 				games: [...action.payload.data]
