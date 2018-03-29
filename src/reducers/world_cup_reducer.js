@@ -15,9 +15,9 @@ const defaultWorldCupState = {
 	Quarters: [],
 	Semis: [],
 	Final: [],
-	team: [],
+	teams: [],
 	test: [],
-	games: []
+	games: {}
 }
 
 export default function(state = defaultWorldCupState, action) {
@@ -26,7 +26,7 @@ export default function(state = defaultWorldCupState, action) {
 			console.log('FETCH_TEAMS:', action.payload.data)
 			return {
 				...state,
-				team: [...action.payload.data],
+				teams: [...action.payload.data],
 				GroupA: [...action.payload.data.filter(team => team.Group === "A")],
 				GroupB: [...action.payload.data.filter(team => team.Group === "B")],
 				GroupC: [...action.payload.data.filter(team => team.Group === "C")],
@@ -42,9 +42,10 @@ export default function(state = defaultWorldCupState, action) {
 				test: [...action.payload.data]
 			}
 		case FETCH_GAMES:
+			console.log(action.payload.data)
 			return {
 				...state, 
-				games: [...action.payload.data]
+				games: {...action.payload.data}
 			}	
 		default: 
 			return state;

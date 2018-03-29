@@ -10,17 +10,37 @@ class WorldCup extends Component {
 		this.props.fetchGames();
 	}
 
+	renderGroupGames(games) {
+
+		return (
+			<div className="games-list">
+			{games.map(game => {
+				const hFlag = this.props.worldcup.teams && this.props.worldcup.teams.filter(tm => tm.Name == game.home)['Flag']
+
+				return (
+					<div key={game.matchID}>______ {game.home}<img src={hFlag}/> vs. {game.away} ______</div>
+				)
+			})}
+
+			</div>
+		)
+		
+	}
+
 	renderSingleGroup(group) {
+		const games = this.props.worldcup.games['Group-Stage'] && this.props.worldcup.games['Group-Stage'].filter(game => game.group === group.charAt(5))
+		const gameFlags = games && games.map(game => {
+			return {
+				matchID: game.matchID,
+				home: this.props.worldcup.teams.filter(tm => tm.Name == game.home)[0],
+				away: this.props.worldcup.teams.filter(tm => tm.Name == game.away)[0]
+			}
+		})
+
+		console.log(gameFlags)
 		return (
 			<div className="group-parent" key={group}>
-				{this.props.worldcup[group].map(team => {
-
-					return (
-						<div className="country" key={team.Name}>{team.Name}
-							<img src={team.Flag}/>
-						</div>
-					)
-				})}
+				{games && this.renderGroupGames(games)}
 			</div>
 		);
 	}
@@ -62,3 +82,17 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WorldCup);
+
+
+
+/*
+{this.props.worldcup[group].map(team => {
+	
+	
+	return (
+		<div className="country" key={team.Name}>{team.Name}
+			<img src={team.Flag}/>
+		</div>
+	)
+})}
+*/
