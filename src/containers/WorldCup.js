@@ -16,9 +16,14 @@ class WorldCup extends Component {
 			<div className="games-list">
 			{games.map(game => {
 				
-				console.log(game);
 				return (
-					<div key={game.matchID}><input className="score-input"/> {game.home.Name} <img src={game.home.Flag}/> vs. <img src={game.away.Flag}/>{game.away.Name} <input className="score-input"/></div>
+					<div className="game-row" key={game.matchID}>
+						<input className="score-input"/> 
+						<span className="team-name" >{game.home.Name}</span><img src={game.home.Flag} className="team-flag"/>
+						<span className="match-num">Match #{game.matchID}</span>
+						<img src={game.away.Flag} className="team-flag"/><span className="team-name">{game.away.Name}</span>
+						<input className="score-input"/>
+					</div>
 				)
 			})}
 
@@ -37,14 +42,16 @@ class WorldCup extends Component {
 			}
 		})
 
-		console.log(gameFlags)
-		return (
-			<div className="group-parent" key={group}>
-				<h4>{`Group ${group.charAt(5)}`}</h4>
-				{gameFlags && this.renderGroupGames(gameFlags)}
-				
-			</div>
-		);
+		if(games) {
+			return (
+				<div className="group-parent" key={group}>
+					<h4>{`Group ${group.charAt(5)}`}</h4>
+					{gameFlags && this.renderGroupGames(gameFlags)}
+					
+				</div>
+			);	
+		}
+		
 	}
 
 	renderAllGroups() {

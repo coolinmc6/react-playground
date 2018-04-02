@@ -172,7 +172,57 @@ nav .brand-logo {
 // World Cup
 
 .score-input {
-	display: inline-block;
-	width: 50px !important;
-	text-align: center;
+	
+}
+
+.group-parent {
+	h4 {
+		text-align: center;
+	}
+	.games-list {
+		.game-row {
+			vertical-align: top;
+			height: 50px;
+			input.score-input {
+				margin-bottom: 0px;
+				margin-left: 2px;
+				margin-right: 2px;
+				display: inline-block;
+				width: 30px !important;
+				text-align: center;
+				font-size: 1.8rem;
+
+			}
+
+			.team-name {
+				display: inline-block;
+				width: 85px;
+				text-align: center;
+				vertical-align: bottom;
+			}
+
+			.team-flag {
+				margin: 0 10px;
+				vertical-align: bottom;
+			}
+			.match-num {
+				display: inline-block;
+				width: 80px;
+				font-size: 0.9rem;
+				font-family: monospace;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.group-parent {
+		vertical-align: top;
+		display: inline-block;
+		width: 49%;
+	}
 }
