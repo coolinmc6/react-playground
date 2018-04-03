@@ -464,6 +464,226 @@
 		]
 	},
 	{
+		"id": 30,
+		"term": "concat",
+		"definition": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+		"snippets": [
+			{
+				"tags":["basic concat example"],
+				"code":["var array1 = ['a', 'b', 'c'];","var array2 = ['d', 'e', 'f'];","","array1.concat(array2)","console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array","","array3 = array1.concat(array2)","console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"]
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
+		"id": 9999999999999,
+		"term": "Template",
+		"definition": "",
+		"snippets": [
+			{
+				"tags": [],
+				"code": []
+			}
+		]
+	},
+	{
 		"id": 9999999999999,
 		"term": "Template",
 		"definition": "",
@@ -474,6 +694,5 @@
 			}
 		]
 	}
-	
 
 ]

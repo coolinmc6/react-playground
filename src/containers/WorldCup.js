@@ -47,7 +47,6 @@ class WorldCup extends Component {
 				<div className="group-parent" key={group}>
 					<h4>{`Group ${group.charAt(5)}`}</h4>
 					{gameFlags && this.renderGroupGames(gameFlags)}
-					
 				</div>
 			);	
 		}
