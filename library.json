@@ -403,19 +403,23 @@
 		"definition": "see Advanced Javascript (AJ) Notes",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["use strict definition and notes","use strict basic example"],
+				"code":["/*","Use Strict Notes:","- it makes debugging easier","- prevents you from accidentally creating global variables","- prevents you from naming variables that will be keywords in future JS verisons","- doesn't let you delete arguments to functions, functions, or variables","*/","\"use strict\"","","asim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\""]
+			},
+			{
+				"tags":["strict mode and function scope"],
+				"code":["// not Strict mode","function newCode() {"," \"use strict\";",""," // Strict Mode","}"]
 			}
 		]
 	},
 	{
 		"id": 25,
 		"term": "NaN (Not a Number, Not-A-Number)",
-		"definition": "",
+		"definition": "The global NaN property is a value representing Not-A-Number.",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["NaN notes and examples"],
+				"code":["/*","- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)","- But weirdly enough, NaN compared to NaN is also false"," - NaN equal to ANYTHING is always false, even when compared to itself","- `isNaN(NaN)` evaluates to true but see below:","*/","","isNaN(NaN) // true","isNaN(1) // evalutes to false; 1 is a number","isNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false","isNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true","","// How do we check if something is equal to NaN","/*","- The question above is complex because:"," -`NaN == NaN` is false AND"," -`isNaN()` has the type coercision problems","- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus"," `NaN !== NaN` will evaluate to true.","*/"]
 			}
 		]
 	},
