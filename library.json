@@ -49,7 +49,8 @@
 					"// ES5", 
 					"var total2 = numbers.reduce(function(acc, sum) {", 
 					"  return sum + acc;", 
-					"},0);","// both return 60"]
+					"},0);",
+					"// both return 60"]
 			},
 			{
 				"tags": [],
@@ -157,7 +158,12 @@
 		"snippets": [
 			{
 				"tags":["basic join examples"],
-				"code":["var newString = arr1.join(' - ');","// stuff - cookie - food","var newString = arr1.join();","// stuff,cookie,food","var newString = arr1.join('');","// stuffcookiefood"]
+				"code":["var newString = arr1.join(' - ');",
+					"// stuff - cookie - food",
+				"var newString = arr1.join();",
+				"// stuff,cookie,food",
+				"var newString = arr1.join('');",
+				"// stuffcookiefood"]
 			}
 		]
 	},
@@ -190,11 +196,17 @@
 		"snippets": [
 			{
 				"tags": ["basic slice example"],
-				"code": ["var array = [1,2,3,4,5]","var sub = array.slice(0, 3);","console.log(array); // [1,2,3,4,5]","console.log(sub) // [1,2,3]"]
+				"code": ["var array = [1,2,3,4,5]",
+					"var sub = array.slice(0, 3);",
+				"console.log(array); // [1,2,3,4,5]",
+				"console.log(sub) // [1,2,3]"]
 			},
 			{
 				"tags":["copy an array using slice"],
-				"code":["var array = [1,2,3,4,5]","var copy = array.slice();","console.log(array)\t// [1,2,3,4,5]","console.log(copy)\t // [1,2,3,4,5]"]
+				"code":["var array = [1,2,3,4,5]",
+					"var copy = array.slice();",
+				"console.log(array)\t// [1,2,3,4,5]",
+				"console.log(copy)\t // [1,2,3,4,5]"]
 			}
 		]
 	},
@@ -243,7 +255,10 @@
 		"snippets": [
 			{
 				"tags":["basic IIFE example"],
-				"code":["(function() {"," var thing = {'hello': 'other'};"," console.log('other: ', thing);","})();"]
+				"code":["(function() {",
+					" var thing = {'hello': 'other'};",
+				" console.log('other: ', thing);",
+				"})();"]
 			}
 		]
 	},
@@ -287,7 +302,8 @@
 		"snippets": [
 			{
 				"tags": ["copy object without mutating original", "toggle an object", "copy object using spread operator"],
-				"code": ["// copy the object by spreading properties into the new object but then reverse the 'isComplete' property","export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});"]
+				"code": ["// copy the object by spreading properties into the new object but then reverse the 'isComplete' property",
+					"export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});"]
 			},
 			{
 				"tags": ["add item to an array without mutating original using spread operator"],
@@ -295,11 +311,27 @@
 			},
 			{
 				"tags": ["update object in an array without mutating original array"],
-				"code": ["export const updateTodo = (list, updated) => {","\tconst updatedIndex = list.findIndex(item => item.id === updated.id)","","\t// the return statement slices the array from 0 to the item in the array we are updating, ","\t// puts in the updated item, 'updated', and then adds the rest of the array using the ","\t// spread operator that starts from 1 after the updated array's location to the end","\treturn [","\t\t...list.slice(0,updatedIndex),","\t\tupdated,","\t\t...list.slice(updatedIndex+1)","\t]","}"]
+				"code": ["export const updateTodo = (list, updated) => {",
+					"\tconst updatedIndex = list.findIndex(item => item.id === updated.id)",
+				"",
+				"\t// the return statement slices the array from 0 to the item in the array we are updating, ",
+				"\t// puts in the updated item, 'updated', and then adds the rest of the array using the ",
+				"\t// spread operator that starts from 1 after the updated array's location to the end",
+				"\treturn [",
+				"\t\t...list.slice(0,updatedIndex),",
+				"\t\tupdated,",
+				"\t\t...list.slice(updatedIndex+1)",
+				"\t]",
+				"}"]
 			},
 			{
 				"tags":["remove item from an array without mutating array", "remove nth item from array without mutating"],
-				"code":["export const removeTodo = (list, id) => {", "// find the index of the item you want to remove", "\tconst removeIndex = list.findIndex(item => item.id === id)","\treturn [","\t\t...list.slice(0, removeIndex),","\t\t...list.slice(removeIndex+1)","\t]","}"]
+				"code":["export const removeTodo = (list, id) => {", "// find the index of the item you want to remove", "\tconst removeIndex = list.findIndex(item => item.id === id)",
+					"\treturn [",
+				"\t\t...list.slice(0, removeIndex),",
+				"\t\t...list.slice(removeIndex+1)",
+				"\t]",
+				"}"]
 			}
 
 		]
@@ -404,7 +436,7 @@
 		"snippets": [
 			{
 				"tags":["use strict definition and notes","use strict basic example"],
-				"code":["/*","Use Strict Notes:","- it makes debugging easier","- prevents you from accidentally creating global variables","- prevents you from naming variables that will be keywords in future JS verisons","- doesn't let you delete arguments to functions, functions, or variables","*/","\"use strict\"","","asim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\""]
+				"code":["//Use Strict Notes:","//- it makes debugging easier","//- prevents you from accidentally creating global variables","//- prevents you from naming variables that will be keywords in future JS verisons","//- doesn't let you delete arguments to functions, functions, or variables","\"use strict\"","","asim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\""]
 			},
 			{
 				"tags":["strict mode and function scope"],
@@ -419,7 +451,22 @@
 		"snippets": [
 			{
 				"tags":["NaN notes and examples"],
-				"code":["/*","- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)","- But weirdly enough, NaN compared to NaN is also false"," - NaN equal to ANYTHING is always false, even when compared to itself","- `isNaN(NaN)` evaluates to true but see below:","*/","","isNaN(NaN) // true","isNaN(1) // evalutes to false; 1 is a number","isNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false","isNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true","","// How do we check if something is equal to NaN","/*","- The question above is complex because:"," -`NaN == NaN` is false AND"," -`isNaN()` has the type coercision problems","- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus"," `NaN !== NaN` will evaluate to true.","*/"]
+				"code":["//- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)",
+					"//- But weirdly enough, NaN compared to NaN is also false",
+					"// - NaN equal to ANYTHING is always false, even when compared to itself",
+					"//- `isNaN(NaN)` evaluates to true but see below:",
+					"",
+					"isNaN(NaN) // true",
+					"isNaN(1) // evalutes to false; 1 is a number",
+					"isNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false",
+					"isNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true",
+					"",
+					"// How do we check if something is equal to NaN",
+					"//- The question above is complex because:",
+					"// -`NaN == NaN` is false AND",
+					"// -`isNaN()` has the type coercision problems",
+					"//- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus",
+					"// NaN !== NaN will evaluate to true."]
 			}
 		]
 	},
@@ -474,7 +521,14 @@
 		"snippets": [
 			{
 				"tags":["basic concat example"],
-				"code":["var array1 = ['a', 'b', 'c'];","var array2 = ['d', 'e', 'f'];","","array1.concat(array2)","console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array","","array3 = array1.concat(array2)","console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"]
+				"code":["var array1 = ['a', 'b', 'c'];",
+					"var array2 = ['d', 'e', 'f'];",
+				"",
+				"array1.concat(array2)",
+				"console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array",
+					"",
+				"array3 = array1.concat(array2)",
+				"console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"]
 			}
 		]
 	},
