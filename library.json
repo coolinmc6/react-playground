@@ -415,6 +415,18 @@
 			{
 				"tags":["count the number of vowels in a string"],
 				"code":["function vowels(str) {","\tconst matches = str.match(/[aeiou]/gi);","\treturn matches ? matches.length : 0;","}"]
+			},
+			{
+				"tags":["Fibonacci - Colin's Solution #1"],
+				"code":["function fib(n) {","\tvar series = [0,1]","\tfor(let i = 2; i < n+1; i++) {","\t\tif(i == 2) {","\t\t\tseries.push(1)","\t\t} else {","\t\t\tseries.push(series[i-2] + series[i-1]);","\t\t}","\t}","\treturn series[n];","}"]
+			},
+			{
+				"tags":["Fibonacci - Solution with Recursion and memoize"],
+				"code":["// This is an exponential time algorithm","// Can we improve our fibonacci recursive function? Our big problem, we are calling the function","// multiple times with the same argument .... the solution is memoization","// Slow Fib Function => Memoizer => Fast, Memoized Fib Function","function memoize(fn) {","\tconst cache = {};","","\t// ... implies that you don't know how many arguments it will receive","\treturn function(...args) {","\t\tif(cache[args]) {","\t\t\treturn cache[args];","\t\t}","","\t\tconst result = fn.apply(this, args);","\t\tcache[args] = result;","","\t\treturn result;","\t}","}","","","function fib(n) {","\tif(n < 2) {","\t\treturn n;","\t}","","\t// we want to make sure that we are calling the memoized function, not the slowFib version","\treturn fib(n-1) + fib(n - 2);","}","","fib = memoize(fib);"]
+			},
+			{
+				"tags":["Basic Pagination"],
+				"code":["var pagination = function(current, total){"," var list = [];"," var pageLimit = 5;"," var upperLimit, lowerLimit;"," var currentPage = lowerLimit = upperLimit = Math.min(current, total);","",""," for (var b = 1; b < pageLimit && b < total;) {"," if (lowerLimit > 1 ) {"," lowerLimit--; b++; "," }"," if (b < pageLimit && upperLimit < total) {"," upperLimit++; b++; "," }"," }",""," for (var i = lowerLimit; i <= upperLimit; i++) {"," if (i == currentPage){"," list.push({page: i, active: 'yes'})"," // list.push(\"[\"+i+\"]\");"," }"," else{"," list.push({page: i, active: 'no'})"," }"," }"," return list;","}"]
 			}
 		]
 	},
