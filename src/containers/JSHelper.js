@@ -39,7 +39,7 @@ class JSHelper extends Component {
 	}
 
 	renderExamples(snippets) {
-
+		console.log('Snippets: ', snippets)
 		return snippets.map((snip) => {
 			return (
 				<div key={Math.floor(Math.random()*10000)} className="code-block">
@@ -71,7 +71,7 @@ class JSHelper extends Component {
 		)
 	}
 
-	// Renders Concept search results
+	// Renders Concept search results: TOP LEVEL item
 	renderSearch() {
 		if(this.props.javascript.search === '') {
 			return <div>Enter a search term above</div>
@@ -94,7 +94,7 @@ class JSHelper extends Component {
 		});
 	}
 
-	// Renders Keyword & Tag search results
+	// Renders Keyword & Tag search results: tags
 	renderKeywords() {
 		if(this.props.javascript.search === '') {
 			return;

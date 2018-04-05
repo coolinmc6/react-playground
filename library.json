@@ -545,13 +545,13 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 31,
+		"term": "FizzBuzz",
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["basic FizzBuzz solution"],
+				"code":["for(let i = 1; i <= n; i++) {","\t// Is the number a multiple of 3 & 5","\tif(i % 3 === 0 && i % 5 === 0) {","\t\tconsole.log('fizzbuzz');","\t} else if(i % 3 === 0) {","\t\tconsole.log(\"fizz\");","\t} else if(i % 5 === 0) {","\t\tconsole.log(\"buzz\");","\t} else {","\t\tconsole.log(i)\t","\t}","\t","}"]
 			}
 		]
 	},
