@@ -516,6 +516,10 @@
 			{
 				"tags": ["deep copy of an object", "copy object values and not references"],
 				"code": ["var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));"]
+			},
+			{
+				"tags":["check if object is empty"],
+				"code":["Object.keys(obj).length === 0 && obj.constructor === Object"]
 			}
 		]
 	},
