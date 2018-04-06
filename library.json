@@ -499,8 +499,12 @@
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["Constructor pattern of creating new object"],
+				"code":["// Person constructor","function Person(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;","};","","// Method #1: Instantiating a new Person","var dude = new Person(\"asim\", \"hussain\");","","// WRONG => this throws an error:","var dude = Person(\"asim\", \"hussain\");","","// Method #2: Instantiating a new Person","var dude = {};","Person.call(dude, \"asim\", \"hussain\");"]
+			},
+			{
+				"tags":["object methods in constructor pattern"],
+				"code":["function Person(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;"," this.full_name = function() {"," return this.first_name + ' ' + this.last_name;"," }","};","","console.log(dude.full_name()) // asim hussain"]
 			}
 		]
 	},
@@ -556,13 +560,13 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 32,
+		"term": "Prototypal Inheritance",
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["the basic need for prototypal inheritance"],
+				"code":["// Person object","function Person(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;"," this.full_name = function() {"," return this.first_name + ' ' + this.last_name;"," }","};","var dude = new Person('asim', 'hussain');","console.log(dude.full_name()) // asim hussain","","// BASIC PROBLEM: every new instance of Person we create has its OWN instance of the ","// \"full_name\" method created. That is a lot of duplicate methods. Instead, we can simply ","// add a method to the **prototype** of our object which can save a ton of memory.","","Person.prototype.full_name_prototype = function() {"," return this.first_name + ' ' + this.last_name;","}"]
 			}
 		]
 	},
