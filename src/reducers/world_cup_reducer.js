@@ -17,7 +17,8 @@ const defaultWorldCupState = {
 	Final: [],
 	teams: [],
 	test: [],
-	games: {}
+	games: {},
+	GroupAStats: {}
 }
 
 export default function(state = defaultWorldCupState, action) {
