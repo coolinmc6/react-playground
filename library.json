@@ -499,12 +499,12 @@
 		"definition": "",
 		"snippets": [
 			{
-				"tags":["Constructor pattern of creating new object"],
+				"tags":["Constructor pattern of creating new object", "OOP constructor"],
 				"code":["// Person constructor","function Person(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;","};","","// Method #1: Instantiating a new Person","var dude = new Person(\"asim\", \"hussain\");","","// WRONG => this throws an error:","var dude = Person(\"asim\", \"hussain\");","","// Method #2: Instantiating a new Person","var dude = {};","Person.call(dude, \"asim\", \"hussain\");"]
 			},
 			{
 				"tags":["object methods in constructor pattern"],
-				"code":["function Person(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;"," this.full_name = function() {"," return this.first_name + ' ' + this.last_name;"," }","};","","console.log(dude.full_name()) // asim hussain"]
+				"code":["function Person(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;"," this.full_name = function() {","   return this.first_name + ' ' + this.last_name;"," }","};","","console.log(dude.full_name()) // asim hussain"]
 			}
 		]
 	},
@@ -575,19 +575,27 @@
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 33,
+		"term": "Prototypal Pattern (OOP)",
 		"definition": "",
 		"snippets": [
 			{
-				"tags": [],
-				"code": []
+				"tags":["prototype OO pattern"],
+				"code":["// - This is an alternative object-oriented solution for inheritance","// - prototypal inheritance is just the prototype chain - there are no classes that we ","// have to worry about","// - this is seen as a more natural type of OO programming in JavaScript","\"use strict\"","","var Person = {"," init: function(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;"," return this;"," },"," full_name: function() {"," return this.first_name + ' ' + this.last_name;"," }","}","","// Version #1: creating an instance","var asim = Object.create(Person);","asim.init(\"asim\", \"hussain\");","console.log(asim.full_name());"]
+			},
+			{
+				"tags":["prototype OO pattern - instantiating object version #2"],
+				"code":["// Version #2","var asim = Object.create(Person, {"," first_name: {"," value: \"Asim\""," }, "," last_name: {"," value: \"Hussain\""," }","});"]
+			},
+			{
+				"tags":["prototype OO pattern - instantiating object version #3"],
+				"code":["// Version #3 (the top code is example object needed for the PersonFactory)","// var Person = {","// init: function(first_name, last_name) {","// this.first_name = first_name;","// this.last_name = last_name;","// return this;","// },","// full_name: function() {","// return this.first_name + ' ' + this.last_name;","// }","}","","function PersonFactory(first_name, last_name) {"," var person = Object.create(Person);"," person.first_name = first_name;"," person.last_name = last_name;"," return person;","}","","var asim = PersonFactory(\"asim\", \"hussain\");","console.log(asim.full_name())"]
 			}
 		]
 	},
 	{
-		"id": 9999999999999,
-		"term": "Template",
+		"id": 34,
+		"term": "Constructor vs. Prototypal",
 		"definition": "",
 		"snippets": [
 			{
