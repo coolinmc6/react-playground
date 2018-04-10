@@ -596,7 +596,7 @@
 	{
 		"id":"34",
 		"term":"Constructor vs. Prototype Pattern",
-		"definition":"- \"Classical\" inheritance is really talking about the methods of object orientation.- A \"class\" that acts as a blueprint or architectural diagram for an object and then you need to create an instance of that class <br>- in JavaScript, inheritance works using prototypes - in prototypal inheritance, new objects are\ncreated using previously created objects.\\n\n\\t- there is a parent \"Object\" for all objects in JavaScript\\n\n- There is a method of JavaScript of emulating the more classical object-oriented form using \nclasses and that's called the *Pseudo-Classical Pattern* but, again, it's only faking it...all\ninheritance in JavaScript is prototypal\\n",
+		"definition":"- \"Classical\" inheritance is really talking about the methods of object orientation.- A \"class\" that acts as a blueprint or architectural diagram for an object and then you need to create an instance of that class - in JavaScript, inheritance works using prototypes - in prototypal inheritance, new objects are\ncreated using previously created objects.\\n\n\\t- there is a parent \"Object\" for all objects in JavaScript\\n\n- There is a method of JavaScript of emulating the more classical object-oriented form using \nclasses and that's called the *Pseudo-Classical Pattern* but, again, it's only faking it...all\ninheritance in JavaScript is prototypal\\n",
 		"snippets":[
 			{
 				"tags":["Constructor Pattern vs. Prototype Pattern"],
