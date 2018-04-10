@@ -576,31 +576,31 @@
 	},
 	{
 		"id": 33,
-		"term": "Prototypal Pattern (OOP)",
+		"term": "Prototype Pattern (OOP)",
 		"definition": "",
 		"snippets": [
 			{
 				"tags":["prototype OO pattern"],
-				"code":["// - This is an alternative object-oriented solution for inheritance","// - prototypal inheritance is just the prototype chain - there are no classes that we ","// have to worry about","// - this is seen as a more natural type of OO programming in JavaScript","\"use strict\"","","var Person = {"," init: function(first_name, last_name) {"," this.first_name = first_name;"," this.last_name = last_name;"," return this;"," },"," full_name: function() {"," return this.first_name + ' ' + this.last_name;"," }","}","","// Version #1: creating an instance","var asim = Object.create(Person);","asim.init(\"asim\", \"hussain\");","console.log(asim.full_name());"]
+				"code":["// - This is an alternative object-oriented solution for inheritance","// - prototypal inheritance is just the prototype chain - there are no classes that we ","// have to worry about","// - this is seen as a more natural type of OO programming in JavaScript","\"use strict\"","var Person = {","\tinit: function(first_name, last_name) {","\t\tthis.first_name = first_name;","\t\tthis.last_name = last_name;","\t\treturn this;","\t},","\tfull_name: function() {","\t\treturn this.first_name + ' ' + this.last_name;","\t}","}","","// Version #1: creating an instance","var asim = Object.create(Person);","asim.init(\"asim\", \"hussain\");"]
 			},
 			{
 				"tags":["prototype OO pattern - instantiating object version #2"],
-				"code":["// Version #2","var asim = Object.create(Person, {"," first_name: {"," value: \"Asim\""," }, "," last_name: {"," value: \"Hussain\""," }","});"]
+				"code":["// Version #2","var asim = Object.create(Person, {","\tfirst_name: {","\t\tvalue: \"Asim\"","\t}, ","\tlast_name: {","\t\tvalue: \"Hussain\"","\t}","});"]
 			},
 			{
 				"tags":["prototype OO pattern - instantiating object version #3"],
-				"code":["// Version #3 (the top code is example object needed for the PersonFactory)","// var Person = {","// init: function(first_name, last_name) {","// this.first_name = first_name;","// this.last_name = last_name;","// return this;","// },","// full_name: function() {","// return this.first_name + ' ' + this.last_name;","// }","}","","function PersonFactory(first_name, last_name) {"," var person = Object.create(Person);"," person.first_name = first_name;"," person.last_name = last_name;"," return person;","}","","var asim = PersonFactory(\"asim\", \"hussain\");","console.log(asim.full_name())"]
+				"code":["function PersonFactory(first_name, last_name) {","\tvar person = Object.create(Person);","\tperson.first_name = first_name;","\tperson.last_name = last_name;","\treturn person;","}","var asim = PersonFactory(\"asim\", \"hussain\");"]
 			}
 		]
 	},
 	{
-		"id": 34,
-		"term": "Constructor vs. Prototypal",
-		"definition": "",
-		"snippets": [
+		"id":"34",
+		"term":"Constructor vs. Prototype Pattern",
+		"definition":"- \"Classical\" inheritance is really talking about the methods of object orientation.\\n\n- A \"class\" that acts as a blueprint or architectural diagram for an object and then you \nneed to create an instance of that class\\n\n- in JavaScript, inheritance works using prototypes - in prototypal inheritance, new objects are\ncreated using previously created objects.\\n\n\\t- there is a parent \"Object\" for all objects in JavaScript\\n\n- There is a method of JavaScript of emulating the more classical object-oriented form using \nclasses and that's called the *Pseudo-Classical Pattern* but, again, it's only faking it...all\ninheritance in JavaScript is prototypal\\n",
+		"snippets":[
 			{
-				"tags": [],
-				"code": []
+				"tags":["Constructor Pattern vs. Prototype Pattern"],
+				"code":["// Constructor Pattern","function Person(first_name, last_name) {","\tthis.first_name = first_name;","\tthis.last_name = last_name;","};","// Method #1: Instantiating a new Person","var dude = new Person(\"asim\", \"hussain\");","","// Method #2: Instantiating a new Person","var dude = {};","Person.call(dude, \"asim\", \"hussain\");","","///////////////////////////////////////////////////////////////////////////////////////////","// Prototype Pattern","var Person = {","\tinit: function(first_name, last_name) {","\t\tthis.first_name = first_name;","\t\tthis.last_name = last_name;","\t\treturn this;","\t},","\tfull_name: function() {","\t\treturn this.first_name + ' ' + this.last_name;","\t}","}","","// Version #1: creating an instance","var asim = Object.create(Person);","asim.init(\"asim\", \"hussain\");","","// Version #2","var asim = Object.create(Person, {","\tfirst_name: {","\t\tvalue: \"Asim\"","\t}, ","\tlast_name: {","\t\tvalue: \"Hussain\"","\t}","});","","// Version #3: we'd need to create the PersonFactory IN ADDITION TO","// the Prototype Pattern \"Person\" object","function PersonFactory(first_name, last_name) {","\tvar person = Object.create(Person);","\tperson.first_name = first_name;","\tperson.last_name = last_name;","\treturn person;","}","var asim = PersonFactory(\"asim\", \"hussain\");"]
 			}
 		]
 	},
