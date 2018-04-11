@@ -1164,88 +1164,126 @@
     "term": "Classes (ES6)",
     "definition": "",
     "snippets": [
-		{
-		  "tags": [
-		    "ES5 vs. ES6 Classes"
-		  ],
-		  "code": [
-		    "// ES5",
-		    "function Car(options) {",
-		    "\tthis.title = options.title;",
-		    "}",
-		    "",
-		    "Car.prototype.drive = function() {",
-		    "\treturn 'vroom';",
-		    "};",
-		    " ",
-		    "",
-		    "function Toyota(options) {",
-		    "\tCar.call(this, options);",
-		    "\tthis.color = options.color; ",
-		    "}",
-		    " ",
-		    "Toyota.prototype = Object.create(Car.prototype);",
-		    "Toyota.prototype.constructor = Toyota;",
-		    "Toyota.prototype.honk = function() {",
-		    "\treturn 'beep'",
-		    "};",
-		    " ",
-		    "const car = new Toyota({color: 'red', title: 'Daily Driver'});",
-		    " ",
-		    "console.log(car.honk()); // beep",
-		    "console.log(car.drive()); // vroom",
-		    " ",
-		    " ",
-		    "// ES6",
-		    "class Car {",
-		    " \tconstructor({title}) {",
-		    " \t\tthis.title = title",
-		    " \t}",
-		    "\tdrive() {",
-		    "\t\treturn 'vroom' ",
-		    "\t}",
-		    " ",
-		    "};",
-		    "",
-		    "",
-		    "class Toyota extends Car {",
-		    "\tconstructor(options) {",
-		    "\t\tsuper(options);\t\t// Car.constructor()",
-		    "\t\tthis.color = options.color;",
-		    "\t}",
-		    " ",
-		    "\thonk() {",
-		    "\t\treturn 'beep';",
-		    "\t};",
-		    "}",
-		    " ",
-		    "const toyota = new Toyota({color: 'red', title: 'CMs Car'});",
-		    " ",
-		    "console.log(toyota.honk()) // beep",
-		    "console.log(toyota.drive()); // vroom"
-		  ]
-		}
-    ]
-  },
-  {
-    "id": 9999999999999,
-    "term": "Template",
-    "definition": "",
-    "snippets": [
       {
-        "tags": [],
-        "code": []
+        "tags": [
+          "ES5 vs. ES6 Classes"
+        ],
+        "code": [
+          "// ES5",
+          "function Car(options) {",
+          "\tthis.title = options.title;",
+          "}",
+          "",
+          "Car.prototype.drive = function() {",
+          "\treturn 'vroom';",
+          "};",
+          " ",
+          "",
+          "function Toyota(options) {",
+          "\tCar.call(this, options);",
+          "\tthis.color = options.color; ",
+          "}",
+          " ",
+          "Toyota.prototype = Object.create(Car.prototype);",
+          "Toyota.prototype.constructor = Toyota;",
+          "Toyota.prototype.honk = function() {",
+          "\treturn 'beep'",
+          "};",
+          " ",
+          "const car = new Toyota({color: 'red', title: 'Daily Driver'});",
+          " ",
+          "console.log(car.honk()); // beep",
+          "console.log(car.drive()); // vroom",
+          " ",
+          " ",
+          "// ES6",
+          "class Car {",
+          " \tconstructor({title}) {",
+          " \t\tthis.title = title",
+          " \t}",
+          "\tdrive() {",
+          "\t\treturn 'vroom' ",
+          "\t}",
+          " ",
+          "};",
+          "",
+          "",
+          "class Toyota extends Car {",
+          "\tconstructor(options) {",
+          "\t\tsuper(options);\t\t// Car.constructor()",
+          "\t\tthis.color = options.color;",
+          "\t}",
+          " ",
+          "\thonk() {",
+          "\t\treturn 'beep';",
+          "\t};",
+          "}",
+          " ",
+          "const toyota = new Toyota({color: 'red', title: 'CMs Car'});",
+          " ",
+          "console.log(toyota.honk()) // beep",
+          "console.log(toyota.drive()); // vroom"
+        ]
       }
     ]
   },
   {
-    "id": 9999999999999,
-    "term": "Template",
+    "id": 38,
+    "term": "Fetch (ES6)",
     "definition": "",
     "snippets": [
       {
-        "tags": [],
-        "code": []
+        "tags": [
+          "fetch"
+        ],
+        "code": [
+          "const url = 'https://jsonplaceholder.typicode.com/posts12312/';",
+          " ",
+          "// fetch(url)",
+          "// \t.then(response => response.json())",
+          "// \t.then(data => console.log(data));",
+          " ",
+          "// the catch statement is only triggered if the network request flat out fails",
+          "// it WON'T catch if you get a 404 or anything at 300 or above which is a failure",
+          "// Use Axios",
+          " ",
+          "fetch(url)",
+          "\t.then(response => console.log(response))",
+          "\t.catch(error => console.log('BAD', error));"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "term": "Promises",
+    "definition": "",
+    "snippets": [
+      {
+        "tags": [
+          "promises"
+        ],
+        "code": [
+          "//- three states of promises",
+          "//\t- unresolved => waiting for something to finish",
+          "//\t- resolved => something finished and it all went okay",
+          "//\t\t- then (callback)",
+          "//\t- rejected => something finished and something went bad",
+          "//\t\t- catch (callback)",
+          "//- the vast majority of promises are related to Ajax requests",
+          " ",
+          "let promise = new Promise((resolve, reject) => {",
+          "\tsetTimeout(() => {",
+          "\t\treject();",
+          "\t}, 3000);",
+          "});",
+          " ",
+          "promise",
+          "\t.then(() => console.log('finally finished'))",
+          "\t.then(() => console.log('this ran as well'))",
+          "\t.catch(() => console.log('Rejected promise!!!'))",
+          " "
+        ]
       }
     ]
   },
