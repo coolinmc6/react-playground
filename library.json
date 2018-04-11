@@ -1160,14 +1160,72 @@
     ]
   },
   {
-    "id": 9999999999999,
-    "term": "Template",
+    "id": 37,
+    "term": "Classes (ES6)",
     "definition": "",
     "snippets": [
-      {
-        "tags": [],
-        "code": []
-      }
+		{
+		  "tags": [
+		    "ES5 vs. ES6 Classes"
+		  ],
+		  "code": [
+		    "// ES5",
+		    "function Car(options) {",
+		    " this.title = options.title;",
+		    " ",
+		    "}",
+		    "",
+		    "Car.prototype.drive = function() {",
+		    " return 'vroom';",
+		    "};",
+		    "",
+		    "",
+		    "function Toyota(options) {",
+		    " Car.call(this, options);",
+		    " this.color = options.color; ",
+		    "}",
+		    "",
+		    "Toyota.prototype = Object.create(Car.prototype);",
+		    "Toyota.prototype.constructor = Toyota;",
+		    "Toyota.prototype.honk = function() {",
+		    " return 'beep'",
+		    "};",
+		    "",
+		    "const car = new Toyota({color: 'red', title: 'Daily Driver'});",
+		    "",
+		    "console.log(car.honk()); // beep",
+		    "console.log(car.drive()); // vroom",
+		    "",
+		    "",
+		    "// ES6",
+		    "class Car {",
+		    " constructor({title}) {",
+		    " this.title = title",
+		    " }",
+		    "\tdrive() {",
+		    " return 'vroom' ",
+		    " }",
+		    "",
+		    "};",
+		    "",
+		    "",
+		    "class Toyota extends Car {",
+		    " constructor(options) {",
+		    " super(options);\t\t// Car.constructor()",
+		    " this.color = options.color;",
+		    " }",
+		    " ",
+		    " honk() {",
+		    " return 'beep';",
+		    " };",
+		    "}",
+		    "",
+		    "const toyota = new Toyota({color: 'red', title: 'CMs Car'});",
+		    "",
+		    "console.log(toyota.honk()) // beep",
+		    "console.log(toyota.drive()); // vroom"
+		  ]
+		}
     ]
   },
   {
