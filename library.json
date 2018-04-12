@@ -5,7 +5,7 @@
     "definition": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
     "snippets": [
       {
-        "tags": [],
+        "tags": ["basic map example"],
         "code": [
           "const arr = [1,2,3,4,5]",
           "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]"
@@ -17,7 +17,7 @@
           "var cars = [",
           "  { model: 'Buick', price: 'CHEAP' },",
           "  { model: 'Camaro', price: 'expensive' },",
-          " ]",
+          "];",
           " ",
           "const prices = cars.map(car => car.price);",
           "console.log(prices); // ['CHEAP', 'expensive']"
@@ -686,8 +686,8 @@
     "definition": "",
     "snippets": [
       {
-        "tags": [],
-        "code": []
+        "tags":["Regular Expressions super basic"],
+        "code":["var a1 = new RegExp('abc');","var word = '12314abcdefgh';"," ","// (String method) - String then RegExp => match, replace, search, split"," ","console.log(word.match(a1)); // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]"," ","var newWord = word.replace(a1, 'zzz'); // NOTE: replace doesn't alter the original string","console.log(newWord); // 12314zzzdefgh => the new string","console.log(word) // 12314abcdefgh => the original string"," ","console.log(word.search(a1)) // 5; 6th character","console.log(newWord.search(a1)) // -1; not found"," ","// (RegExp method) - RegExp then String => exec, test","var arr = a1.exec(word) // Just like match but the string and RegExp are reversed","console.log(arr) // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]"," ","console.log(a1.test(word)) // true"]
       }
     ]
   },
