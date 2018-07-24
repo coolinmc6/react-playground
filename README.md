@@ -15,6 +15,13 @@ code that would work
 - Wireframes:
 	+ [https://wireframe.cc/9d1msX](https://wireframe.cc/9d1msX)
 
+## Code Editor
+
+- List of code is currently loaded
+- When clicking on code, I must show the code object in an input form and a completed Prism-styled code block with tags, etc.
+- I need to be able to add new properties to the object; custom properties if needed
+- I need to be able to edit and delete pieces of code
+
 ## Updates
 
 **Mar 28, 2018**
