@@ -13,6 +13,7 @@ import reducers from './reducers';
 import NavBar from './components/NavBar';
 import App from './containers/App';
 import About from './components/About';
+import NoReduxState from './components/NoReduxState';
 
 // Containers
 import Counter from './containers/Counter';
@@ -46,6 +47,7 @@ ReactDOM.render(
 				<Route path="/react-playground/tweets" component={TweetBox}/>
 				<Route path="/react-playground/js-cheat-sheet" component={JSHelper}/>
 				<Route path="/react-playground/world-cup-2018" component={WorldCup}/>
+				<Route path="/react-playground/no-redux-state" component={NoReduxState} />
 			</div>
 		</Router>
 	</Provider>
