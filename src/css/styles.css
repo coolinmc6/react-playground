@@ -118,6 +118,10 @@ nav .brand-logo {
       padding: 0.1rem 0.2rem;
       margin: 0.5rem 0.3rem; }
 
+.main-collection {
+  max-height: 80vh;
+  overflow-y: scroll; }
+
 .group-parent h4 {
   text-align: center; }
 

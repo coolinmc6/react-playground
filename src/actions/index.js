@@ -9,7 +9,8 @@ import {
 	CHANGE_FOCUS,
 	FETCH_TEAMS,
 	FETCH_TEST,
-	FETCH_GAMES
+	FETCH_GAMES,
+	FETCH_CODE_LIBRARY
 } from './types';
 
 import axios from 'axios';
@@ -66,6 +67,7 @@ export function updateSearch(text) {
 export function fetchLibrary()  {
 	const rand = Math.floor(Math.random()*1000000)
 	const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
+	// const url = `http://localhost:3004/code`
 	const request = axios.get(url);
 
 	return {
@@ -85,6 +87,22 @@ export function changeFocus(bool) {
 	return {
 		type: CHANGE_FOCUS,
 		payload: bool
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// JavaScript Helper
+
+export function fetchCodeLibrary()  {
+	const rand = Math.floor(Math.random()*1000000)
+	// const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
+	const url = `http://localhost:3004/code`
+	const request = axios.get(url);
+
+	return {
+		type: FETCH_CODE_LIBRARY,
+		payload: request
 	}
 }
 

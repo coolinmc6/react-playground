@@ -119,7 +119,6 @@ class JSHelper extends Component {
 
 	// Renders the term or concept, definition, and code examples
 	renderPage() {
-		
 		if(this.props.javascript.page.length > 0) {
 			const item = this.props.javascript.page[0]
 			return (

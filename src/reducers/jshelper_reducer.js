@@ -20,7 +20,7 @@ export default function(state = defaultJSNotes, action) {
 		case FETCH_LIBRARY:
 			return {
 				...state,
-				library: [...action.payload.data]
+				library: [...action.payload.data["code"]]
 			}
 			
 		case UPDATE_SEARCH:

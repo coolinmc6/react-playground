@@ -12,6 +12,9 @@ export const FETCH_LIBRARY = 'FETCH_LIBRARY';
 export const CHANGE_PAGE = 'CHANGE_PAGE';
 export const CHANGE_FOCUS = 'CHANGE_FOCUS';
 
+// Code Editor
+export const FETCH_CODE_LIBRARY = 'FETCH_CODE_LIBRARY';
+
 // World Cup 2018
 export const FETCH_TEAMS = 'FETCH_TEAMS';
 export const FETCH_TEST = 'FETCH_TEST';
