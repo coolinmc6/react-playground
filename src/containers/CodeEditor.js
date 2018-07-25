@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchCodeLibrary } from '../actions/index';
+import { fetchCodeLibrary, changeCodeObject, changeInputValue } from '../actions/index';
+
+// import CodeObject from '../components/CodeObject';
 
 import '../css/prism.css';
 import '../css/materialize.css';
@@ -32,13 +34,46 @@ class CodeEditor extends Component {
 		})
 	}
 
+	handleChange(event) {
+	    this.setState({value: event.target.value});
+	  }
+
+	// requires the id of the item I am showing
+	renderCodeObject(id) {
+		// if id = new, show the unpopulated form
+		// console.log(id);
+		const item = id === 'new' ? {...this.props.my_code} : this.props.my_code.library.find(item => item.id === id)
+		// const item = {...this.props.my_code}
+		// console.log(item)
+		return (
+			<div className="row">
+				<div className="input-field col s4">
+		        	<input placeholder="Placeholder" defaultValue={item.term} onChange={(e) => this.changeInput('term', e.target.value)} type="text"/>
+		        	<label htmlFor="term">Term</label>
+		        </div>
+			</div>
+		)
+		
+	}
+
+	changeInput(prop, value) {
+		this.props.changeInputValue(prop, value)
+	}
+
+	changeCodeObject(id) {
+		this.props.changeCodeObject(id)
+	}
+
 	renderCodeList() {
-		return this.props.my_code.library.map(obj => {
-			
-			return (
-				<li className="collection-item" key={obj.id}>{obj.term}</li>
-			)
-		})
+		if(this.props.my_code) {
+			return this.props.my_code.library.map(obj => {
+				
+				return (
+					<li className="collection-item" key={obj.id} onClick={() => this.changeCodeObject(obj.id)}>{obj.term} </li>
+				)
+			})	
+		}
+		
 	}
 
 	render() {
@@ -47,6 +82,7 @@ class CodeEditor extends Component {
 				<h1>Code Editor!</h1>
 				<div className="row">
 					<div className="main-editor col s9">
+						{this.renderCodeObject(this.props.my_code.id)}
 					</div>
 					<div className="main-collection col s3">
 						<ul className="collection">
@@ -68,7 +104,7 @@ function mapStateToProps(state) {
 };
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({fetchCodeLibrary}, dispatch);
+	return bindActionCreators({fetchCodeLibrary, changeCodeObject, changeInputValue}, dispatch);
 }
 
 

@@ -10,7 +10,9 @@ import {
 	FETCH_TEAMS,
 	FETCH_TEST,
 	FETCH_GAMES,
-	FETCH_CODE_LIBRARY
+	FETCH_CODE_LIBRARY,
+	CLICK_COLLECTION_ITEM,
+	CHANGE_INPUT
 } from './types';
 
 import axios from 'axios';
@@ -103,6 +105,22 @@ export function fetchCodeLibrary()  {
 	return {
 		type: FETCH_CODE_LIBRARY,
 		payload: request
+	}
+}
+
+export function changeCodeObject(id) {
+
+	return {
+		type: CLICK_COLLECTION_ITEM,
+		payload: id
+	}
+}
+
+export function changeInputValue(prop, value) {
+	return {
+		type: CHANGE_INPUT,
+		payload: value,
+		prop: prop
 	}
 }
 

@@ -14,6 +14,8 @@ export const CHANGE_FOCUS = 'CHANGE_FOCUS';
 
 // Code Editor
 export const FETCH_CODE_LIBRARY = 'FETCH_CODE_LIBRARY';
+export const CLICK_COLLECTION_ITEM = 'CLICK_COLLECTION_ITEM';
+export const CHANGE_INPUT = 'CHANGE_INPUT';
 
 // World Cup 2018
 export const FETCH_TEAMS = 'FETCH_TEAMS';

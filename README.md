@@ -21,6 +21,38 @@ code that would work
 - When clicking on code, I must show the code object in an input form and a completed Prism-styled code block with tags, etc.
 - I need to be able to add new properties to the object; custom properties if needed
 - I need to be able to edit and delete pieces of code
+- Ideal Code Object:
+
+```json
+{
+  "id": 1,
+  "term": "map",
+  "definition": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
+  "languages": ["JavaScript"],
+  "snippets": [
+    {
+      "tags": ["basic map example"],
+      "code": [
+        "const arr = [1,2,3,4,5]",
+        "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]"
+      ]
+    },
+    {
+      "tags": [],
+      "code": [
+        "var cars = [",
+        "  { model: 'Buick', price: 'CHEAP' },",
+        "  { model: 'Camaro', price: 'expensive' },",
+        "];",
+        " ",
+        "const prices = cars.map(car => car.price);",
+        "console.log(prices); // ['CHEAP', 'expensive']"
+      ]
+    }
+  ]
+}
+```
+
 
 ## Updates
 
