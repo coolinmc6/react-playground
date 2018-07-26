@@ -122,6 +122,20 @@ nav .brand-logo {
   max-height: 80vh;
   overflow-y: scroll; }
 
+.todo-item {
+  position: relative; }
+  .todo-item i.material-icons {
+    position: absolute;
+    top: 0.4rem;
+    cursor: pointer; }
+  .todo-item .delete-item {
+    right: 0.5rem; }
+  .todo-item .complete-item {
+    right: 2.5rem;
+    color: green; }
+    .todo-item .complete-item:hover {
+      font-weight: bold; }
+
 .group-parent h4 {
   text-align: center; }
 

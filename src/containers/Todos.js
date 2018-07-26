@@ -22,10 +22,11 @@ class Todos extends Component {
 			return this.props.todos.map(todo => {
 				// console.log(todo);
 				return (
-					<div key={todo.id}>
+					<li key={todo.id} className="collection-item todo-item">
 						{todo.text}
-						<i className="material-icons" onClick={() => this.deleteTodo(todo.id)}>delete</i>
-					</div>
+						<i className="material-icons complete-item">check</i>
+						<i className="material-icons delete-item" onClick={() => this.deleteTodo(todo.id)}>delete</i>
+					</li>
 				)
 			})	
 		} else {
@@ -85,7 +86,9 @@ class Todos extends Component {
 					</div>
 				</div>
 				<h5>Your ToDo List</h5>
-				{this.renderTodos()}
+				<ul className="collection">
+					{this.renderTodos()}
+				</ul>
 			</div>
 		)
 	}
