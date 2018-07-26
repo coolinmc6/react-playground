@@ -4,13 +4,15 @@ import tweetReducer from './tweet_reducer';
 import jsHelperReducer from './jshelper_reducer';
 import WCReducer from './world_cup_reducer';
 import CodeReducer from './code_editor_reducer'
+import TodosReducer from './todos_reducer';
 	
 const rootReducer = combineReducers({	
 	count: counterReducer,
 	tweets: tweetReducer,
 	javascript: jsHelperReducer,
 	worldcup: WCReducer,
-	my_code: CodeReducer
+	my_code: CodeReducer,
+	todos: TodosReducer
 });	
 	
 export default rootReducer;	

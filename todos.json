@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 638626,
+      "text": "What's up bra??",
+      "complete": false
+    },
+    {
+      "id": 767660,
+      "text": "Who are you",
+      "complete": false
+    },
+    {
+      "id": 574925,
+      "text": "Groceries",
+      "complete": false
+    },
+    {
+      "id": 176632,
+      "text": "3rd item",
+      "complete": false
+    }
+  ]
+}

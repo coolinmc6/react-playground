@@ -21,6 +21,7 @@ import TweetBox from './containers/TweetBox';
 import JSHelper from './containers/JSHelper';
 import WorldCup from './containers/WorldCup';
 import CodeEditor from './containers/CodeEditor';
+import Todos from './containers/Todos'
 
 // React Router
 import {
@@ -50,6 +51,7 @@ ReactDOM.render(
 				<Route path="/react-playground/code-editor" component={CodeEditor}/>
 				<Route path="/react-playground/world-cup-2018" component={WorldCup}/>
 				<Route path="/react-playground/no-redux-state" component={NoReduxState} />
+				<Route path="/react-playground/todos" component={Todos} />
 			</div>
 		</Router>
 	</Provider>

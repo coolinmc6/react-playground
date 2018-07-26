@@ -12,7 +12,10 @@ import {
 	FETCH_GAMES,
 	FETCH_CODE_LIBRARY,
 	CLICK_COLLECTION_ITEM,
-	CHANGE_INPUT
+	CHANGE_INPUT,
+	FETCH_TODOS,
+	SAVE_TODO,
+	DELETE_TODO
 } from './types';
 
 import axios from 'axios';
@@ -121,6 +124,58 @@ export function changeInputValue(prop, value) {
 		type: CHANGE_INPUT,
 		payload: value,
 		prop: prop
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Todos
+
+export function fetchTodos() {
+
+	const port = 3004;
+	const url = `http://localhost:${port}/todos`;
+	const request = axios.get(url);
+	// console.log(request);
+	return {
+		type: FETCH_TODOS,
+		payload: request
+	}
+}
+
+export function saveTodo(todo) {
+
+	const port = 3004;
+	const url = `http://localhost:${port}/todos`;
+	const request = axios.post(url, todo)
+		.then(function(res) {
+			// console.log(res)
+		})
+		.catch(function(res) {
+			console.log("FAIL:", res)
+		})
+
+	return {
+		type: SAVE_TODO,
+		payload: todo
+	}
+
+
+}
+
+export function deleteTodo(id) {
+	const port = 3004;
+	const url = `http://localhost:${port}/todos/${id}`;
+	const request = axios.delete(url, id)
+		.then(function(res) {
+			// console.log(res)
+		})
+		.catch(function(res) {
+			console.log("FAIL:", res)
+		});
+
+	return {
+		type: DELETE_TODO, 
+		payload: id
 	}
 }
 
