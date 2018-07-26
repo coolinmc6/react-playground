@@ -16,7 +16,7 @@ class NavBar extends Component {
 			           <li><Link to="/react-playground/tweets">Tweets</Link></li>
 			           <li><Link to="/react-playground/js-cheat-sheet">JS Cheat Sheet</Link></li>
 			           <li><Link to="/react-playground/no-redux-state">No Redux State</Link></li>
-			           <li><Link to="/react-playground/todos">Todo List</Link></li>
+			           {/*<li><Link to="/react-playground/todos">Todo List</Link></li> */}
 			         </ul>
 			         <ul className="side-nav" id="mobile-demo">
 			           <li><Link to="/react-playground/about">About</Link></li>
@@ -24,7 +24,7 @@ class NavBar extends Component {
 			           <li><Link to="/react-playground/tweets">Tweets</Link></li>
 			           <li><Link to="/react-playground/js-cheat-sheet">JS Cheat Sheet</Link></li>
 			           <li><Link to="/react-playground/no-redux-state">No Redux State</Link></li>
-			           <li><Link to="/react-playground/todos">Todo List</Link></li>
+			           {/*<li><Link to="/react-playground/todos">Todo List</Link></li>*/}
 			         </ul>
 			       </div>
 			     </nav>
