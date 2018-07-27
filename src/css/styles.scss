@@ -188,16 +188,39 @@ nav .brand-logo {
 
 	.delete-item {
 		right: 0.5rem;
+		transition: color 0.3s ease-in;
+		&:hover {
+			color: #f66;;
+		}
 	}
 
 	.complete-item {
 		right: 2.5rem;
-		color: green;
+		color: #bdb;
 
 		&:hover {
 			font-weight: bold;
 		}	
 	}
+
+	.edit-item {
+		right: 4.7rem;
+		color: #aaa;
+		&:hover {
+			font-weight: bold;
+			color: #333;
+		}
+	}
+
+	.complete-item.complete {
+		
+		color: green;
+	}
+}
+
+.todo-item.complete {
+	text-decoration: line-through;
+	font-style: italic;
 }
 
 

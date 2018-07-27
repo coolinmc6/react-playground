@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchTodos, saveTodo, deleteTodo } from '../actions'
+import { fetchTodos, saveTodo, deleteTodo, markTodoComplete } from '../actions'
 import { generateID } from '../helpers/Helpers'
 
 class Todos extends Component {
@@ -9,7 +9,14 @@ class Todos extends Component {
 	constructor() {
 		super()
 		this.state = {
-			text: ''
+			existing: false,
+			text: '',
+			todo: {
+				text: '',
+				id: '',
+				complete: false
+			}
+
 		}
 	}
 
@@ -20,12 +27,14 @@ class Todos extends Component {
 	renderTodos() {
 		if(this.props.todos.length > 0) {
 			return this.props.todos.map(todo => {
-				// console.log(todo);
+
+				const completed = todo.complete ? 'complete' : 'incomplete'
 				return (
-					<li key={todo.id} className="collection-item todo-item">
+					<li key={todo.id} className={`collection-item todo-item ${completed}`}>
 						{todo.text}
-						<i className="material-icons complete-item">check</i>
-						<i className="material-icons delete-item" onClick={() => this.deleteTodo(todo.id)}>delete</i>
+						<i className={`material-icons edit-item ${completed}`} onClick={() => this.editTodo(todo.id)}>edit</i>
+						<i className={`material-icons complete-item ${completed}`} onClick={() => this.markTodoComplete(todo.id)}>check</i>
+						<i className={`material-icons delete-item ${completed}`} onClick={() => this.deleteTodo(todo.id)}>delete</i>
 					</li>
 				)
 			})	
@@ -33,6 +42,26 @@ class Todos extends Component {
 			return <div>Loading...</div>
 		}
 		
+	}
+
+	editTodo(id) {
+		console.log(id)
+		let todo = this.props.todos.filter(item => item.id === id)[0]
+		this.setState({
+			existing: !this.state.existing,
+			todo: {
+				text: todo.text,
+				id: todo.id,
+				complete: todo.complete
+			}
+		})
+	}
+
+	markTodoComplete(id) {
+		console.log(id);
+		let todo = this.props.todos.filter(item => item.id === id)[0]
+		todo.complete = !todo.complete
+		this.props.markTodoComplete(todo)
 	}
 
 	deleteTodo(id) {
@@ -45,6 +74,15 @@ class Todos extends Component {
 	changeTodoText(text) {
 		this.setState({
 			text
+		})
+	}
+
+	changeExistingTodoText(text) {
+		this.setState({
+			todo: { 
+				...this.state.todo,
+				text 
+			}
 		})
 	}
 
@@ -66,23 +104,66 @@ class Todos extends Component {
 
 	}
 
+	updateTodo() {
+		var todo = {
+			id: this.state.todo.id,
+			text: this.state.todo.text,
+			complete: this.state.todo.complete
+		}
+
+		console.log(todo);
+		// now I need to:
+		//		- send to action creator to send PUT
+		//		- update list
+		//		- go back to not existing
+
+		this.setState({
+			existing: false
+		})
+	}
+
+	renderInputs() {
+		if(!this.state.existing) {
+			return (
+				<div>
+					<input id="todo-text" 
+							name="todo-text" 
+							placeholder="Enter your todo" 
+							type="text"
+							onChange={(e) => this.changeTodoText(e.target.value)}
+							value={this.state.text}/>
+					<label htmlFor="todo-text">Todo Item</label>
+					<a className="waves-effect waves-light btn"
+						onClick={() => this.saveTodo()}
+						>Save Todo
+					</a>
+				</div>
+			)
+		} else {
+			return (
+				<div>
+					<input id="todo-text" 
+							name="todo-text" 
+							placeholder="Edit your todo" 
+							type="text"
+							onChange={(e) => this.changeExistingTodoText(e.target.value)}
+							value={this.state.todo.text}/>
+					<label htmlFor="todo-text">Todo Item</label>
+					<a className="waves-effect waves-light btn"
+						onClick={() => this.updateTodo()}
+						>Update Todo
+					</a>
+				</div>
+			)
+		}
+	}
+
 	render() {
 		return (
 			<div className="container">
 				<div className="row">
 					<div className="input-field col s6">
-						<input id="todo-text" 
-								name="todo-text" 
-								placeholder="Enter your todo" 
-								type="text"
-								onChange={(e) => this.changeTodoText(e.target.value)}
-								value={this.state.text}/>
-						<label htmlFor="todo-text">Todo Item</label>
-						<a className="waves-effect waves-light btn"
-							onClick={() => this.saveTodo()}
-							>Save Todo
-							
-						</a>
+						{this.renderInputs()}
 					</div>
 				</div>
 				<h5>Your ToDo List</h5>
@@ -101,7 +182,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ fetchTodos, saveTodo, deleteTodo}, dispatch );
+	return bindActionCreators({ fetchTodos, saveTodo, deleteTodo, markTodoComplete}, dispatch );
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);

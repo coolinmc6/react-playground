@@ -15,7 +15,8 @@ import {
 	CHANGE_INPUT,
 	FETCH_TODOS,
 	SAVE_TODO,
-	DELETE_TODO
+	DELETE_TODO,
+	MARK_TODO_COMPLETE
 } from './types';
 
 import axios from 'axios';
@@ -177,6 +178,26 @@ export function deleteTodo(id) {
 		type: DELETE_TODO, 
 		payload: id
 	}
+}
+
+// I need more than the id; I need the entire todo
+export function markTodoComplete(todo) {
+	console.log(todo);
+	const port = 3004;
+	const url = `http://localhost:${port}/todos/${todo.id}`;
+	const request = axios.put(url, todo)
+		.then(function(res) {
+			// console.log(res)
+		})
+		.catch(function(res) {
+			console.log("FAIL:", res)
+		});
+
+	return {
+		type: MARK_TODO_COMPLETE,
+		payload: todo
+	}
+
 }
 
 

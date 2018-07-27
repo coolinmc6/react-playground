@@ -25,4 +25,5 @@ export const FETCH_GAMES = 'FETCH_GAMES';
 // Todos
 export const FETCH_TODOS = 'FETCH_TODOS';
 export const SAVE_TODO = 'SAVE_TODO';
-export const DELETE_TODO = 'DELETE_TODO'
+export const DELETE_TODO = 'DELETE_TODO';
+export const MARK_TODO_COMPLETE = 'MARK_TODO_COMPLETE';

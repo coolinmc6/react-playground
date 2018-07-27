@@ -3,16 +3,11 @@
     {
       "id": 638626,
       "text": "What's up bra??",
-      "complete": false
+      "complete": true
     },
     {
       "id": 767660,
       "text": "Who are you",
-      "complete": false
-    },
-    {
-      "id": 176632,
-      "text": "3rd item",
       "complete": false
     },
     {
@@ -33,6 +28,11 @@
     {
       "id": 116420158599167330000,
       "text": "Add drinks to calendar",
+      "complete": false
+    },
+    {
+      "id": 47812935571823530000,
+      "text": "Another item",
       "complete": false
     }
   ]
