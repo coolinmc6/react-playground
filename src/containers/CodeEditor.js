@@ -58,14 +58,14 @@ class CodeEditor extends Component {
 			existing: false,
 			newCodeObject: {
 				term: '',
-				definition: '', 
+				description: '', 
 				language: '', 
 				snipTags: [],
 				snipCode: []
 			},
 			existingCodeObject: {
 				term: '',
-				definition: '', 
+				description: '', 
 				language: '', 
 				snipTags: [],
 				snipCode: []
@@ -89,10 +89,14 @@ class CodeEditor extends Component {
 		return codeArray.map((line) => {
 			const html = Prism.highlight(line, Prism.languages.javascript);
 			return (
-				<div key={Math.floor(Math.random()*10000)}
+				<div key={Math.floor(Math.random()*10000000000)}
 					dangerouslySetInnerHTML={this.createMarkup(html)}></div>
 			);
 		})
+	}
+
+	saveCodeObject() {
+		console.log(this.state.newCodeObject)
 	}
 
 	renderCodeInputs() {
@@ -100,6 +104,7 @@ class CodeEditor extends Component {
 			let existing = false;
 			return (
 				<div className="row">
+					<h5>Create New Code Snippet</h5>
 					<div className="input-field col s6">
 			        	<input type="text"
 			        			onChange={(e) => this.changeInput(existing, "term", e.target.value)}
@@ -108,18 +113,37 @@ class CodeEditor extends Component {
 			        </div>
 			        <br />
 	        		<div className="input-field col s9">
-	                	<textarea className="materialize-textarea" type="text"></textarea>
+	                	<textarea className="materialize-textarea" type="text"
+	                				onChange={(e) => this.changeInput(existing, "description", e.target.value)}
+	                	></textarea>
 	                	<label htmlFor="term">Description</label>
 	                </div>
 	                <br />
     				<div className="input-field col s6">
-			        	<input type="text"/>
+			        	<input type="text"
+			        			onChange={(e) => this.changeInput(existing, "language", e.target.value)}
+			        			/>
 			        	<label htmlFor="language">Language</label>
 			        </div>
 			        <br />
 			        <div className="input-field col s9">
-	                	<textarea className="materialize-textarea" type="text"></textarea>
+	                	<textarea className="materialize-textarea" type="text"
+	                				onChange={(e) => this.changeInput(existing, "snippet", e.target.value)}
+	                				onKeyDown={(e) => e.keyCode == 9 && e.preventDefault()}
+	                	></textarea>
 	                	<label htmlFor="term">Code Snippets</label>
+	                </div>
+	                <div className="input-field col s6">
+			        	<input type="text"
+			        			onChange={(e) => this.changeInput(existing, "tags", e.target.value)}
+			        			/>
+			        	<label htmlFor="term">Tags</label>
+			        </div>
+	                <div className="col s12">
+	                <a className="waves-effect waves-light btn"
+	                	onClick={() => this.saveCodeObject()}
+	                	>Save Snippet
+	                </a>
 	                </div>
 				</div>
 
@@ -134,13 +158,20 @@ class CodeEditor extends Component {
 		let info = {
 			...this.state.newCodeObject
 		}
-		info[property] = value;
+		if(property != 'snippet' && property != 'tags') {
+			info[property] = value;
+		} else if(property == 'snippet') {
+			const array = value.split('\n')
+			info['snipCode'] = array;
+		}
+
 		this.setState({
 			...this.state, 
 			newCodeObject: {...info}
-		})
-
-		console.log(this.state)
+		});
+		
+		
+		
 	}
 
 	changeCodeObject(id) {
