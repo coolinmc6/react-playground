@@ -2,8 +2,8 @@
   "todos": [
     {
       "id": 638626,
-      "text": "What's up bra??",
-      "complete": true
+      "text": "What's up broseph??",
+      "complete": false
     },
     {
       "id": 767660,
@@ -12,7 +12,7 @@
     },
     {
       "id": 495220,
-      "text": "Move the car",
+      "text": "Move the car - do it noW!",
       "complete": false
     },
     {
@@ -32,7 +32,22 @@
     },
     {
       "id": 47812935571823530000,
-      "text": "Another item",
+      "text": "Another item - does it work here???",
+      "complete": false
+    },
+    {
+      "id": 662080603600407200000,
+      "text": "What is going on, my buh-ruthah??",
+      "complete": false
+    },
+    {
+      "id": 782301520508763500000,
+      "text": "What is going, man??",
+      "complete": false
+    },
+    {
+      "id": 571265526511312700000,
+      "text": "This is so cool!?!?!?",
       "complete": false
     }
   ]

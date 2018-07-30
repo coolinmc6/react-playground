@@ -27,3 +27,4 @@ export const FETCH_TODOS = 'FETCH_TODOS';
 export const SAVE_TODO = 'SAVE_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
 export const MARK_TODO_COMPLETE = 'MARK_TODO_COMPLETE';
+export const UPDATE_TODO = 'UPDATE_TODO';

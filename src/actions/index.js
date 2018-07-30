@@ -16,10 +16,15 @@ import {
 	FETCH_TODOS,
 	SAVE_TODO,
 	DELETE_TODO,
-	MARK_TODO_COMPLETE
+	MARK_TODO_COMPLETE,
+	UPDATE_TODO
 } from './types';
 
 import axios from 'axios';
+
+// JSON SERVER VARIABLES
+const port = 3004;
+const todosURL = `http://localhost:${port}/todos`;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Counter
@@ -132,10 +137,8 @@ export function changeInputValue(prop, value) {
 // Todos
 
 export function fetchTodos() {
-
-	const port = 3004;
-	const url = `http://localhost:${port}/todos`;
-	const request = axios.get(url);
+	// const url = `http://localhost:${port}/todos`;
+	const request = axios.get(todosURL);
 	// console.log(request);
 	return {
 		type: FETCH_TODOS,
@@ -145,9 +148,8 @@ export function fetchTodos() {
 
 export function saveTodo(todo) {
 
-	const port = 3004;
-	const url = `http://localhost:${port}/todos`;
-	const request = axios.post(url, todo)
+	// const url = `http://localhost:${port}/todos`;
+	const request = axios.post(todosURL, todo)
 		.then(function(res) {
 			// console.log(res)
 		})
@@ -164,8 +166,9 @@ export function saveTodo(todo) {
 }
 
 export function deleteTodo(id) {
-	const port = 3004;
-	const url = `http://localhost:${port}/todos/${id}`;
+	// const port = 3004;
+	// const url = `http://localhost:${port}/todos/${id}`;
+	const url = `${todosURL}/${id}`
 	const request = axios.delete(url, id)
 		.then(function(res) {
 			// console.log(res)
@@ -182,9 +185,7 @@ export function deleteTodo(id) {
 
 // I need more than the id; I need the entire todo
 export function markTodoComplete(todo) {
-	console.log(todo);
-	const port = 3004;
-	const url = `http://localhost:${port}/todos/${todo.id}`;
+	const url = `${todosURL}/${todo.id}`
 	const request = axios.put(url, todo)
 		.then(function(res) {
 			// console.log(res)
@@ -198,6 +199,22 @@ export function markTodoComplete(todo) {
 		payload: todo
 	}
 
+}
+
+export function updateTodo(todo){
+	const url = `${todosURL}/${todo.id}`
+	const request = axios.put(url, todo)
+		.then(function(res) {
+			// console.log(res)
+		})
+		.catch(function(res) {
+			console.log("FAIL:", res)
+		});
+
+	return {
+		type: UPDATE_TODO,
+		payload: todo
+	}
 }
 
 

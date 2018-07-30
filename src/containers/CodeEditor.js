@@ -10,8 +10,69 @@ import '../css/materialize.css';
 
 import Prism from 'prismjs';
 
+/*
+ToDo's
+
+- Build form for all the fields that I'll need
+	- term: STRING - [input]
+	- definition: STRING - [textarea]
+	- language: STRING - [input]
+	- snippets: OBJECT
+		- tags: ARRAY (array of strings) - [input]
+		- code: ARRAY (array of strings) - [textarea]
+- Add event handlers for each one to update the appropriate state; make each input a controlled input
+- Add CodeBlocks to Library.json
+- Duplicate form for existing items
+- Instantiate state:
+	constructor() {
+		super()
+		this.state = {
+			existing: false,
+			newCodeObject: {
+				term: '',
+				definition: '', 
+				language: '', 
+				snipTags: [],
+				snipCode: []
+			},
+			existingCodeObject: {
+				term: '',
+				definition: '', 
+				language: '', 
+				snipTags: [],
+				snipCode: []
+			}
+		}
+	}
+
+
+
+
+*/
 
 class CodeEditor extends Component {
+
+	constructor() {
+		super()
+		this.state = {
+			existing: false,
+			newCodeObject: {
+				term: '',
+				definition: '', 
+				language: '', 
+				snipTags: [],
+				snipCode: []
+			},
+			existingCodeObject: {
+				term: '',
+				definition: '', 
+				language: '', 
+				snipTags: [],
+				snipCode: []
+			}
+		}
+	}
+
 	componentDidMount() {
 		this.props.fetchCodeLibrary();
 	}
@@ -34,30 +95,52 @@ class CodeEditor extends Component {
 		})
 	}
 
-	handleChange(event) {
-	    this.setState({value: event.target.value});
-	  }
+	renderCodeInputs() {
+		if(!this.state.existing) {
+			let existing = false;
+			return (
+				<div className="row">
+					<div className="input-field col s6">
+			        	<input type="text"
+			        			onChange={(e) => this.changeInput(existing, "term", e.target.value)}
+			        			/>
+			        	<label htmlFor="term">Term</label>
+			        </div>
+			        <br />
+	        		<div className="input-field col s9">
+	                	<textarea className="materialize-textarea" type="text"></textarea>
+	                	<label htmlFor="term">Description</label>
+	                </div>
+	                <br />
+    				<div className="input-field col s6">
+			        	<input type="text"/>
+			        	<label htmlFor="language">Language</label>
+			        </div>
+			        <br />
+			        <div className="input-field col s9">
+	                	<textarea className="materialize-textarea" type="text"></textarea>
+	                	<label htmlFor="term">Code Snippets</label>
+	                </div>
+				</div>
 
-	// requires the id of the item I am showing
-	renderCodeObject(id) {
-		// if id = new, show the unpopulated form
-		// console.log(id);
-		const item = id === 'new' ? {...this.props.my_code} : this.props.my_code.library.find(item => item.id === id)
-		// const item = {...this.props.my_code}
-		// console.log(item)
-		return (
-			<div className="row">
-				<div className="input-field col s4">
-		        	<input placeholder="Placeholder" defaultValue={item.term} onChange={(e) => this.changeInput('term', e.target.value)} type="text"/>
-		        	<label htmlFor="term">Term</label>
-		        </div>
-			</div>
-		)
+			)	
+		}
 		
 	}
 
-	changeInput(prop, value) {
-		this.props.changeInputValue(prop, value)
+
+
+	changeInput(existing, property, value) {
+		let info = {
+			...this.state.newCodeObject
+		}
+		info[property] = value;
+		this.setState({
+			...this.state, 
+			newCodeObject: {...info}
+		})
+
+		console.log(this.state)
 	}
 
 	changeCodeObject(id) {
@@ -82,7 +165,7 @@ class CodeEditor extends Component {
 				<h1>Code Editor!</h1>
 				<div className="row">
 					<div className="main-editor col s9">
-						{this.renderCodeObject(this.props.my_code.id)}
+						{this.renderCodeInputs()}
 					</div>
 					<div className="main-collection col s3">
 						<ul className="collection">

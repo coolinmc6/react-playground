@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchTodos, saveTodo, deleteTodo, markTodoComplete } from '../actions'
+import { fetchTodos, saveTodo, deleteTodo, markTodoComplete, updateTodo } from '../actions'
 import { generateID } from '../helpers/Helpers'
 
 class Todos extends Component {
@@ -110,16 +110,10 @@ class Todos extends Component {
 			text: this.state.todo.text,
 			complete: this.state.todo.complete
 		}
-
-		console.log(todo);
-		// now I need to:
-		//		- send to action creator to send PUT
-		//		- update list
-		//		- go back to not existing
-
 		this.setState({
 			existing: false
 		})
+		this.props.updateTodo(todo)
 	}
 
 	renderInputs() {
@@ -130,6 +124,7 @@ class Todos extends Component {
 							name="todo-text" 
 							placeholder="Enter your todo" 
 							type="text"
+							onKeyDown={(e) => e.keyCode == 13 && this.saveTodo()}
 							onChange={(e) => this.changeTodoText(e.target.value)}
 							value={this.state.text}/>
 					<label htmlFor="todo-text">Todo Item</label>
@@ -146,6 +141,7 @@ class Todos extends Component {
 							name="todo-text" 
 							placeholder="Edit your todo" 
 							type="text"
+							onKeyDown={(e) => e.keyCode == 13 && this.updateTodo()}
 							onChange={(e) => this.changeExistingTodoText(e.target.value)}
 							value={this.state.todo.text}/>
 					<label htmlFor="todo-text">Todo Item</label>
@@ -182,7 +178,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ fetchTodos, saveTodo, deleteTodo, markTodoComplete}, dispatch );
+	return bindActionCreators({ fetchTodos, saveTodo, deleteTodo, markTodoComplete, updateTodo}, dispatch );
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);
