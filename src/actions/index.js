@@ -17,7 +17,9 @@ import {
 	SAVE_TODO,
 	DELETE_TODO,
 	MARK_TODO_COMPLETE,
-	UPDATE_TODO
+	UPDATE_TODO,
+	SAVE_NEW_CODE_OBJECT,
+	UPDATE_EXISTING_CODE_OBJECT
 } from './types';
 
 import axios from 'axios';
@@ -25,6 +27,7 @@ import axios from 'axios';
 // JSON SERVER VARIABLES
 const port = 3004;
 const todosURL = `http://localhost:${port}/todos`;
+const codeEditorURL = `http://localhost:${port}/code`;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Counter
@@ -103,11 +106,10 @@ export function changeFocus(bool) {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// JavaScript Helper
+// Code Editor
 
 export function fetchCodeLibrary()  {
 	const rand = Math.floor(Math.random()*1000000)
-	// const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
 	const url = `http://localhost:3004/code`
 	const request = axios.get(url);
 
@@ -130,6 +132,38 @@ export function changeInputValue(prop, value) {
 		type: CHANGE_INPUT,
 		payload: value,
 		prop: prop
+	}
+}
+
+export function saveNewCodeObject(code_obj) {
+
+	const request = axios.post(codeEditorURL, code_obj)
+		.then(function(res) {
+			console.log("SUCCESS")
+		})
+		.catch(function(res) {
+			console.log("FAIL: ", res);
+		})
+
+	return {
+		type: SAVE_NEW_CODE_OBJECT,
+		payload: code_obj
+	}
+}
+
+export function updateCodeObject(code_obj) {
+	const url = `${codeEditorURL}/${code_obj.id}`
+	const request = axios.put(url, code_obj)
+		.then(function(res) {
+			// console.log(res)
+		})
+		.catch(function(res) {
+			console.log("FAIL:", res)
+		});
+
+	return {
+		type: UPDATE_EXISTING_CODE_OBJECT,
+		payload: code_obj
 	}
 }
 

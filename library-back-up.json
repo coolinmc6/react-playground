@@ -2,18 +2,11 @@
   "code": [
     {
       "id": 1,
-      "term": "map",
+      "term": "map - edited",
       "description": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
-      "language": "JavaScript",
+      "language": "",
       "snipRawCode": "const arr = [1,2,3,4,5]\nconst doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]",
-      "snipRawTags": "basic map example",
-      "snipCode": [
-        "const arr = [1,2,3,4,5]",
-        "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]"
-      ],
-      "snipTags": [
-        "basic map example"
-      ]
+      "snipRawTags": "basic map example"
     },
     {
       "id": 2,
@@ -1449,25 +1442,13 @@
     },
     {
       "id": 575298081704481260000,
-      "term": "And one more?? - EDITED",
-      "description": "Does this work - maybe",
-      "language": "asdfasdfasdf",
-      "snipRawCode": "asdflkjasdflkjasdflkjasdf\nasdflkasdfas\nasdfasdfasfd\n\n\nfdsdfs\nfafdasd",
-      "snipRawTags": "tag1, tag2, tag3",
-      "snipCode": [
-        "asdflkjasdflkjasdflkjasdf",
-        "asdflkasdfas",
-        "asdfasdfasfd",
-        "",
-        "",
-        "fdsdfs",
-        "fafdasd"
-      ],
-      "snipTags": [
-        "tag1",
-        "tag2",
-        "tag3"
-      ]
+      "term": "And one more??",
+      "description": "",
+      "language": "",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipTags": [],
+      "snipCode": []
     }
   ]
 }

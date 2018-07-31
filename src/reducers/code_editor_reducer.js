@@ -1,7 +1,9 @@
 import {
 	FETCH_CODE_LIBRARY,
 	CLICK_COLLECTION_ITEM,
-	CHANGE_INPUT
+	CHANGE_INPUT,
+	SAVE_NEW_CODE_OBJECT,
+	UPDATE_EXISTING_CODE_OBJECT
 } from '../actions/types';
 
 const defaultJSNotes = {
@@ -31,6 +33,22 @@ export default function(state = defaultJSNotes, action) {
 			return {
 				...state,
 				prop: action.value
+			}
+		case SAVE_NEW_CODE_OBJECT:
+
+			return {
+				...state,
+				library: [...state.library, action.payload]
+			}
+		case UPDATE_EXISTING_CODE_OBJECT:
+			const updatedIndex = state.library.findIndex(item => item.id === action.payload.id)
+			return {
+				...state, 
+				library: [
+					...state.library.slice(0,updatedIndex),
+					action.payload,
+					...state.library.slice(updatedIndex+1)
+				]
 			}
 		default:
 			return state;

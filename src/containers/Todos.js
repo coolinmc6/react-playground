@@ -124,7 +124,7 @@ class Todos extends Component {
 							name="todo-text" 
 							placeholder="Enter your todo" 
 							type="text"
-							onKeyDown={(e) => e.keyCode == 13 && this.saveTodo()}
+							onKeyDown={(e) => e.keyCode === 13 && this.saveTodo()}
 							onChange={(e) => this.changeTodoText(e.target.value)}
 							value={this.state.text}/>
 					<label htmlFor="todo-text">Todo Item</label>
@@ -141,7 +141,7 @@ class Todos extends Component {
 							name="todo-text" 
 							placeholder="Edit your todo" 
 							type="text"
-							onKeyDown={(e) => e.keyCode == 13 && this.updateTodo()}
+							onKeyDown={(e) => e.keyCode === 13 && this.updateTodo()}
 							onChange={(e) => this.changeExistingTodoText(e.target.value)}
 							value={this.state.todo.text}/>
 					<label htmlFor="todo-text">Todo Item</label>

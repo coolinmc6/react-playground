@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchCodeLibrary, changeCodeObject, changeInputValue } from '../actions/index';
+import { fetchCodeLibrary, changeInputValue, saveNewCodeObject, updateCodeObject } from '../actions/index';
+import { generateID } from '../helpers/Helpers'
 
 // import CodeObject from '../components/CodeObject';
 
@@ -57,9 +58,12 @@ class CodeEditor extends Component {
 		this.state = {
 			existing: false,
 			newCodeObject: {
+				id: generateID(),
 				term: '',
 				description: '', 
-				language: '', 
+				language: '',
+				snipRawCode: '', 
+				snipRawTags: '',
 				snipTags: [],
 				snipCode: []
 			},
@@ -86,6 +90,7 @@ class CodeEditor extends Component {
 	}
 
 	renderCode(codeArray) {
+
 		return codeArray.map((line) => {
 			const html = Prism.highlight(line, Prism.languages.javascript);
 			return (
@@ -96,7 +101,77 @@ class CodeEditor extends Component {
 	}
 
 	saveCodeObject() {
-		console.log(this.state.newCodeObject)
+		this.props.saveNewCodeObject(this.state.newCodeObject)
+		this.setState({
+			...this.state, 
+			newCodeObject: {
+				id: generateID(),
+				term: '',
+				description: '', 
+				language: '',
+				snipRawCode: '',
+				snipRawTags: '', 
+				snipTags: [],
+				snipCode: []
+			}
+		})	
+	}
+
+	updateCodeObject() {
+		this.props.updateCodeObject(this.state.existingCodeObject)
+		this.setState({
+			...this.state,
+			existing: false,
+			existingCodeObject: {
+				id: 0,
+				term: '',
+				description: '', 
+				language: '',
+				snipRawCode: '',
+				snipRawTags: '', 
+				snipTags: [],
+				snipCode: []
+			}
+		})
+	}
+
+	loadExistingCodeObject(id) {
+		const code_obj = this.props.my_code.library.filter(obj => obj.id === id)[0];
+		console.log(code_obj);
+		if(code_obj.hasOwnProperty('snippets')) {
+			this.setState({
+				...this.state,
+				existing: true,
+				existingCodeObject: {
+					id: code_obj.id,
+					term: code_obj.term,
+					description: code_obj.definition,
+					language: '',
+					snipRawCode: code_obj.snippets[0].code.join('\n'),
+					snipRawTags: code_obj.snippets[0].tags.join(', '),
+					snipCode: code_obj.snippets.code,
+					snipTags: code_obj.snippets.tags
+				}
+			})	
+		} else {
+			this.setState({
+				...this.state,
+				existing: true,
+				existingCodeObject: {
+					id: code_obj.id,
+					term: code_obj.term,
+					description: code_obj.description,
+					language: code_obj.language,
+					snipRawCode: code_obj.snipRawCode,
+					snipRawTags: code_obj.snipRawTags,
+					snipCode: code_obj.snipCode ? code_obj.snipCode : [],
+					snipTags: code_obj.snipTags ? code_obj.snipTags : []
+				}
+			})
+		}
+
+		console.log(this.state.existingCodeObject)
+		
 	}
 
 	renderCodeInputs() {
@@ -107,35 +182,40 @@ class CodeEditor extends Component {
 					<h5>Create New Code Snippet</h5>
 					<div className="input-field col s6">
 			        	<input type="text"
-			        			onChange={(e) => this.changeInput(existing, "term", e.target.value)}
+			        			onChange={(e) => this.changeInput('newCodeObject', existing, "term", e.target.value)}
+			        			value={this.state.newCodeObject.term}
 			        			/>
 			        	<label htmlFor="term">Term</label>
 			        </div>
 			        <br />
 	        		<div className="input-field col s9">
 	                	<textarea className="materialize-textarea" type="text"
-	                				onChange={(e) => this.changeInput(existing, "description", e.target.value)}
+	                				onChange={(e) => this.changeInput('newCodeObject', existing, "description", e.target.value)}
+	                				value={this.state.newCodeObject.description}
 	                	></textarea>
 	                	<label htmlFor="term">Description</label>
 	                </div>
 	                <br />
     				<div className="input-field col s6">
 			        	<input type="text"
-			        			onChange={(e) => this.changeInput(existing, "language", e.target.value)}
+			        			onChange={(e) => this.changeInput('newCodeObject', existing, "language", e.target.value)}
+			        			value={this.state.newCodeObject.language}
 			        			/>
 			        	<label htmlFor="language">Language</label>
 			        </div>
 			        <br />
 			        <div className="input-field col s9">
 	                	<textarea className="materialize-textarea" type="text"
-	                				onChange={(e) => this.changeInput(existing, "snippet", e.target.value)}
+	                				onChange={(e) => this.changeInput('newCodeObject', existing, "snippet", e.target.value)}
+	                				value={this.state.newCodeObject.snipRawCode}
 	                				onKeyDown={(e) => e.keyCode == 9 && e.preventDefault()}
 	                	></textarea>
 	                	<label htmlFor="term">Code Snippets</label>
 	                </div>
 	                <div className="input-field col s6">
 			        	<input type="text"
-			        			onChange={(e) => this.changeInput(existing, "tags", e.target.value)}
+			        			onChange={(e) => this.changeInput('newCodeObject', existing, "tags", e.target.value)}
+			        			value={this.state.newCodeObject.snipRawTags}
 			        			/>
 			        	<label htmlFor="term">Tags</label>
 			        </div>
@@ -148,34 +228,98 @@ class CodeEditor extends Component {
 				</div>
 
 			)	
+		} else {
+			let existing = true;
+			console.log(this.state.existingCodeObject)
+			console.log("EXISTING SHOWN")
+			return (
+				<div className="row">
+					<h5>Create New Code Snippet</h5>
+					<div className="input-field col s6">
+			        	<input type="text"
+			        			onChange={(e) => this.changeInput('existingCodeObject', existing, "term", e.target.value)}
+
+			        			value={this.state.existingCodeObject.term}
+			        			/>
+			        	<label className="active" htmlFor="term">Term</label>
+			        </div>
+			        <br />
+	        		<div className="input-field col s9">
+	                	<textarea className="materialize-textarea" type="text"
+	                				onChange={(e) => this.changeInput('existingCodeObject', existing, "description", e.target.value)}
+	                				value={this.state.existingCodeObject.description}
+	                	></textarea>
+	                	<label className="active" htmlFor="term">Description</label>
+	                </div>
+	                <br />
+    				<div className="input-field col s6">
+			        	<input type="text"
+			        			onChange={(e) => this.changeInput('existingCodeObject', existing, "language", e.target.value)}
+			        			value={this.state.existingCodeObject.language}
+			        			/>
+			        	<label className="active" htmlFor="language">Language</label>
+			        </div>
+			        <br />
+			        <div className="input-field col s9">
+	                	<textarea className="materialize-textarea" type="text"
+	                				onChange={(e) => this.changeInput('existingCodeObject', existing, "snippet", e.target.value)}
+	                				value={this.state.existingCodeObject.snipRawCode}
+	                				onKeyDown={(e) => e.keyCode == 9 && e.preventDefault()}
+	                	></textarea>
+	                	<label className="active" htmlFor="term">Code Snippets</label>
+	                </div>
+	                <div className="input-field col s6">
+			        	<input type="text"
+			        			onChange={(e) => this.changeInput('existingCodeObject', existing, "tags", e.target.value)}
+			        			value={this.state.existingCodeObject.snipRawTags}
+			        			/>
+			        	<label className="active" htmlFor="term">Tags</label>
+			        </div>
+	                <div className="col s12">
+	                <a className="waves-effect waves-light btn"
+	                	onClick={() => this.updateCodeObject()}
+	                	>Update Snippet
+	                </a>
+	                </div>
+				</div>
+
+			)
 		}
 		
 	}
 
 
-
-	changeInput(existing, property, value) {
+	changeInput(codeType, existing, property, value) {
+		console.log(property, value);
 		let info = {
-			...this.state.newCodeObject
+			...this.state[codeType]
 		}
 		if(property != 'snippet' && property != 'tags') {
 			info[property] = value;
 		} else if(property == 'snippet') {
-			const array = value.split('\n')
-			info['snipCode'] = array;
+			// let array = value.split('\n')
+			// info['snipCode'] = array;
+			info['snipRawCode'] = value;
+		} else if(property == 'tags') {
+			// let array = value.split(', ');
+			// info['snipTags'] = array;
+			info['snipRawTags'] = value;
 		}
 
-		this.setState({
-			...this.state, 
-			newCodeObject: {...info}
-		});
-		
-		
-		
-	}
+		info['snipCode'] = info['snipRawCode'].split('\n')
+		info['snipTags'] = info['snipRawTags'].split('\n')
 
-	changeCodeObject(id) {
-		this.props.changeCodeObject(id)
+		let fakeState = {...this.state};
+		fakeState[codeType] = info;
+
+		this.setState({
+			...fakeState
+		});
+
+		console.log(this.state)
+		
+		
+		
 	}
 
 	renderCodeList() {
@@ -183,7 +327,7 @@ class CodeEditor extends Component {
 			return this.props.my_code.library.map(obj => {
 				
 				return (
-					<li className="collection-item" key={obj.id} onClick={() => this.changeCodeObject(obj.id)}>{obj.term} </li>
+					<li className="collection-item" key={obj.id} onClick={() => this.loadExistingCodeObject(obj.id)}>{obj.term} </li>
 				)
 			})	
 		}
@@ -218,7 +362,12 @@ function mapStateToProps(state) {
 };
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({fetchCodeLibrary, changeCodeObject, changeInputValue}, dispatch);
+	return bindActionCreators({
+		fetchCodeLibrary, 
+		changeInputValue, 
+		saveNewCodeObject,
+		updateCodeObject
+	}, dispatch);
 }
 
 

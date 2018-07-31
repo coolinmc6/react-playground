@@ -25,9 +25,9 @@ export default function(state = [], action) {
 		case MARK_TODO_COMPLETE:
 			const updatedIndex = state.findIndex(item => item.id === action.payload.id)
 			return [
-				...state.slice(0,updatedIndex),
+				...state.library.slice(0,updatedIndex),
 				action.payload,
-				...state.slice(updatedIndex+1)
+				...state.library.slice(updatedIndex+1)
 			];
 			// return state;
 		case UPDATE_TODO:
