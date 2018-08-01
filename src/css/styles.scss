@@ -168,12 +168,60 @@ nav .brand-logo {
 	}
 }
 
+/*************************************************************************************************/
 // Code Editor
+
+.main-editor {
+
+	textarea {
+		font-family: monospace;
+	}
+
+	.btn.cancel {
+		margin-left: 1rem;
+	}
+}
 .main-collection {
-	max-height: 80vh;
+	max-height: 50vh;
 	overflow-y: scroll;
+	padding: 0 !important;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	// overflow: hidden;
+	
+	.collection {
+		margin-top: 0px;
+		.collection-item {
+			cursor: pointer;
+
+			&:hover {
+				background-color: #1e88e5;
+				color: #fff;
+			}
+		}	
+	}
+	
+}
+.finished-code {
+	.tag {
+		font-size: 0.9rem;
+		background-color: #F44336;
+		color: white;
+		border-radius: 2px;
+		display: inline-block;
+		padding: 0.1rem 0.2rem;
+		margin: 0.5rem 0.3rem;
+	}	
 }
 
+
+.main-code-block {
+	font-family: monospace;
+}
+
+
+
+/*************************************************************************************************/
 // Todo List
 
 .todo-item {

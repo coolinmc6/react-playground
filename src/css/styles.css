@@ -118,10 +118,40 @@ nav .brand-logo {
       padding: 0.1rem 0.2rem;
       margin: 0.5rem 0.3rem; }
 
-.main-collection {
-  max-height: 80vh;
-  overflow-y: scroll; }
+/*************************************************************************************************/
+.main-editor textarea {
+  font-family: monospace; }
 
+.main-editor .btn.cancel {
+  margin-left: 1rem; }
+
+.main-collection {
+  max-height: 50vh;
+  overflow-y: scroll;
+  padding: 0 !important;
+  border: 1px solid #ddd;
+  border-radius: 2px; }
+  .main-collection .collection {
+    margin-top: 0px; }
+    .main-collection .collection .collection-item {
+      cursor: pointer; }
+      .main-collection .collection .collection-item:hover {
+        background-color: #1e88e5;
+        color: #fff; }
+
+.finished-code .tag {
+  font-size: 0.9rem;
+  background-color: #F44336;
+  color: white;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0.1rem 0.2rem;
+  margin: 0.5rem 0.3rem; }
+
+.main-code-block {
+  font-family: monospace; }
+
+/*************************************************************************************************/
 .todo-item {
   position: relative; }
   .todo-item i.material-icons {

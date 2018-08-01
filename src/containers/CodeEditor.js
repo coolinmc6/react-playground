@@ -14,38 +14,7 @@ import Prism from 'prismjs';
 /*
 ToDo's
 
-- Build form for all the fields that I'll need
-	- term: STRING - [input]
-	- definition: STRING - [textarea]
-	- language: STRING - [input]
-	- snippets: OBJECT
-		- tags: ARRAY (array of strings) - [input]
-		- code: ARRAY (array of strings) - [textarea]
-- Add event handlers for each one to update the appropriate state; make each input a controlled input
-- Add CodeBlocks to Library.json
-- Duplicate form for existing items
-- Instantiate state:
-	constructor() {
-		super()
-		this.state = {
-			existing: false,
-			newCodeObject: {
-				term: '',
-				definition: '', 
-				language: '', 
-				snipTags: [],
-				snipCode: []
-			},
-			existingCodeObject: {
-				term: '',
-				definition: '', 
-				language: '', 
-				snipTags: [],
-				snipCode: []
-			}
-		}
-	}
-
+- Render the code as the person is typing it
 
 
 
@@ -71,6 +40,8 @@ class CodeEditor extends Component {
 				term: '',
 				description: '', 
 				language: '', 
+				snipRawCode: '', 
+				snipRawTags: '',
 				snipTags: [],
 				snipCode: []
 			}
@@ -89,8 +60,34 @@ class CodeEditor extends Component {
 
 	}
 
-	renderCode(codeArray) {
+	renderTags() {
+		let tags;
+		if(this.state.existing) {
+			tags = this.state.existingCodeObject.snipTags;
+		} else {
+			tags = this.state.newCodeObject.snipTags;
+		}
 
+		if(!tags) {
+			return <div></div>;
+		}
+		return tags.map(tag => {
+			return (
+				<span className="tag">{tag}</span>
+			);
+		})
+	}
+
+	renderCode() {
+		let codeArray;
+		if(this.state.existing) {
+			codeArray = this.state.existingCodeObject.snipCode;
+		} else {
+			codeArray = this.state.newCodeObject.snipCode;
+		}
+		if(!codeArray) {
+			return <div>No code...</div>
+		}
 		return codeArray.map((line) => {
 			const html = Prism.highlight(line, Prism.languages.javascript);
 			return (
@@ -136,7 +133,7 @@ class CodeEditor extends Component {
 	}
 
 	loadExistingCodeObject(id) {
-		const code_obj = this.props.my_code.library.filter(obj => obj.id === id)[0];
+		let code_obj = this.props.my_code.library.filter(obj => obj.id === id)[0];
 		console.log(code_obj);
 		if(code_obj.hasOwnProperty('snippets')) {
 			this.setState({
@@ -169,9 +166,6 @@ class CodeEditor extends Component {
 				}
 			})
 		}
-
-		console.log(this.state.existingCodeObject)
-		
 	}
 
 	renderCodeInputs() {
@@ -230,8 +224,6 @@ class CodeEditor extends Component {
 			)	
 		} else {
 			let existing = true;
-			console.log(this.state.existingCodeObject)
-			console.log("EXISTING SHOWN")
 			return (
 				<div className="row">
 					<h5>Create New Code Snippet</h5>
@@ -280,6 +272,14 @@ class CodeEditor extends Component {
 	                	onClick={() => this.updateCodeObject()}
 	                	>Update Snippet
 	                </a>
+	                <a className="waves-effect waves-light btn orange  cancel"
+	                	onClick={() => {
+	                		console.log(this.state);
+	                		this.setState({existing: false})
+	                		}
+	                	}
+	                	>Cancel
+                	</a>
 	                </div>
 				</div>
 
@@ -307,7 +307,7 @@ class CodeEditor extends Component {
 		}
 
 		info['snipCode'] = info['snipRawCode'].split('\n')
-		info['snipTags'] = info['snipRawTags'].split('\n')
+		info['snipTags'] = info['snipRawTags'].split(',')
 
 		let fakeState = {...this.state};
 		fakeState[codeType] = info;
@@ -317,14 +317,14 @@ class CodeEditor extends Component {
 		});
 
 		console.log(this.state)
-		
-		
-		
+
 	}
 
 	renderCodeList() {
 		if(this.props.my_code) {
-			return this.props.my_code.library.map(obj => {
+			let sorted = this.props.my_code.library.sort((a,b) => a.term.toLowerCase() > b.term.toLowerCase() ? 1 : b.term.toLowerCase() > a.term.toLowerCase() ? -1 : 0)
+			// this.props.my_code.library
+			return sorted.map(obj => {
 				
 				return (
 					<li className="collection-item" key={obj.id} onClick={() => this.loadExistingCodeObject(obj.id)}>{obj.term} </li>
@@ -339,13 +339,27 @@ class CodeEditor extends Component {
 			<div className="js-helper-main">
 				<h1>Code Editor!</h1>
 				<div className="row">
-					<div className="main-editor col s9">
+					<div className="main-editor col s8">
 						{this.renderCodeInputs()}
 					</div>
-					<div className="main-collection col s3">
+					<div className="main-collection col s4">
 						<ul className="collection">
 							{this.renderCodeList()}
 						</ul>
+					</div>
+				</div>
+				<div className="row finished-code">
+					
+					<div className="col s12">
+						<h5>Code Snippet</h5>
+						<div><strong>Tags: </strong>{this.renderTags()}</div>
+					</div>
+					<div className="col s12">
+						<strong>Code:</strong>	
+					</div>
+					
+					<div className="main-code-block col s9">
+						{this.renderCode()}
 					</div>
 				</div>
 			</div>

@@ -5,37 +5,42 @@
       "term": "map",
       "description": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
       "language": "JavaScript",
-      "snipRawCode": "const arr = [1,2,3,4,5]\nconst doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]",
-      "snipRawTags": "basic map example",
+      "snipRawCode": "// basic example #1\nconst arr = [1,2,3,4,5]\nconst doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]\n\n",
+      "snipRawTags": "basic map example, and another one",
       "snipCode": [
+        "// basic example #1",
         "const arr = [1,2,3,4,5]",
-        "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]"
+        "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]",
+        "",
+        ""
       ],
       "snipTags": [
-        "basic map example"
+        "basic map example",
+        " and another one"
       ]
     },
     {
       "id": 2,
       "term": "filter",
-      "definition": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": [
-            "var products = [",
-            "  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },",
-            "  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },",
-            "  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },",
-            "  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },",
-            "  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }",
-            "];",
-            "",
-            "var filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);",
-            "",
-            " // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}]"
-          ]
-        }
+      "description": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
+      "language": "",
+      "snipRawCode": "var products = [\n  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },\n  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },\n  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },\n  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },\n  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }\n];\n\nvar filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);\n\n // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}];",
+      "snipRawTags": "",
+      "snipCode": [
+        "var products = [",
+        "  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },",
+        "  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },",
+        "  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },",
+        "  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },",
+        "  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }",
+        "];",
+        "",
+        "var filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);",
+        "",
+        " // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}];"
+      ],
+      "snipTags": [
+        ""
       ]
     },
     {
@@ -182,12 +187,24 @@
     {
       "id": 10,
       "term": "shift",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
+      "description": "The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
+      "language": "",
+      "snipRawCode": "var array1 = [1, 2, 3];\n\nvar firstElement = array1.shift();\n\nconsole.log(array1);\n// expected output: Array [2, 3]\n\nconsole.log(firstElement);\n// expected output: 1\n",
+      "snipRawTags": "",
+      "snipCode": [
+        "var array1 = [1, 2, 3];",
+        "",
+        "var firstElement = array1.shift();",
+        "",
+        "console.log(array1);",
+        "// expected output: Array [2, 3]",
+        "",
+        "console.log(firstElement);",
+        "// expected output: 1",
+        ""
+      ],
+      "snipTags": [
+        ""
       ]
     },
     {
@@ -204,30 +221,18 @@
     {
       "id": 12,
       "term": "slice",
-      "definition": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end. The original array will not be modified.",
-      "snippets": [
-        {
-          "tags": [
-            "basic slice example"
-          ],
-          "code": [
-            "var array = [1,2,3,4,5]",
-            "var sub = array.slice(0, 3);",
-            "console.log(array); // [1,2,3,4,5]",
-            "console.log(sub) // [1,2,3]"
-          ]
-        },
-        {
-          "tags": [
-            "copy an array using slice"
-          ],
-          "code": [
-            "var array = [1,2,3,4,5]",
-            "var copy = array.slice();",
-            "console.log(array)\t// [1,2,3,4,5]",
-            "console.log(copy)\t // [1,2,3,4,5]"
-          ]
-        }
+      "description": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end. The original array will not be modified.",
+      "language": "",
+      "snipRawCode": "var array = [1,2,3,4,5]\nvar sub = array.slice(0, 3);\nconsole.log(array); // [1,2,3,4,5]\nconsole.log(sub) // [1,2,3]",
+      "snipRawTags": "basic slice example",
+      "snipCode": [
+        "var array = [1,2,3,4,5]",
+        "var sub = array.slice(0, 3);",
+        "console.log(array); // [1,2,3,4,5]",
+        "console.log(sub) // [1,2,3]"
+      ],
+      "snipTags": [
+        "basic slice example"
       ]
     },
     {
@@ -1317,15 +1322,15 @@
       "term": "Another Test",
       "description": "And it looks like we got another",
       "language": "JavaScript",
-      "snipTags": [
-        "tag3",
-        "tag5",
-        "tag8"
-      ],
       "snipCode": [
         "Hello, are you",
         "    This is some more code",
         "and we are here"
+      ],
+      "snipTags": [
+        "tag3",
+        "tag5",
+        "tag8"
       ]
     },
     {
@@ -1452,21 +1457,33 @@
       "term": "And one more?? - EDITED",
       "description": "Does this work - maybe",
       "language": "asdfasdfasdf",
-      "snipRawCode": "asdflkjasdflkjasdflkjasdf\nasdflkasdfas\nasdfasdfasfd\n\n\nfdsdfs\nfafdasd",
-      "snipRawTags": "tag1, tag2, tag3",
+      "snipRawCode": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "snipRawTags": "tag1, tag2",
       "snipCode": [
-        "asdflkjasdflkjasdflkjasdf",
-        "asdflkasdfas",
-        "asdfasdfasfd",
         "",
         "",
-        "fdsdfs",
-        "fafdasd"
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
       ],
       "snipTags": [
         "tag1",
-        "tag2",
-        "tag3"
+        " tag2"
       ]
     }
   ]
