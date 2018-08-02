@@ -19,7 +19,8 @@ import {
 	MARK_TODO_COMPLETE,
 	UPDATE_TODO,
 	SAVE_NEW_CODE_OBJECT,
-	UPDATE_EXISTING_CODE_OBJECT
+	UPDATE_EXISTING_CODE_OBJECT,
+	DELETE_CODE_OBJECT
 } from './types';
 
 import axios from 'axios';
@@ -164,6 +165,22 @@ export function updateCodeObject(code_obj) {
 	return {
 		type: UPDATE_EXISTING_CODE_OBJECT,
 		payload: code_obj
+	}
+}
+
+export function deleteCodeObject(id) {
+	const url = `${codeEditorURL}/${id}`
+
+	const request = axios.delete(url, id)
+		.then(function(res) {
+			// console.log(res)
+		})
+		.catch(function(res) {
+			console.log("FAIL:", res)
+		});
+	return {
+		type: DELETE_CODE_OBJECT,
+		payload: id
 	}
 }
 

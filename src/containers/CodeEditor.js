@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchCodeLibrary, changeInputValue, saveNewCodeObject, updateCodeObject } from '../actions/index';
+import { fetchCodeLibrary, 
+		changeInputValue, 
+		saveNewCodeObject, 
+		updateCodeObject, 
+		deleteCodeObject } from '../actions/index';
 import { generateID } from '../helpers/Helpers'
 
 // import CodeObject from '../components/CodeObject';
@@ -72,32 +76,52 @@ class CodeEditor extends Component {
 			return <div></div>;
 		}
 		return tags.map(tag => {
+			let random = generateID();
 			return (
-				<span className="tag">{tag}</span>
+				<span className="tag" key={`${tag}-${random}`}>{tag}</span>
 			);
 		})
 	}
 
 	renderCode() {
-		let codeArray;
+		let codeArray, languageStyle;
 		if(this.state.existing) {
 			codeArray = this.state.existingCodeObject.snipCode;
+			// languageStyle = this.state.existingCodeObject.language
 		} else {
 			codeArray = this.state.newCodeObject.snipCode;
+			// languageStyle = this.state.newCodeObject.language
 		}
 		if(!codeArray) {
 			return <div>No code...</div>
 		}
-		return codeArray.map((line) => {
-			const html = Prism.highlight(line, Prism.languages.javascript);
-			return (
-				<div key={Math.floor(Math.random()*10000000000)}
-					dangerouslySetInnerHTML={this.createMarkup(html)}></div>
-			);
-		})
+		return (
+
+			<pre>
+				<code className="language-javascript">
+					{codeArray.map((line) => {
+						const html = Prism.highlight(line, Prism.languages.javascript);
+						return (
+
+							<div key={Math.floor(Math.random()*10000000000)}
+								dangerouslySetInnerHTML={this.createMarkup(html)}></div>
+						);
+					})}
+				</code>
+			</pre>
+		)
+		// return codeArray.map((line) => {
+		// 	const html = Prism.highlight(line, Prism.languages.javascript);
+		// 	return (
+
+		// 		<div key={Math.floor(Math.random()*10000000000)}
+		// 			dangerouslySetInnerHTML={this.createMarkup(html)}></div>
+		// 	);
+		// })
 	}
 
 	saveCodeObject() {
+
 		this.props.saveNewCodeObject(this.state.newCodeObject)
 		this.setState({
 			...this.state, 
@@ -132,9 +156,30 @@ class CodeEditor extends Component {
 		})
 	}
 
+	deleteCodeObject(id) {
+
+		if(window.confirm("Are you sure you want to delete this item?")){
+			this.props.deleteCodeObject(id)
+			this.setState({
+				...this.state,
+				existing: false,
+				existingCodeObject: {
+					id: 0,
+					term: '',
+					description: '', 
+					language: '',
+					snipRawCode: '',
+					snipRawTags: '', 
+					snipTags: [],
+					snipCode: []
+				}
+			})
+		} 
+
+	}
+
 	loadExistingCodeObject(id) {
 		let code_obj = this.props.my_code.library.filter(obj => obj.id === id)[0];
-		console.log(code_obj);
 		if(code_obj.hasOwnProperty('snippets')) {
 			this.setState({
 				...this.state,
@@ -230,7 +275,6 @@ class CodeEditor extends Component {
 					<div className="input-field col s6">
 			        	<input type="text"
 			        			onChange={(e) => this.changeInput('existingCodeObject', existing, "term", e.target.value)}
-
 			        			value={this.state.existingCodeObject.term}
 			        			/>
 			        	<label className="active" htmlFor="term">Term</label>
@@ -273,13 +317,9 @@ class CodeEditor extends Component {
 	                	>Update Snippet
 	                </a>
 	                <a className="waves-effect waves-light btn orange  cancel"
-	                	onClick={() => {
-	                		console.log(this.state);
-	                		this.setState({existing: false})
-	                		}
-	                	}
-	                	>Cancel
-                	</a>
+	                	onClick={() => {this.setState({existing: false})}}>Cancel</a>
+	                <a className="waves-effect waves-light btn red lighten-1  cancel"
+	                	onClick={() => this.deleteCodeObject(this.state.existingCodeObject.id)}>Delete</a>
 	                </div>
 				</div>
 
@@ -290,7 +330,6 @@ class CodeEditor extends Component {
 
 
 	changeInput(codeType, existing, property, value) {
-		console.log(property, value);
 		let info = {
 			...this.state[codeType]
 		}
@@ -306,8 +345,8 @@ class CodeEditor extends Component {
 			info['snipRawTags'] = value;
 		}
 
-		info['snipCode'] = info['snipRawCode'].split('\n')
-		info['snipTags'] = info['snipRawTags'].split(',')
+		info['snipCode'] = info['snipRawCode'] ? [...info['snipRawCode'].split('\n')] : [];
+		info['snipTags'] = info['snipRawTags'] ? [...info['snipRawTags'].split(',')] : [];
 
 		let fakeState = {...this.state};
 		fakeState[codeType] = info;
@@ -315,9 +354,6 @@ class CodeEditor extends Component {
 		this.setState({
 			...fakeState
 		});
-
-		console.log(this.state)
-
 	}
 
 	renderCodeList() {
@@ -380,7 +416,8 @@ function mapDispatchToProps(dispatch) {
 		fetchCodeLibrary, 
 		changeInputValue, 
 		saveNewCodeObject,
-		updateCodeObject
+		updateCodeObject,
+		deleteCodeObject
 	}, dispatch);
 }
 

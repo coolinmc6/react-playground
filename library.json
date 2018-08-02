@@ -23,7 +23,7 @@
       "id": 2,
       "term": "filter",
       "description": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
-      "language": "",
+      "language": "JavaScript",
       "snipRawCode": "var products = [\n  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },\n  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },\n  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },\n  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },\n  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }\n];\n\nvar filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);\n\n // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}];",
       "snipRawTags": "",
       "snipCode": [
@@ -39,156 +39,113 @@
         "",
         " // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}];"
       ],
-      "snipTags": [
-        ""
-      ]
+      "snipTags": []
     },
     {
       "id": 3,
       "term": "reduce",
-      "definition": "The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": [
-            "var numbers = [10,20,30];",
-            "// ES6",
-            "var total = numbers.reduce((acc, num) => acc + num);",
-            "// ES5",
-            "var total2 = numbers.reduce(function(acc, sum) {",
-            "  return sum + acc;",
-            "},0);",
-            "// both return 60"
-          ]
-        },
-        {
-          "tags": [],
-          "code": [
-            "var primaryColors = [",
-            "  { color: 'red' },",
-            "  { color: 'yellow' },",
-            "  { color: 'blue' }",
-            "];",
-            "",
-            "var colors = primaryColors.reduce(function(previous, color) {",
-            "  previous.push(color.color);",
-            "  return previous;",
-            "}, [])",
-            "// ['red', 'yellow', 'blue']"
-          ]
-        },
-        {
-          "tags": [],
-          "code": [
-            "let array = [1,2,3,4,5]\t",
-            "let sum = array.reduce((all,item,index) => {\t",
-            "\tall += item;",
-            "\treturn all;",
-            "}, 0);\t"
-          ]
-        },
-        {
-          "tags": [
-            "Reverse a string using reduce"
-          ],
-          "code": [
-            "return str.split('').reduce((rev, char) => char + rev, '');"
-          ]
-        }
-      ]
+      "description": "The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
+      "language": "JavaScript",
+      "snipRawCode": "var numbers = [10,20,30];\n// ES6\nvar total = numbers.reduce((acc, num) => acc + num);\n// ES5\nvar total2 = numbers.reduce(function(acc, sum) {\n  return sum + acc;\n},0);\n// both return 60",
+      "snipRawTags": "",
+      "snipCode": [
+        "var numbers = [10,20,30];",
+        "// ES6",
+        "var total = numbers.reduce((acc, num) => acc + num);",
+        "// ES5",
+        "var total2 = numbers.reduce(function(acc, sum) {",
+        "  return sum + acc;",
+        "},0);",
+        "// both return 60"
+      ],
+      "snipTags": []
     },
     {
       "id": 4,
       "term": "indexOf (Arrays)",
-      "definition": "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": [
-            "var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];",
-            "",
-            "console.log(beasts.indexOf('bison'));",
-            "// expected output: 1",
-            "",
-            "// start from index 2",
-            "console.log(beasts.indexOf('bison', 2));",
-            "// expected output: 4",
-            "",
-            "console.log(beasts.indexOf('giraffe'));",
-            "// expected output: -1"
-          ]
-        }
-      ]
+      "description": "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.",
+      "language": "JavaScript",
+      "snipRawCode": "var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];\n\nconsole.log(beasts.indexOf('bison'));\n// expected output: 1\n\n// start from index 2\nconsole.log(beasts.indexOf('bison', 2));\n// expected output: 4\n\nconsole.log(beasts.indexOf('giraffe'));\n// expected output: -1",
+      "snipRawTags": "",
+      "snipCode": [
+        "var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];",
+        "",
+        "console.log(beasts.indexOf('bison'));",
+        "// expected output: 1",
+        "",
+        "// start from index 2",
+        "console.log(beasts.indexOf('bison', 2));",
+        "// expected output: 4",
+        "",
+        "console.log(beasts.indexOf('giraffe'));",
+        "// expected output: -1"
+      ],
+      "snipTags": []
     },
     {
       "id": 5,
       "term": "substr",
-      "definition": "The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 6,
       "term": "forEach",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 7,
       "term": "sort",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 8,
       "term": "reverse",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 9,
       "term": "join",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "basic join examples"
-          ],
-          "code": [
-            "var newString = arr1.join(' - ');",
-            "// stuff - cookie - food",
-            "var newString = arr1.join();",
-            "// stuff,cookie,food",
-            "var newString = arr1.join('');",
-            "// stuffcookiefood"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "var newString = arr1.join(' - ');\n// stuff - cookie - food\nvar newString = arr1.join();\n// stuff,cookie,food\nvar newString = arr1.join('');\n// stuffcookiefood",
+      "snipRawTags": "basic join examples",
+      "snipCode": [
+        "var newString = arr1.join(' - ');",
+        "// stuff - cookie - food",
+        "var newString = arr1.join();",
+        "// stuff,cookie,food",
+        "var newString = arr1.join('');",
+        "// stuffcookiefood"
+      ],
+      "snipTags": [
+        "basic join examples"
       ]
     },
     {
       "id": 10,
       "term": "shift",
       "description": "The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
-      "language": "",
+      "language": "JavaScript",
       "snipRawCode": "var array1 = [1, 2, 3];\n\nvar firstElement = array1.shift();\n\nconsole.log(array1);\n// expected output: Array [2, 3]\n\nconsole.log(firstElement);\n// expected output: 1\n",
       "snipRawTags": "",
       "snipCode": [
@@ -203,26 +160,23 @@
         "// expected output: 1",
         ""
       ],
-      "snipTags": [
-        ""
-      ]
+      "snipTags": []
     },
     {
       "id": 11,
       "term": "unshift",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 12,
       "term": "slice",
       "description": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end. The original array will not be modified.",
-      "language": "",
+      "language": "JavaScript",
       "snipRawCode": "var array = [1,2,3,4,5]\nvar sub = array.slice(0, 3);\nconsole.log(array); // [1,2,3,4,5]\nconsole.log(sub) // [1,2,3]",
       "snipRawTags": "basic slice example",
       "snipCode": [
@@ -238,1252 +192,668 @@
     {
       "id": 13,
       "term": "splice",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 3141592653,
       "term": "Cool Code",
-      "definition": "Just random bits of code that I like.",
-      "snippets": [
-        {
-          "tags": [
-            "random color generator"
-          ],
-          "code": [
-            "function randomColor() {  ",
-            "    var rand = '#' + Math.random().toString(16).slice(2,8);",
-            " return rand",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "random number generator function"
-          ],
-          "code": [
-            "export const generateID = () => Math.floor(Math.random()*1000000);"
-          ]
-        }
+      "description": "Just random bits of code that I like.\n",
+      "language": "",
+      "snipRawCode": "function randomColor() {  \n    var rand = '#' + Math.random().toString(16).slice(2,8);\n return rand\n}",
+      "snipRawTags": "random color generator",
+      "snipCode": [
+        "function randomColor() {  ",
+        "    var rand = '#' + Math.random().toString(16).slice(2,8);",
+        " return rand",
+        "}"
+      ],
+      "snipTags": [
+        "random color generator"
       ]
     },
     {
       "id": 14,
       "term": "Detecting Properties on Objects",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "hasOwnProperty"
-          ],
-          "code": []
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "hasOwnProperty",
+      "snipCode": [],
+      "snipTags": [
+        "hasOwnProperty"
       ]
     },
     {
       "id": 15,
       "term": "Immediately Invoked Function Expressions (IIFEs)",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "basic IIFE example"
-          ],
-          "code": [
-            "(function() {",
-            " var thing = {'hello': 'other'};",
-            " console.log('other: ', thing);",
-            "})();"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "(function() {\n var thing = {'hello': 'other'};\n console.log('other: ', thing);\n})();",
+      "snipRawTags": "basic IIFE example",
+      "snipCode": [
+        "(function() {",
+        " var thing = {'hello': 'other'};",
+        " console.log('other: ', thing);",
+        "})();"
+      ],
+      "snipTags": [
+        "basic IIFE example"
       ]
     },
     {
       "id": 16,
       "term": "Recursion",
-      "definition": "Examples of recursive functions.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "Examples of recursive functions.",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 17,
       "term": "fetch",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 18,
       "term": "find",
-      "definition": "The find() method is like filter but returns only one result and not an array of results that may fit the conditional.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": [
-            "const comment = comments.find((comment) => comment.id === 823423);"
-          ]
-        }
+      "description": "The find() method is like filter but returns only one result and not an array of results that may fit the conditional.",
+      "language": "JavaScript",
+      "snipRawCode": "const comment = comments.find((comment) => comment.id === 823423);",
+      "snipRawTags": "find",
+      "snipCode": [
+        "const comment = comments.find((comment) => comment.id === 823423);"
+      ],
+      "snipTags": [
+        "find"
       ]
     },
     {
       "id": 19,
       "term": "Immutability",
-      "definition": "The snippets below are examples of changing arrays or objects without mutating the original.",
-      "snippets": [
-        {
-          "tags": [
-            "copy object without mutating original",
-            "toggle an object",
-            "copy object using spread operator"
-          ],
-          "code": [
-            "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property",
-            "export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});"
-          ]
-        },
-        {
-          "tags": [
-            "add item to an array without mutating original using spread operator"
-          ],
-          "code": [
-            "export const addTodo = (list, item) => [...list, item];"
-          ]
-        },
-        {
-          "tags": [
-            "update object in an array without mutating original array"
-          ],
-          "code": [
-            "export const updateTodo = (list, updated) => {",
-            "\tconst updatedIndex = list.findIndex(item => item.id === updated.id)",
-            "",
-            "\t// the return statement slices the array from 0 to the item in the array we are updating, ",
-            "\t// puts in the updated item, 'updated', and then adds the rest of the array using the ",
-            "\t// spread operator that starts from 1 after the updated array's location to the end",
-            "\treturn [",
-            "\t\t...list.slice(0,updatedIndex),",
-            "\t\tupdated,",
-            "\t\t...list.slice(updatedIndex+1)",
-            "\t]",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "remove item from an array without mutating array",
-            "remove nth item from array without mutating"
-          ],
-          "code": [
-            "export const removeTodo = (list, id) => {",
-            "// find the index of the item you want to remove",
-            "\tconst removeIndex = list.findIndex(item => item.id === id)",
-            "\treturn [",
-            "\t\t...list.slice(0, removeIndex),",
-            "\t\t...list.slice(removeIndex+1)",
-            "\t]",
-            "}"
-          ]
-        }
+      "description": "The snippets below are examples of changing arrays or objects without mutating the original.",
+      "language": "JavaScript",
+      "snipRawCode": "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property\nexport const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});",
+      "snipRawTags": "copy object without mutating original, toggle an object, copy object using spread operator",
+      "snipCode": [
+        "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property",
+        "export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});"
+      ],
+      "snipTags": [
+        "copy object without mutating original",
+        " toggle an object",
+        " copy object using spread operator"
       ]
     },
     {
       "id": 20,
       "term": "indexOf (Strings)",
-      "definition": "The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string. It is NOT the same as search() because it cannot take regular expressions.",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string. It is NOT the same as search() because it cannot take regular expressions.",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 21,
       "term": "split",
-      "definition": "The split() method is used to split a string into an array of substrings, and returns the new array. If an empty string ('') is used as a separator, the string is split between each character.",
-      "snippets": [
-        {
-          "tags": [
-            "reverse a string using split"
-          ],
-          "code": [
-            "return str.split('').reverse().join('');"
-          ]
-        }
+      "description": "The split() method is used to split a string into an array of substrings, and returns the new array. If an empty string ('') is used as a separator, the string is split between each character.",
+      "language": "JavaScript",
+      "snipRawCode": "return str.split('').reverse().join('');",
+      "snipRawTags": "reverse a string using split",
+      "snipCode": [
+        "return str.split('').reverse().join('');"
+      ],
+      "snipTags": [
+        "reverse a string using split"
       ]
     },
     {
       "id": 22,
       "term": "Random Algorithms",
-      "definition": "Random algorithms that I've seen or learned. Each algorithm has relevant tags.",
-      "snippets": [
-        {
-          "tags": [
-            "palindrome function",
-            "use split reverse and join to determine if palindrome"
-          ],
-          "code": [
-            "// The Palindrome function takes a string and can return true/false successfully in any of the below",
-            "// return statements",
-            "function palindrome(str) {",
-            "\t//// CM Solution #1",
-            "\treturn str.split('').reverse().join('') == str ? true : false;",
-            "",
-            "\t//// CM Solution #2: I can just return the conditional; the ternary above is excess logic",
-            "\treturn str.split('').reverse().join('') === str;",
-            "",
-            "\t//// Solution #1",
-            "\tconst reversed = str.split('').reverse().join('');",
-            "\treturn str === reversed;",
-            "",
-            "\t//// Solution #2",
-            "\t// one problem it has is that it compares the same two elements twice; the double comparison problem",
-            "\t// NOTICE: I don't have to set str.split('') to an array. I can just call str",
-            "\treturn str.split('').every((char, i) => {",
-            "\t\treturn char === str[str.length -i - 1];",
-            "\t});",
-            "",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "capitalize the first letter of each word using split, slice, and join"
-          ],
-          "code": [
-            "function capitalize(str) {",
-            "",
-            "\tvar words = str.split(' ');",
-            "",
-            "\tvar capitalized = words.map((word) => {",
-            "\t\tvar newWord = word[0].toUpperCase() + word.slice(1);",
-            "\t\treturn newWord;",
-            "\t})",
-            "\treturn capitalized.join(' ');",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "Determine if two strings are anagrams of each other"
-          ],
-          "code": [
-            "function anagrams(stringA, stringB) {\t",
-            "\tvar strA = stringA.replace(/[^\\w]/g, \"\").toLowerCase().split(\"\").sort().join(\"\");",
-            "\tvar strB = stringB.replace(/[^\\w]/g, \"\").toLowerCase().split(\"\").sort().join(\"\");",
-            "\treturn strA === strB;",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "Determine if two strings are anagrams of each other"
-          ],
-          "code": [
-            "function anagrams(stringA, stringB) {",
-            "\treturn cleanString(stringA) === cleanString(stringB);",
-            "}",
-            "",
-            "function cleanString(str) {",
-            "\treturn str.replace(/[^\\w]/g, \"\").toLowerCase().split('').sort().join('');",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "BubbleSort"
-          ],
-          "code": [
-            "function bubbleSort(arr) {",
-            "\tfor(let i = 0; i < arr.length; i++) {",
-            "\t\tfor(let j = 0; j < (arr.length - i - 1); j++) {",
-            "\t\t\tif(arr[j] > arr[j+1]) {",
-            "\t\t\t\tconst lesser = arr[j+1];",
-            "\t\t\t\tarr[j+1] = arr[j];",
-            "\t\t\t\tarr[j] = lesser;",
-            "\t\t\t}",
-            "\t\t}",
-            "\t}",
-            "\treturn arr;",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "Selection Sort"
-          ],
-          "code": [
-            "function selectionSort(arr) {",
-            "\tfor(let i = 0; i < arr.length; i++) {",
-            "\t\tlet indexOfMin = i;",
-            "\t\tfor(let j = i + 1; j < arr.length; j++) {",
-            "\t\t\tif(arr[j] < arr[indexOfMin]) {",
-            "\t\t\t\tindexOfMin = j;",
-            "\t\t\t}\t",
-            "\t\t}",
-            "\t\tif(indexOfMin !== i) {",
-            "\t\t\tlet lesser = arr[indexOfMin];",
-            "\t\t\tarr[indexOfMin] = arr[i];",
-            "\t\t\tarr[i] = lesser;",
-            "\t\t}",
-            "\t}",
-            "\treturn arr;",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "Merge Sort"
-          ],
-          "code": [
-            "function mergeSort(arr) {",
-            "\tif(arr.length === 1) {",
-            "\t\treturn arr;",
-            "\t}",
-            "\tconst center = Math.floor(arr.length / 2);",
-            "\tconst left = arr.slice(0,center);",
-            "\tconst right = arr.slice(center);",
-            "\treturn merge(mergeSort(left), mergeSort(right));",
-            "}",
-            "",
-            "function merge(left, right) {",
-            "\tconst results = [];",
-            "\twhile(left.length && right.length) {",
-            "\t\tif(left[0] < right[0]) {",
-            "\t\t\tresults.push(left.shift())",
-            "\t\t} else {",
-            "\t\t\tresults.push(right.shift())",
-            "\t\t}",
-            "\t}",
-            "\treturn [...results, ...left, ...right];",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "count the number of vowels in a string"
-          ],
-          "code": [
-            "function vowels(str) {",
-            "\tconst matches = str.match(/[aeiou]/gi);",
-            "\treturn matches ? matches.length : 0;",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "Fibonacci - Colin's Solution #1"
-          ],
-          "code": [
-            "function fib(n) {",
-            "\tvar series = [0,1]",
-            "\tfor(let i = 2; i < n+1; i++) {",
-            "\t\tif(i == 2) {",
-            "\t\t\tseries.push(1)",
-            "\t\t} else {",
-            "\t\t\tseries.push(series[i-2] + series[i-1]);",
-            "\t\t}",
-            "\t}",
-            "\treturn series[n];",
-            "}"
-          ]
-        },
-        {
-          "tags": [
-            "Fibonacci - Solution with Recursion and memoize"
-          ],
-          "code": [
-            "// This is an exponential time algorithm",
-            "// Can we improve our fibonacci recursive function? Our big problem, we are calling the function",
-            "// multiple times with the same argument .... the solution is memoization",
-            "// Slow Fib Function => Memoizer => Fast, Memoized Fib Function",
-            "function memoize(fn) {",
-            "\tconst cache = {};",
-            "",
-            "\t// ... implies that you don't know how many arguments it will receive",
-            "\treturn function(...args) {",
-            "\t\tif(cache[args]) {",
-            "\t\t\treturn cache[args];",
-            "\t\t}",
-            "",
-            "\t\tconst result = fn.apply(this, args);",
-            "\t\tcache[args] = result;",
-            "",
-            "\t\treturn result;",
-            "\t}",
-            "}",
-            "",
-            "",
-            "function fib(n) {",
-            "\tif(n < 2) {",
-            "\t\treturn n;",
-            "\t}",
-            "",
-            "\t// we want to make sure that we are calling the memoized function, not the slowFib version",
-            "\treturn fib(n-1) + fib(n - 2);",
-            "}",
-            "",
-            "fib = memoize(fib);"
-          ]
-        },
-        {
-          "tags": [
-            "Basic pagination"
-          ],
-          "code": [
-            "var pagination = function(current, total){",
-            "\tvar list = [];",
-            "\tvar pageLimit = 5;",
-            "\tvar upperLimit, lowerLimit;",
-            "\tvar currentPage = lowerLimit = upperLimit = Math.min(current, total);",
-            "",
-            "",
-            "\tfor (var b = 1; b < pageLimit && b < total;) {",
-            "\t\tif (lowerLimit > 1 ) {",
-            "\t\t\tlowerLimit--; b++; ",
-            "\t\t}",
-            "\t\tif (b < pageLimit && upperLimit < total) {",
-            "\t\t\tupperLimit++; b++; ",
-            "\t\t}",
-            "\t}",
-            "",
-            "\tfor (var i = lowerLimit; i <= upperLimit; i++) {",
-            "\t\tif (i == currentPage){",
-            "\t\t\tlist.push({page: i, active: 'yes'})",
-            "\t\t\t// list.push(\"[\"+i+\"]\");",
-            "\t\t}",
-            "\t\telse {",
-            "\t\t\tlist.push({page: i, active: 'no'})",
-            "\t\t}",
-            "\t}",
-            "\treturn list;",
-            "}"
-          ]
-        }
+      "description": "Random algorithms that I've seen or learned. Each algorithm has relevant tags.",
+      "language": "JavaScript",
+      "snipRawCode": "// The Palindrome function takes a string and can return true/false successfully in any of the below\n// return statements\nfunction palindrome(str) {\n\t//// CM Solution #1\n\treturn str.split('').reverse().join('') == str ? true : false;\n\n\t//// CM Solution #2: I can just return the conditional; the ternary above is excess logic\n\treturn str.split('').reverse().join('') === str;\n\n\t//// Solution #1\n\tconst reversed = str.split('').reverse().join('');\n\treturn str === reversed;\n\n\t//// Solution #2\n\t// one problem it has is that it compares the same two elements twice; the double comparison problem\n\t// NOTICE: I don't have to set str.split('') to an array. I can just call str\n\treturn str.split('').every((char, i) => {\n\t\treturn char === str[str.length -i - 1];\n\t});\n\n}",
+      "snipRawTags": "palindrome function, use split reverse and join to determine if palindrome",
+      "snipCode": [
+        "// The Palindrome function takes a string and can return true/false successfully in any of the below",
+        "// return statements",
+        "function palindrome(str) {",
+        "\t//// CM Solution #1",
+        "\treturn str.split('').reverse().join('') == str ? true : false;",
+        "",
+        "\t//// CM Solution #2: I can just return the conditional; the ternary above is excess logic",
+        "\treturn str.split('').reverse().join('') === str;",
+        "",
+        "\t//// Solution #1",
+        "\tconst reversed = str.split('').reverse().join('');",
+        "\treturn str === reversed;",
+        "",
+        "\t//// Solution #2",
+        "\t// one problem it has is that it compares the same two elements twice; the double comparison problem",
+        "\t// NOTICE: I don't have to set str.split('') to an array. I can just call str",
+        "\treturn str.split('').every((char, i) => {",
+        "\t\treturn char === str[str.length -i - 1];",
+        "\t});",
+        "",
+        "}"
+      ],
+      "snipTags": [
+        "palindrome function",
+        " use split reverse and join to determine if palindrome"
       ]
     },
     {
       "id": 23,
       "term": "Regular Expressions",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "Regular Expressions super basic"
-          ],
-          "code": [
-            "var a1 = new RegExp('abc');",
-            "var word = '12314abcdefgh';",
-            " ",
-            "// (String method) - String then RegExp => match, replace, search, split",
-            " ",
-            "console.log(word.match(a1)); // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]",
-            " ",
-            "var newWord = word.replace(a1, 'zzz'); // NOTE: replace doesn't alter the original string",
-            "console.log(newWord); // 12314zzzdefgh => the new string",
-            "console.log(word) // 12314abcdefgh => the original string",
-            " ",
-            "console.log(word.search(a1)) // 5; 6th character",
-            "console.log(newWord.search(a1)) // -1; not found",
-            " ",
-            "// (RegExp method) - RegExp then String => exec, test",
-            "var arr = a1.exec(word) // Just like match but the string and RegExp are reversed",
-            "console.log(arr) // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]",
-            " ",
-            "console.log(a1.test(word)) // true"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "var a1 = new RegExp('abc');\nvar word = '12314abcdefgh';\n \n// (String method) - String then RegExp => match, replace, search, split\n \nconsole.log(word.match(a1)); // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]\n \nvar newWord = word.replace(a1, 'zzz'); // NOTE: replace doesn't alter the original string\nconsole.log(newWord); // 12314zzzdefgh => the new string\nconsole.log(word) // 12314abcdefgh => the original string\n \nconsole.log(word.search(a1)) // 5; 6th character\nconsole.log(newWord.search(a1)) // -1; not found\n \n// (RegExp method) - RegExp then String => exec, test\nvar arr = a1.exec(word) // Just like match but the string and RegExp are reversed\nconsole.log(arr) // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]\n \nconsole.log(a1.test(word)) // true",
+      "snipRawTags": "Regular Expressions super basic",
+      "snipCode": [
+        "var a1 = new RegExp('abc');",
+        "var word = '12314abcdefgh';",
+        " ",
+        "// (String method) - String then RegExp => match, replace, search, split",
+        " ",
+        "console.log(word.match(a1)); // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]",
+        " ",
+        "var newWord = word.replace(a1, 'zzz'); // NOTE: replace doesn't alter the original string",
+        "console.log(newWord); // 12314zzzdefgh => the new string",
+        "console.log(word) // 12314abcdefgh => the original string",
+        " ",
+        "console.log(word.search(a1)) // 5; 6th character",
+        "console.log(newWord.search(a1)) // -1; not found",
+        " ",
+        "// (RegExp method) - RegExp then String => exec, test",
+        "var arr = a1.exec(word) // Just like match but the string and RegExp are reversed",
+        "console.log(arr) // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]",
+        " ",
+        "console.log(a1.test(word)) // true"
+      ],
+      "snipTags": [
+        "Regular Expressions super basic"
       ]
     },
     {
       "id": 24,
       "term": "Use Strict",
-      "definition": "see Advanced Javascript (AJ) Notes",
-      "snippets": [
-        {
-          "tags": [
-            "use strict definition and notes",
-            "use strict basic example"
-          ],
-          "code": [
-            "//Use Strict Notes:",
-            "//- it makes debugging easier",
-            "//- prevents you from accidentally creating global variables",
-            "//- prevents you from naming variables that will be keywords in future JS verisons",
-            "//- doesn't let you delete arguments to functions, functions, or variables",
-            "\"use strict\"",
-            "",
-            "asim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\""
-          ]
-        },
-        {
-          "tags": [
-            "strict mode and function scope"
-          ],
-          "code": [
-            "// not Strict mode",
-            "function newCode() {",
-            " \"use strict\";",
-            "",
-            " // Strict Mode",
-            "}"
-          ]
-        }
+      "description": "see Advanced Javascript (AJ) Notes",
+      "language": "JavaScript",
+      "snipRawCode": "//Use Strict Notes:\n//- it makes debugging easier\n//- prevents you from accidentally creating global variables\n//- prevents you from naming variables that will be keywords in future JS verisons\n//- doesn't let you delete arguments to functions, functions, or variables\n\"use strict\"\n\nasim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\"",
+      "snipRawTags": "use strict definition and notes, use strict basic example",
+      "snipCode": [
+        "//Use Strict Notes:",
+        "//- it makes debugging easier",
+        "//- prevents you from accidentally creating global variables",
+        "//- prevents you from naming variables that will be keywords in future JS verisons",
+        "//- doesn't let you delete arguments to functions, functions, or variables",
+        "\"use strict\"",
+        "",
+        "asim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\""
+      ],
+      "snipTags": [
+        "use strict definition and notes",
+        " use strict basic example"
       ]
     },
     {
       "id": 25,
       "term": "NaN (Not a Number, Not-A-Number)",
-      "definition": "The global NaN property is a value representing Not-A-Number.",
-      "snippets": [
-        {
-          "tags": [
-            "NaN notes and examples"
-          ],
-          "code": [
-            "//- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)",
-            "//- But weirdly enough, NaN compared to NaN is also false",
-            "// - NaN equal to ANYTHING is always false, even when compared to itself",
-            "//- `isNaN(NaN)` evaluates to true but see below:",
-            "",
-            "isNaN(NaN) // true",
-            "isNaN(1) // evalutes to false; 1 is a number",
-            "isNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false",
-            "isNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true",
-            "",
-            "// How do we check if something is equal to NaN",
-            "//- The question above is complex because:",
-            "// -`NaN == NaN` is false AND",
-            "// -`isNaN()` has the type coercision problems",
-            "//- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus",
-            "// NaN !== NaN will evaluate to true."
-          ]
-        }
+      "description": "The global NaN property is a value representing Not-A-Number.",
+      "language": "JavaScript",
+      "snipRawCode": "//- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)\n//- But weirdly enough, NaN compared to NaN is also false\n// - NaN equal to ANYTHING is always false, even when compared to itself\n//- `isNaN(NaN)` evaluates to true but see below:\n\nisNaN(NaN) // true\nisNaN(1) // evalutes to false; 1 is a number\nisNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false\nisNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true\n\n// How do we check if something is equal to NaN\n//- The question above is complex because:\n// -`NaN == NaN` is false AND\n// -`isNaN()` has the type coercision problems\n//- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus\n// NaN !== NaN will evaluate to true.",
+      "snipRawTags": "NaN notes and examples",
+      "snipCode": [
+        "//- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)",
+        "//- But weirdly enough, NaN compared to NaN is also false",
+        "// - NaN equal to ANYTHING is always false, even when compared to itself",
+        "//- `isNaN(NaN)` evaluates to true but see below:",
+        "",
+        "isNaN(NaN) // true",
+        "isNaN(1) // evalutes to false; 1 is a number",
+        "isNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false",
+        "isNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true",
+        "",
+        "// How do we check if something is equal to NaN",
+        "//- The question above is complex because:",
+        "// -`NaN == NaN` is false AND",
+        "// -`isNaN()` has the type coercision problems",
+        "//- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus",
+        "// NaN !== NaN will evaluate to true."
+      ],
+      "snipTags": [
+        "NaN notes and examples"
       ]
     },
     {
       "id": 26,
       "term": "Call, Bind and Apply Comparison",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 27,
       "term": "Constructor Pattern",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "Constructor pattern of creating new object",
-            "OOP constructor"
-          ],
-          "code": [
-            "// Person constructor",
-            "function Person(first_name, last_name) {",
-            " this.first_name = first_name;",
-            " this.last_name = last_name;",
-            "};",
-            "",
-            "// Method #1: Instantiating a new Person",
-            "var dude = new Person(\"asim\", \"hussain\");",
-            "",
-            "// WRONG => this throws an error:",
-            "var dude = Person(\"asim\", \"hussain\");",
-            "",
-            "// Method #2: Instantiating a new Person",
-            "var dude = {};",
-            "Person.call(dude, \"asim\", \"hussain\");"
-          ]
-        },
-        {
-          "tags": [
-            "object methods in constructor pattern"
-          ],
-          "code": [
-            "function Person(first_name, last_name) {",
-            " this.first_name = first_name;",
-            " this.last_name = last_name;",
-            " this.full_name = function() {",
-            "   return this.first_name + ' ' + this.last_name;",
-            " }",
-            "};",
-            "",
-            "console.log(dude.full_name()) // asim hussain"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// Person constructor\nfunction Person(first_name, last_name) {\n this.first_name = first_name;\n this.last_name = last_name;\n};\n\n// Method #1: Instantiating a new Person\nvar dude = new Person(\"asim\", \"hussain\");\n\n// WRONG => this throws an error:\nvar dude = Person(\"asim\", \"hussain\");\n\n// Method #2: Instantiating a new Person\nvar dude = {};\nPerson.call(dude, \"asim\", \"hussain\");\n\nfunction Person(first_name, last_name) {\nthis.first_name = first_name;\nthis.last_name = last_name;\nthis.full_name = function() {\nreturn this.first_name + ' ' + this.last_name;\n}\n};\n\nconsole.log(dude.full_name()) // asim hussain\"",
+      "snipRawTags": "Constructor pattern of creating new object, OOP constructor",
+      "snipCode": [
+        "// Person constructor",
+        "function Person(first_name, last_name) {",
+        " this.first_name = first_name;",
+        " this.last_name = last_name;",
+        "};",
+        "",
+        "// Method #1: Instantiating a new Person",
+        "var dude = new Person(\"asim\", \"hussain\");",
+        "",
+        "// WRONG => this throws an error:",
+        "var dude = Person(\"asim\", \"hussain\");",
+        "",
+        "// Method #2: Instantiating a new Person",
+        "var dude = {};",
+        "Person.call(dude, \"asim\", \"hussain\");",
+        "",
+        "function Person(first_name, last_name) {",
+        "this.first_name = first_name;",
+        "this.last_name = last_name;",
+        "this.full_name = function() {",
+        "return this.first_name + ' ' + this.last_name;",
+        "}",
+        "};",
+        "",
+        "console.log(dude.full_name()) // asim hussain\""
+      ],
+      "snipTags": [
+        "Constructor pattern of creating new object",
+        " OOP constructor"
       ]
     },
     {
       "id": 28,
       "term": "Objects",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "deep copy of an object",
-            "copy object values and not references"
-          ],
-          "code": [
-            "var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));"
-          ]
-        },
-        {
-          "tags": [
-            "check if object is empty"
-          ],
-          "code": [
-            "Object.keys(obj).length === 0 && obj.constructor === Object"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));",
+      "snipRawTags": "deep copy of an object, copy object values and not references",
+      "snipCode": [
+        "var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));"
+      ],
+      "snipTags": [
+        "deep copy of an object",
+        " copy object values and not references"
       ]
     },
     {
       "id": 29,
       "term": "Loops",
-      "definition": "JavaScript loops",
-      "snippets": [
-        {
-          "tags": [],
-          "code": []
-        }
-      ]
+      "description": "JavaScript loops",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
     },
     {
       "id": 30,
       "term": "concat",
-      "definition": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
-      "snippets": [
-        {
-          "tags": [
-            "basic concat example"
-          ],
-          "code": [
-            "var array1 = ['a', 'b', 'c'];",
-            "var array2 = ['d', 'e', 'f'];",
-            "",
-            "array1.concat(array2)",
-            "console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array",
-            "",
-            "array3 = array1.concat(array2)",
-            "console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"
-          ]
-        }
+      "description": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+      "language": "",
+      "snipRawCode": "var array1 = ['a', 'b', 'c'];\nvar array2 = ['d', 'e', 'f'];\n\narray1.concat(array2)\nconsole.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array\n\narray3 = array1.concat(array2)\nconsole.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+      "snipRawTags": "basic concat example, very nice",
+      "snipCode": [
+        "var array1 = ['a', 'b', 'c'];",
+        "var array2 = ['d', 'e', 'f'];",
+        "",
+        "array1.concat(array2)",
+        "console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array",
+        "",
+        "array3 = array1.concat(array2)",
+        "console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"
+      ],
+      "snipTags": [
+        "basic concat example",
+        " very nice"
       ]
     },
     {
       "id": 31,
       "term": "FizzBuzz",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "basic FizzBuzz solution"
-          ],
-          "code": [
-            "for(let i = 1; i <= n; i++) {",
-            "\t// Is the number a multiple of 3 & 5",
-            "\tif(i % 3 === 0 && i % 5 === 0) {",
-            "\t\tconsole.log('fizzbuzz');",
-            "\t} else if(i % 3 === 0) {",
-            "\t\tconsole.log(\"fizz\");",
-            "\t} else if(i % 5 === 0) {",
-            "\t\tconsole.log(\"buzz\");",
-            "\t} else {",
-            "\t\tconsole.log(i)\t",
-            "\t}",
-            "\t",
-            "}"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "for(let i = 1; i <= n; i++) {\n\t// Is the number a multiple of 3 & 5\n\tif(i % 3 === 0 && i % 5 === 0) {\n\t\tconsole.log('fizzbuzz');\n\t} else if(i % 3 === 0) {\n\t\tconsole.log(\"fizz\");\n\t} else if(i % 5 === 0) {\n\t\tconsole.log(\"buzz\");\n\t} else {\n\t\tconsole.log(i)\t\n\t}\n\t\n}",
+      "snipRawTags": "basic FizzBuzz solution",
+      "snipCode": [
+        "for(let i = 1; i <= n; i++) {",
+        "\t// Is the number a multiple of 3 & 5",
+        "\tif(i % 3 === 0 && i % 5 === 0) {",
+        "\t\tconsole.log('fizzbuzz');",
+        "\t} else if(i % 3 === 0) {",
+        "\t\tconsole.log(\"fizz\");",
+        "\t} else if(i % 5 === 0) {",
+        "\t\tconsole.log(\"buzz\");",
+        "\t} else {",
+        "\t\tconsole.log(i)\t",
+        "\t}",
+        "\t",
+        "}"
+      ],
+      "snipTags": [
+        "basic FizzBuzz solution"
       ]
     },
     {
       "id": 32,
       "term": "Prototypal Inheritance",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "the basic need for prototypal inheritance"
-          ],
-          "code": [
-            "// Person object",
-            "function Person(first_name, last_name) {",
-            " this.first_name = first_name;",
-            " this.last_name = last_name;",
-            " this.full_name = function() {",
-            " return this.first_name + ' ' + this.last_name;",
-            " }",
-            "};",
-            "var dude = new Person('asim', 'hussain');",
-            "console.log(dude.full_name()) // asim hussain",
-            "",
-            "// BASIC PROBLEM: every new instance of Person we create has its OWN instance of the ",
-            "// \"full_name\" method created. That is a lot of duplicate methods. Instead, we can simply ",
-            "// add a method to the **prototype** of our object which can save a ton of memory.",
-            "",
-            "Person.prototype.full_name_prototype = function() {",
-            " return this.first_name + ' ' + this.last_name;",
-            "}"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// Person object\nfunction Person(first_name, last_name) {\n this.first_name = first_name;\n this.last_name = last_name;\n this.full_name = function() {\n return this.first_name + ' ' + this.last_name;\n }\n};\nvar dude = new Person('asim', 'hussain');\nconsole.log(dude.full_name()) // asim hussain\n\n// BASIC PROBLEM: every new instance of Person we create has its OWN instance of the \n// \"full_name\" method created. That is a lot of duplicate methods. Instead, we can simply \n// add a method to the **prototype** of our object which can save a ton of memory.\n\nPerson.prototype.full_name_prototype = function() {\n return this.first_name + ' ' + this.last_name;\n}",
+      "snipRawTags": "the basic need for prototypal inheritance",
+      "snipCode": [
+        "// Person object",
+        "function Person(first_name, last_name) {",
+        " this.first_name = first_name;",
+        " this.last_name = last_name;",
+        " this.full_name = function() {",
+        " return this.first_name + ' ' + this.last_name;",
+        " }",
+        "};",
+        "var dude = new Person('asim', 'hussain');",
+        "console.log(dude.full_name()) // asim hussain",
+        "",
+        "// BASIC PROBLEM: every new instance of Person we create has its OWN instance of the ",
+        "// \"full_name\" method created. That is a lot of duplicate methods. Instead, we can simply ",
+        "// add a method to the **prototype** of our object which can save a ton of memory.",
+        "",
+        "Person.prototype.full_name_prototype = function() {",
+        " return this.first_name + ' ' + this.last_name;",
+        "}"
+      ],
+      "snipTags": [
+        "the basic need for prototypal inheritance"
       ]
     },
     {
       "id": 33,
       "term": "Prototype Pattern (OOP)",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "prototype OO pattern"
-          ],
-          "code": [
-            "// - This is an alternative object-oriented solution for inheritance",
-            "// - prototypal inheritance is just the prototype chain - there are no classes that we ",
-            "// have to worry about",
-            "// - this is seen as a more natural type of OO programming in JavaScript",
-            "\"use strict\"",
-            "var Person = {",
-            "\tinit: function(first_name, last_name) {",
-            "\t\tthis.first_name = first_name;",
-            "\t\tthis.last_name = last_name;",
-            "\t\treturn this;",
-            "\t},",
-            "\tfull_name: function() {",
-            "\t\treturn this.first_name + ' ' + this.last_name;",
-            "\t}",
-            "}",
-            "",
-            "// Version #1: creating an instance",
-            "var asim = Object.create(Person);",
-            "asim.init(\"asim\", \"hussain\");"
-          ]
-        },
-        {
-          "tags": [
-            "prototype OO pattern - instantiating object version #2"
-          ],
-          "code": [
-            "// Version #2",
-            "var asim = Object.create(Person, {",
-            "\tfirst_name: {",
-            "\t\tvalue: \"Asim\"",
-            "\t}, ",
-            "\tlast_name: {",
-            "\t\tvalue: \"Hussain\"",
-            "\t}",
-            "});"
-          ]
-        },
-        {
-          "tags": [
-            "prototype OO pattern - instantiating object version #3"
-          ],
-          "code": [
-            "function PersonFactory(first_name, last_name) {",
-            "\tvar person = Object.create(Person);",
-            "\tperson.first_name = first_name;",
-            "\tperson.last_name = last_name;",
-            "\treturn person;",
-            "}",
-            "var asim = PersonFactory(\"asim\", \"hussain\");"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// - This is an alternative object-oriented solution for inheritance\n// - prototypal inheritance is just the prototype chain - there are no classes that we \n// have to worry about\n// - this is seen as a more natural type of OO programming in JavaScript\n\"use strict\"\nvar Person = {\n\tinit: function(first_name, last_name) {\n\t\tthis.first_name = first_name;\n\t\tthis.last_name = last_name;\n\t\treturn this;\n\t},\n\tfull_name: function() {\n\t\treturn this.first_name + ' ' + this.last_name;\n\t}\n}\n\n// Version #1: creating an instance\nvar asim = Object.create(Person);\nasim.init(\"asim\", \"hussain\");",
+      "snipRawTags": "prototype OO pattern",
+      "snipCode": [
+        "// - This is an alternative object-oriented solution for inheritance",
+        "// - prototypal inheritance is just the prototype chain - there are no classes that we ",
+        "// have to worry about",
+        "// - this is seen as a more natural type of OO programming in JavaScript",
+        "\"use strict\"",
+        "var Person = {",
+        "\tinit: function(first_name, last_name) {",
+        "\t\tthis.first_name = first_name;",
+        "\t\tthis.last_name = last_name;",
+        "\t\treturn this;",
+        "\t},",
+        "\tfull_name: function() {",
+        "\t\treturn this.first_name + ' ' + this.last_name;",
+        "\t}",
+        "}",
+        "",
+        "// Version #1: creating an instance",
+        "var asim = Object.create(Person);",
+        "asim.init(\"asim\", \"hussain\");"
+      ],
+      "snipTags": [
+        "prototype OO pattern"
       ]
     },
     {
       "id": 34,
       "term": "Constructor vs. Prototype Pattern",
-      "definition": "- \"Classical\" inheritance is really talking about the methods of object orientation.- A \"class\" that acts as a blueprint or architectural diagram for an object and then you need to create an instance of that class - in JavaScript, inheritance works using prototypes - in prototypal inheritance, new objects are\ncreated using previously created objects.\\n\n\\t- there is a parent \"Object\" for all objects in JavaScript\\n\n- There is a method of JavaScript of emulating the more classical object-oriented form using \nclasses and that's called the *Pseudo-Classical Pattern* but, again, it's only faking it...all\ninheritance in JavaScript is prototypal\\n",
-      "snippets": [
-        {
-          "tags": [
-            "Constructor Pattern vs. Prototype Pattern"
-          ],
-          "code": [
-            "// Constructor Pattern",
-            "function Person(first_name, last_name) {",
-            "\tthis.first_name = first_name;",
-            "\tthis.last_name = last_name;",
-            "};",
-            "// Method #1: Instantiating a new Person",
-            "var dude = new Person(\"asim\", \"hussain\");",
-            "",
-            "// Method #2: Instantiating a new Person",
-            "var dude = {};",
-            "Person.call(dude, \"asim\", \"hussain\");",
-            "",
-            "///////////////////////////////////////////////////////////////////////////////////////////",
-            "// Prototype Pattern",
-            "var Person = {",
-            "\tinit: function(first_name, last_name) {",
-            "\t\tthis.first_name = first_name;",
-            "\t\tthis.last_name = last_name;",
-            "\t\treturn this;",
-            "\t},",
-            "\tfull_name: function() {",
-            "\t\treturn this.first_name + ' ' + this.last_name;",
-            "\t}",
-            "}",
-            "",
-            "// Version #1: creating an instance",
-            "var asim = Object.create(Person);",
-            "asim.init(\"asim\", \"hussain\");",
-            "",
-            "// Version #2",
-            "var asim = Object.create(Person, {",
-            "\tfirst_name: {",
-            "\t\tvalue: \"Asim\"",
-            "\t}, ",
-            "\tlast_name: {",
-            "\t\tvalue: \"Hussain\"",
-            "\t}",
-            "});",
-            "",
-            "// Version #3: we'd need to create the PersonFactory IN ADDITION TO",
-            "// the Prototype Pattern \"Person\" object",
-            "function PersonFactory(first_name, last_name) {",
-            "\tvar person = Object.create(Person);",
-            "\tperson.first_name = first_name;",
-            "\tperson.last_name = last_name;",
-            "\treturn person;",
-            "}",
-            "var asim = PersonFactory(\"asim\", \"hussain\");"
-          ]
-        }
+      "description": "- \"Classical\" inheritance is really talking about the methods of object orientation.- A \"class\" that acts as a blueprint or architectural diagram for an object and then you need to create an instance of that class - in JavaScript, inheritance works using prototypes - in prototypal inheritance, new objects are\ncreated using previously created objects.\\n\n\\t- there is a parent \"Object\" for all objects in JavaScript\\n\n- There is a method of JavaScript of emulating the more classical object-oriented form using \nclasses and that's called the *Pseudo-Classical Pattern* but, again, it's only faking it...all\ninheritance in JavaScript is prototypal\\n",
+      "language": "JavaScript",
+      "snipRawCode": "// Constructor Pattern\nfunction Person(first_name, last_name) {\n\tthis.first_name = first_name;\n\tthis.last_name = last_name;\n};\n// Method #1: Instantiating a new Person\nvar dude = new Person(\"asim\", \"hussain\");\n\n// Method #2: Instantiating a new Person\nvar dude = {};\nPerson.call(dude, \"asim\", \"hussain\");\n\n///////////////////////////////////////////////////////////////////////////////////////////\n// Prototype Pattern\nvar Person = {\n\tinit: function(first_name, last_name) {\n\t\tthis.first_name = first_name;\n\t\tthis.last_name = last_name;\n\t\treturn this;\n\t},\n\tfull_name: function() {\n\t\treturn this.first_name + ' ' + this.last_name;\n\t}\n}\n\n// Version #1: creating an instance\nvar asim = Object.create(Person);\nasim.init(\"asim\", \"hussain\");\n\n// Version #2\nvar asim = Object.create(Person, {\n\tfirst_name: {\n\t\tvalue: \"Asim\"\n\t}, \n\tlast_name: {\n\t\tvalue: \"Hussain\"\n\t}\n});\n\n// Version #3: we'd need to create the PersonFactory IN ADDITION TO\n// the Prototype Pattern \"Person\" object\nfunction PersonFactory(first_name, last_name) {\n\tvar person = Object.create(Person);\n\tperson.first_name = first_name;\n\tperson.last_name = last_name;\n\treturn person;\n}\nvar asim = PersonFactory(\"asim\", \"hussain\");",
+      "snipRawTags": "Constructor Pattern vs. Prototype Pattern",
+      "snipCode": [
+        "// Constructor Pattern",
+        "function Person(first_name, last_name) {",
+        "\tthis.first_name = first_name;",
+        "\tthis.last_name = last_name;",
+        "};",
+        "// Method #1: Instantiating a new Person",
+        "var dude = new Person(\"asim\", \"hussain\");",
+        "",
+        "// Method #2: Instantiating a new Person",
+        "var dude = {};",
+        "Person.call(dude, \"asim\", \"hussain\");",
+        "",
+        "///////////////////////////////////////////////////////////////////////////////////////////",
+        "// Prototype Pattern",
+        "var Person = {",
+        "\tinit: function(first_name, last_name) {",
+        "\t\tthis.first_name = first_name;",
+        "\t\tthis.last_name = last_name;",
+        "\t\treturn this;",
+        "\t},",
+        "\tfull_name: function() {",
+        "\t\treturn this.first_name + ' ' + this.last_name;",
+        "\t}",
+        "}",
+        "",
+        "// Version #1: creating an instance",
+        "var asim = Object.create(Person);",
+        "asim.init(\"asim\", \"hussain\");",
+        "",
+        "// Version #2",
+        "var asim = Object.create(Person, {",
+        "\tfirst_name: {",
+        "\t\tvalue: \"Asim\"",
+        "\t}, ",
+        "\tlast_name: {",
+        "\t\tvalue: \"Hussain\"",
+        "\t}",
+        "});",
+        "",
+        "// Version #3: we'd need to create the PersonFactory IN ADDITION TO",
+        "// the Prototype Pattern \"Person\" object",
+        "function PersonFactory(first_name, last_name) {",
+        "\tvar person = Object.create(Person);",
+        "\tperson.first_name = first_name;",
+        "\tperson.last_name = last_name;",
+        "\treturn person;",
+        "}",
+        "var asim = PersonFactory(\"asim\", \"hussain\");"
+      ],
+      "snipTags": [
+        "Constructor Pattern vs. Prototype Pattern"
       ]
     },
     {
       "id": 35,
       "term": "Every and Some",
-      "definition": "The every() method tests whether all elements in the array pass the test implemented by the provided function. The some() method tests whether at least one element in the array passes the test implemented by the provided function. Both return either true or false.",
-      "snippets": [
-        {
-          "tags": [
-            "basic every and some example"
-          ],
-          "code": [
-            "var computers = [",
-            " { name: 'Apple', ram: 24 },",
-            " { name: 'Compaq', ram: 4 },",
-            " { name: 'Acer', ram: 32 }",
-            "];",
-            "",
-            "computers.some(comp => comp.ram > 16) \t// true",
-            "computers.every(comp => comp.ram > 16)\t// false"
-          ]
-        }
+      "description": "The every() method tests whether all elements in the array pass the test implemented by the provided function. The some() method tests whether at least one element in the array passes the test implemented by the provided function. Both return either true or false.",
+      "language": "JavaScript",
+      "snipRawCode": "var computers = [\n { name: 'Apple', ram: 24 },\n { name: 'Compaq', ram: 4 },\n { name: 'Acer', ram: 32 }\n];\n\ncomputers.some(comp => comp.ram > 16) \t// true\ncomputers.every(comp => comp.ram > 16)\t// false",
+      "snipRawTags": "basic every and some example",
+      "snipCode": [
+        "var computers = [",
+        " { name: 'Apple', ram: 24 },",
+        " { name: 'Compaq', ram: 4 },",
+        " { name: 'Acer', ram: 32 }",
+        "];",
+        "",
+        "computers.some(comp => comp.ram > 16) \t// true",
+        "computers.every(comp => comp.ram > 16)\t// false"
+      ],
+      "snipTags": [
+        "basic every and some example"
       ]
     },
     {
       "id": 36,
       "term": "Arrow Functions (ES6)",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "basic arrow function examples"
-          ],
-          "code": [
-            "// One Argument does NOT need parens around the num after the equals",
-            "const double = num => num * 2;",
-            "",
-            "// Zero Arguments DOES need parens around the empty string",
-            "const triple = () => 3;",
-            "",
-            "// Two+ Arguments NEED parens",
-            "const quadru = (num1, num2) => num1 * num2;",
-            "",
-            "const numbers = [1,2,3];",
-            "",
-            "// Slimmed down Map function with One Argument",
-            "numbers.map(num => num * 2);"
-          ]
-        },
-        {
-          "tags": [
-            "arrow function lexical this"
-          ],
-          "code": [
-            "// arrow functions use lexical 'this'",
-            "const team4 = {",
-            " members: ['Jane', 'Bill'],",
-            " teamName: 'Super Squad', ",
-            " teamSummary: function() {",
-            "\t\t// this === team when using the fat arrow function",
-            " return this.members.map(member => {",
-            " return `${member} is on team ${this.teamName}`;",
-            " });",
-            " }",
-            "};",
-            "",
-            "// The example below fails because the \"this\" is ambiguous",
-            "const team = {",
-            " members: ['Jane', 'Bill'],",
-            " teamName: 'Super Squad', ",
-            " teamSummary: function() {",
-            "",
-            " return this.members.map(function(member) {",
-            " return `${member} is on team ${this.teamName}`;",
-            " });",
-            " }",
-            "};",
-            "",
-            "// You could solve in the following ways OR just use the arrow function listed above:",
-            "// Bind Solution",
-            "const team2 = {",
-            " members: ['Jane', 'Bill'],",
-            " teamName: 'Super Squad', ",
-            " teamSummary: function() {",
-            " return this.members.map(function(member) {",
-            " return `${member} is on team ${this.teamName}`;",
-            " }.bind(this));",
-            " }",
-            "};",
-            "",
-            "",
-            "// Self Solution",
-            "const team3 = {",
-            " members: ['Jane', 'Bill'],",
-            " teamName: 'Super Squad', ",
-            " teamSummary: function() {",
-            " const self = this;",
-            " return this.members.map(function(member) {",
-            " return `${member} is on team ${self.teamName}`;",
-            " });",
-            " }",
-            "};"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// One Argument does NOT need parens around the num after the equals\nconst double = num => num * 2;\n\n// Zero Arguments DOES need parens around the empty string\nconst triple = () => 3;\n\n// Two+ Arguments NEED parens\nconst quadru = (num1, num2) => num1 * num2;\n\nconst numbers = [1,2,3];\n\n// Slimmed down Map function with One Argument\nnumbers.map(num => num * 2);",
+      "snipRawTags": "basic arrow function examples",
+      "snipCode": [
+        "// One Argument does NOT need parens around the num after the equals",
+        "const double = num => num * 2;",
+        "",
+        "// Zero Arguments DOES need parens around the empty string",
+        "const triple = () => 3;",
+        "",
+        "// Two+ Arguments NEED parens",
+        "const quadru = (num1, num2) => num1 * num2;",
+        "",
+        "const numbers = [1,2,3];",
+        "",
+        "// Slimmed down Map function with One Argument",
+        "numbers.map(num => num * 2);"
+      ],
+      "snipTags": [
+        "basic arrow function examples"
       ]
     },
     {
       "id": 37,
       "term": "Classes (ES6)",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "ES5 vs. ES6 Classes"
-          ],
-          "code": [
-            "// ES5",
-            "function Car(options) {",
-            "\tthis.title = options.title;",
-            "}",
-            "",
-            "Car.prototype.drive = function() {",
-            "\treturn 'vroom';",
-            "};",
-            " ",
-            "",
-            "function Toyota(options) {",
-            "\tCar.call(this, options);",
-            "\tthis.color = options.color; ",
-            "}",
-            " ",
-            "Toyota.prototype = Object.create(Car.prototype);",
-            "Toyota.prototype.constructor = Toyota;",
-            "Toyota.prototype.honk = function() {",
-            "\treturn 'beep'",
-            "};",
-            " ",
-            "const car = new Toyota({color: 'red', title: 'Daily Driver'});",
-            " ",
-            "console.log(car.honk()); // beep",
-            "console.log(car.drive()); // vroom",
-            " ",
-            " ",
-            "// ES6",
-            "class Car {",
-            " \tconstructor({title}) {",
-            " \t\tthis.title = title",
-            " \t}",
-            "\tdrive() {",
-            "\t\treturn 'vroom' ",
-            "\t}",
-            " ",
-            "};",
-            "",
-            "",
-            "class Toyota extends Car {",
-            "\tconstructor(options) {",
-            "\t\tsuper(options);\t\t// Car.constructor()",
-            "\t\tthis.color = options.color;",
-            "\t}",
-            " ",
-            "\thonk() {",
-            "\t\treturn 'beep';",
-            "\t};",
-            "}",
-            " ",
-            "const toyota = new Toyota({color: 'red', title: 'CMs Car'});",
-            " ",
-            "console.log(toyota.honk()) // beep",
-            "console.log(toyota.drive()); // vroom"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// ES5\nfunction Car(options) {\n\tthis.title = options.title;\n}\n\nCar.prototype.drive = function() {\n\treturn 'vroom';\n};\n \n\nfunction Toyota(options) {\n\tCar.call(this, options);\n\tthis.color = options.color; \n}\n \nToyota.prototype = Object.create(Car.prototype);\nToyota.prototype.constructor = Toyota;\nToyota.prototype.honk = function() {\n\treturn 'beep'\n};\n \nconst car = new Toyota({color: 'red', title: 'Daily Driver'});\n \nconsole.log(car.honk()); // beep\nconsole.log(car.drive()); // vroom\n \n \n// ES6\nclass Car {\n \tconstructor({title}) {\n \t\tthis.title = title\n \t}\n\tdrive() {\n\t\treturn 'vroom' \n\t}\n \n};\n\n\nclass Toyota extends Car {\n\tconstructor(options) {\n\t\tsuper(options);\t\t// Car.constructor()\n\t\tthis.color = options.color;\n\t}\n \n\thonk() {\n\t\treturn 'beep';\n\t};\n}\n \nconst toyota = new Toyota({color: 'red', title: 'CMs Car'});\n \nconsole.log(toyota.honk()) // beep\nconsole.log(toyota.drive()); // vroom",
+      "snipRawTags": "ES5 vs. ES6 Classes",
+      "snipCode": [
+        "// ES5",
+        "function Car(options) {",
+        "\tthis.title = options.title;",
+        "}",
+        "",
+        "Car.prototype.drive = function() {",
+        "\treturn 'vroom';",
+        "};",
+        " ",
+        "",
+        "function Toyota(options) {",
+        "\tCar.call(this, options);",
+        "\tthis.color = options.color; ",
+        "}",
+        " ",
+        "Toyota.prototype = Object.create(Car.prototype);",
+        "Toyota.prototype.constructor = Toyota;",
+        "Toyota.prototype.honk = function() {",
+        "\treturn 'beep'",
+        "};",
+        " ",
+        "const car = new Toyota({color: 'red', title: 'Daily Driver'});",
+        " ",
+        "console.log(car.honk()); // beep",
+        "console.log(car.drive()); // vroom",
+        " ",
+        " ",
+        "// ES6",
+        "class Car {",
+        " \tconstructor({title}) {",
+        " \t\tthis.title = title",
+        " \t}",
+        "\tdrive() {",
+        "\t\treturn 'vroom' ",
+        "\t}",
+        " ",
+        "};",
+        "",
+        "",
+        "class Toyota extends Car {",
+        "\tconstructor(options) {",
+        "\t\tsuper(options);\t\t// Car.constructor()",
+        "\t\tthis.color = options.color;",
+        "\t}",
+        " ",
+        "\thonk() {",
+        "\t\treturn 'beep';",
+        "\t};",
+        "}",
+        " ",
+        "const toyota = new Toyota({color: 'red', title: 'CMs Car'});",
+        " ",
+        "console.log(toyota.honk()) // beep",
+        "console.log(toyota.drive()); // vroom"
+      ],
+      "snipTags": [
+        "ES5 vs. ES6 Classes"
       ]
     },
     {
       "id": 38,
       "term": "Fetch (ES6)",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "fetch"
-          ],
-          "code": [
-            "const url = 'https://jsonplaceholder.typicode.com/posts12312/';",
-            " ",
-            "// fetch(url)",
-            "// \t.then(response => response.json())",
-            "// \t.then(data => console.log(data));",
-            " ",
-            "// the catch statement is only triggered if the network request flat out fails",
-            "// it WON'T catch if you get a 404 or anything at 300 or above which is a failure",
-            "// Use Axios",
-            " ",
-            "fetch(url)",
-            "\t.then(response => console.log(response))",
-            "\t.catch(error => console.log('BAD', error));"
-          ]
-        }
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "const url = 'https://jsonplaceholder.typicode.com/posts12312/';\n \n// fetch(url)\n// \t.then(response => response.json())\n// \t.then(data => console.log(data));\n \n// the catch statement is only triggered if the network request flat out fails\n// it WON'T catch if you get a 404 or anything at 300 or above which is a failure\n// Use Axios\n \nfetch(url)\n\t.then(response => console.log(response))\n\t.catch(error => console.log('BAD', error));",
+      "snipRawTags": "fetch",
+      "snipCode": [
+        "const url = 'https://jsonplaceholder.typicode.com/posts12312/';",
+        " ",
+        "// fetch(url)",
+        "// \t.then(response => response.json())",
+        "// \t.then(data => console.log(data));",
+        " ",
+        "// the catch statement is only triggered if the network request flat out fails",
+        "// it WON'T catch if you get a 404 or anything at 300 or above which is a failure",
+        "// Use Axios",
+        " ",
+        "fetch(url)",
+        "\t.then(response => console.log(response))",
+        "\t.catch(error => console.log('BAD', error));"
+      ],
+      "snipTags": [
+        "fetch"
       ]
     },
     {
       "id": 39,
       "term": "Promises",
-      "definition": "",
-      "snippets": [
-        {
-          "tags": [
-            "promises"
-          ],
-          "code": [
-            "//- three states of promises",
-            "//\t- unresolved => waiting for something to finish",
-            "//\t- resolved => something finished and it all went okay",
-            "//\t\t- then (callback)",
-            "//\t- rejected => something finished and something went bad",
-            "//\t\t- catch (callback)",
-            "//- the vast majority of promises are related to Ajax requests",
-            " ",
-            "let promise = new Promise((resolve, reject) => {",
-            "\tsetTimeout(() => {",
-            "\t\treject();",
-            "\t}, 3000);",
-            "});",
-            " ",
-            "promise",
-            "\t.then(() => console.log('finally finished'))",
-            "\t.then(() => console.log('this ran as well'))",
-            "\t.catch(() => console.log('Rejected promise!!!'))",
-            " "
-          ]
-        }
-      ]
-    },
-    {
-      "id": 860491745910149300000,
-      "term": "This is a test!!",
-      "description": "Hello how are you??",
-      "language": "What is going on here?",
-      "snipTags": [
-        "tag1",
-        "tag2"
-      ],
-      "snipCode": [
-        "code snippet"
-      ]
-    },
-    {
-      "id": 643103265079349600000,
-      "term": "Another Test",
-      "description": "And it looks like we got another",
-      "language": "JavaScript",
-      "snipCode": [
-        "Hello, are you",
-        "    This is some more code",
-        "and we are here"
-      ],
-      "snipTags": [
-        "tag3",
-        "tag5",
-        "tag8"
-      ]
-    },
-    {
-      "id": 564867121108689550000,
-      "term": "asdfasdf",
-      "description": "asdfasdfasfd",
-      "language": "asdfasdf",
-      "snipTags": [
-        "ffff",
-        "asdf"
-      ],
-      "snipCode": [
-        "asdfasdfaff"
-      ]
-    },
-    {
-      "id": 303419451580212000000,
-      "term": "Another test",
-      "description": "asdfaf",
-      "language": "ruby",
-      "snipRawCode": "<div className=\"row\">\n\t\t\t\t\t<h5>Create New Code Snippet</h5>\n\t\t\t\t\t<div className=\"input-field col s6\">\n\t\t\t        \t<input type=\"text\"\n\t\t\t        \t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"term\", e.target.value)}\n\t\t\t        \t\t\tvalue={this.state.newCodeObject.term}\n\t\t\t        \t\t\t/>\n\t\t\t        \t<label htmlFor=\"term\">Term</label>\n\t\t\t        </div>\n\t\t\t        <br />\n\t        \t\t<div className=\"input-field col s9\">\n\t                \t<textarea className=\"materialize-textarea\" type=\"text\"\n\t                \t\t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"description\", e.target.value)}\n\t                \t\t\t\tvalue={this.state.newCodeObject.description}\n\t                \t></textarea>\n\t                \t<label htmlFor=\"term\">Description</label>\n\t                </div>\n\t                <br />\n    \t\t\t\t<div className=\"input-field col s6\">\n\t\t\t        \t<input type=\"text\"\n\t\t\t        \t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"language\", e.target.value)}\n\t\t\t        \t\t\tvalue={this.state.newCodeObject.language}\n\t\t\t        \t\t\t/>\n\t\t\t        \t<label htmlFor=\"language\">Language</label>\n\t\t\t        </div>\n\t\t\t        <br />\n\t\t\t        <div className=\"input-field col s9\">\n\t                \t<textarea className=\"materialize-textarea\" type=\"text\"\n\t                \t\t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"snippet\", e.target.value)}\n\t                \t\t\t\tvalue={this.state.newCodeObject.snipRawCode}\n\t                \t\t\t\tonKeyDown={(e) => e.keyCode == 9 && e.preventDefault()}\n\t                \t></textarea>\n\t                \t<label htmlFor=\"term\">Code Snippets</label>\n\t                </div>\n\t                <div className=\"input-field col s6\">\n\t\t\t        \t<input type=\"text\"\n\t\t\t        \t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"tags\", e.target.value)}\n\t\t\t        \t\t\tvalue={this.state.newCodeObject.snipRawTags}\n\t\t\t        \t\t\t/>\n\t\t\t        \t<label htmlFor=\"term\">Tags</label>\n\t\t\t        </div>\n\t                <div className=\"col s12\">\n\t                <a className=\"waves-effect waves-light btn\"\n\t                \tonClick={() => this.saveCodeObject()}\n\t                \t>Save Snippet\n\t                </a>\n\t                </div>\n\t\t\t\t</div>",
-      "snipRawTags": "tags2, fjasdfasdf, asdfasdf",
-      "snipTags": [
-        "tags2",
-        "fjasdfasdf",
-        "asdfasdf"
-      ],
-      "snipCode": [
-        "<div className=\"row\">",
-        "\t\t\t\t\t<h5>Create New Code Snippet</h5>",
-        "\t\t\t\t\t<div className=\"input-field col s6\">",
-        "\t\t\t        \t<input type=\"text\"",
-        "\t\t\t        \t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"term\", e.target.value)}",
-        "\t\t\t        \t\t\tvalue={this.state.newCodeObject.term}",
-        "\t\t\t        \t\t\t/>",
-        "\t\t\t        \t<label htmlFor=\"term\">Term</label>",
-        "\t\t\t        </div>",
-        "\t\t\t        <br />",
-        "\t        \t\t<div className=\"input-field col s9\">",
-        "\t                \t<textarea className=\"materialize-textarea\" type=\"text\"",
-        "\t                \t\t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"description\", e.target.value)}",
-        "\t                \t\t\t\tvalue={this.state.newCodeObject.description}",
-        "\t                \t></textarea>",
-        "\t                \t<label htmlFor=\"term\">Description</label>",
-        "\t                </div>",
-        "\t                <br />",
-        "    \t\t\t\t<div className=\"input-field col s6\">",
-        "\t\t\t        \t<input type=\"text\"",
-        "\t\t\t        \t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"language\", e.target.value)}",
-        "\t\t\t        \t\t\tvalue={this.state.newCodeObject.language}",
-        "\t\t\t        \t\t\t/>",
-        "\t\t\t        \t<label htmlFor=\"language\">Language</label>",
-        "\t\t\t        </div>",
-        "\t\t\t        <br />",
-        "\t\t\t        <div className=\"input-field col s9\">",
-        "\t                \t<textarea className=\"materialize-textarea\" type=\"text\"",
-        "\t                \t\t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"snippet\", e.target.value)}",
-        "\t                \t\t\t\tvalue={this.state.newCodeObject.snipRawCode}",
-        "\t                \t\t\t\tonKeyDown={(e) => e.keyCode == 9 && e.preventDefault()}",
-        "\t                \t></textarea>",
-        "\t                \t<label htmlFor=\"term\">Code Snippets</label>",
-        "\t                </div>",
-        "\t                <div className=\"input-field col s6\">",
-        "\t\t\t        \t<input type=\"text\"",
-        "\t\t\t        \t\t\tonChange={(e) => this.changeInput('newCodeObject', existing, \"tags\", e.target.value)}",
-        "\t\t\t        \t\t\tvalue={this.state.newCodeObject.snipRawTags}",
-        "\t\t\t        \t\t\t/>",
-        "\t\t\t        \t<label htmlFor=\"term\">Tags</label>",
-        "\t\t\t        </div>",
-        "\t                <div className=\"col s12\">",
-        "\t                <a className=\"waves-effect waves-light btn\"",
-        "\t                \tonClick={() => this.saveCodeObject()}",
-        "\t                \t>Save Snippet",
-        "\t                </a>",
-        "\t                </div>",
-        "\t\t\t\t</div>"
-      ]
-    },
-    {
-      "id": 888804413719043100000,
-      "term": "test 5",
-      "description": "asdflkajsdflkj",
-      "language": "more text",
-      "snipRawCode": "asdflkasjfdlkjff",
-      "snipRawTags": "ffddd, adfadf, fdafsd",
-      "snipTags": [
-        "ffddd",
-        "adfadf",
-        "fdafsd"
-      ],
-      "snipCode": [
-        "asdflkasjfdlkjff"
-      ]
-    },
-    {
-      "id": 245918526989591840000,
-      "term": "And we've got another",
-      "description": "asdfasdf",
-      "language": "asdfasdfasdf",
-      "snipRawCode": "asdfasdfasdfasfdasdf\nasdfasdfasdf\nasdfasdf",
-      "snipRawTags": "hello1, asdfasdf",
-      "snipTags": [
-        "hello1",
-        "asdfasdf"
-      ],
-      "snipCode": [
-        "asdfasdfasdfasfdasdf",
-        "asdfasdfasdf",
-        "asdfasdf"
-      ]
-    },
-    {
-      "id": 787302871665879000000,
-      "term": "Saving this",
       "description": "",
-      "language": "",
-      "snipRawCode": "",
-      "snipRawTags": "",
-      "snipTags": [],
-      "snipCode": []
-    },
-    {
-      "id": 575298081704481260000,
-      "term": "And one more?? - EDITED",
-      "description": "Does this work - maybe",
-      "language": "asdfasdfasdf",
-      "snipRawCode": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-      "snipRawTags": "tag1, tag2",
+      "language": "JavaScript",
+      "snipRawCode": "//- three states of promises\n//\t- unresolved => waiting for something to finish\n//\t- resolved => something finished and it all went okay\n//\t\t- then (callback)\n//\t- rejected => something finished and something went bad\n//\t\t- catch (callback)\n//- the vast majority of promises are related to Ajax requests\n \nlet promise = new Promise((resolve, reject) => {\n\tsetTimeout(() => {\n\t\treject();\n\t}, 3000);\n});\n \npromise\n\t.then(() => console.log('finally finished'))\n\t.then(() => console.log('this ran as well'))\n\t.catch(() => console.log('Rejected promise!!!'))\n ",
+      "snipRawTags": "promises",
       "snipCode": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "//- three states of promises",
+        "//\t- unresolved => waiting for something to finish",
+        "//\t- resolved => something finished and it all went okay",
+        "//\t\t- then (callback)",
+        "//\t- rejected => something finished and something went bad",
+        "//\t\t- catch (callback)",
+        "//- the vast majority of promises are related to Ajax requests",
+        " ",
+        "let promise = new Promise((resolve, reject) => {",
+        "\tsetTimeout(() => {",
+        "\t\treject();",
+        "\t}, 3000);",
+        "});",
+        " ",
+        "promise",
+        "\t.then(() => console.log('finally finished'))",
+        "\t.then(() => console.log('this ran as well'))",
+        "\t.catch(() => console.log('Rejected promise!!!'))",
+        " "
       ],
       "snipTags": [
-        "tag1",
-        " tag2"
+        "promises"
       ]
     }
   ]

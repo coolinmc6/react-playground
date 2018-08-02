@@ -18,6 +18,7 @@ const defaultJSNotes = {
 export default function(state = defaultJSNotes, action) {
 	switch(action.type) {
 		case FETCH_LIBRARY:
+			console.log(action.payload.data["code"]);
 			return {
 				...state,
 				library: [...action.payload.data["code"]]
@@ -34,14 +35,22 @@ export default function(state = defaultJSNotes, action) {
 				};
 			} else {
 				const keywords = [];
+				console.log(state);
 				state.library.map(parent => {
-					return parent.snippets.map(block => {
-						return block.tags.map(tag => {
-							if(tag.toLowerCase().includes(action.payload.toLowerCase())) {
-								var obj = {id: parent.id, tag: tag}
-								keywords.push(obj)		
-							}
-						});
+					// return parent.snippets.map(block => {
+					// 	return block.tags.map(tag => {
+					// 		if(tag.toLowerCase().includes(action.payload.toLowerCase())) {
+					// 			var obj = {id: parent.id, tag: tag}
+					// 			keywords.push(obj)		
+					// 		}
+					// 	});
+					// });
+					return parent.snipTags.map(tag => {
+						if(tag.toLowerCase().includes(action.payload.toLowerCase())) {
+							var obj = {id: parent.id, tag: tag}
+							keywords.push(obj)		
+						}
+						
 					});
 				});
 				const obj = {

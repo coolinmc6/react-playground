@@ -3,7 +3,8 @@ import {
 	CLICK_COLLECTION_ITEM,
 	CHANGE_INPUT,
 	SAVE_NEW_CODE_OBJECT,
-	UPDATE_EXISTING_CODE_OBJECT
+	UPDATE_EXISTING_CODE_OBJECT,
+	DELETE_CODE_OBJECT
 } from '../actions/types';
 
 const defaultJSNotes = {
@@ -48,6 +49,15 @@ export default function(state = defaultJSNotes, action) {
 					...state.library.slice(0,updatedIndex),
 					action.payload,
 					...state.library.slice(updatedIndex+1)
+				]
+			}
+		case DELETE_CODE_OBJECT:
+			const removeIndex = state.library.findIndex(item => item.id === action.payload)
+			return {
+				...state, 
+				library: [
+					...state.library.slice(0, removeIndex),
+					...state.library.slice(removeIndex+1)
 				]
 			}
 		default:
