@@ -203,14 +203,15 @@
       "id": 3141592653,
       "term": "Cool Code",
       "description": "Just random bits of code that I like.\n",
-      "language": "",
-      "snipRawCode": "function randomColor() {  \n    var rand = '#' + Math.random().toString(16).slice(2,8);\n return rand\n}",
+      "language": "JavaScript",
+      "snipRawCode": "function randomColor() {  \n    var rand = '#' + Math.random().toString(16).slice(2,8);\n    return rand\n}\n",
       "snipRawTags": "random color generator",
       "snipCode": [
         "function randomColor() {  ",
         "    var rand = '#' + Math.random().toString(16).slice(2,8);",
-        " return rand",
-        "}"
+        "    return rand",
+        "}",
+        ""
       ],
       "snipTags": [
         "random color generator"
@@ -389,7 +390,7 @@
     },
     {
       "id": 24,
-      "term": "Use Strict",
+      "term": "\"Use Strict\"",
       "description": "see Advanced Javascript (AJ) Notes",
       "language": "JavaScript",
       "snipRawCode": "//Use Strict Notes:\n//- it makes debugging easier\n//- prevents you from accidentally creating global variables\n//- prevents you from naming variables that will be keywords in future JS verisons\n//- doesn't let you delete arguments to functions, functions, or variables\n\"use strict\"\n\nasim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\"",
