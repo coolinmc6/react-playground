@@ -198,12 +198,46 @@ nav .brand-logo {
 				background-color: #1e88e5;
 				color: #fff;
 			}
+
+
+			.list-lang {
+				display: inline-block;
+				border: 1px solid transparent;
+				font-size: 0.7rem;
+				margin-left: 1rem;
+				border-radius: 4px;
+				text-transform: uppercase;
+				padding: 0.05rem 0.3rem;
+
+			}
+
+			.cm-javascript {
+				background-color: #EDDA68;
+				// font-weight: bold;
+				color: #fff;
+			}
+
+			.cm-html {
+				background-color: #D35736;
+				color: #fff;
+				font-weight: bold;;
+			}
+
+			.cm-css {
+				background-color: #2F50DC;
+				color: #fff;
+				
+			}
+
+
+
+
 		}	
 	}
 	
 }
 .finished-code {
-	.tag {
+	.cm-tag {
 		font-size: 0.9rem;
 		background-color: #F44336;
 		color: white;

@@ -138,8 +138,26 @@ nav .brand-logo {
       .main-collection .collection .collection-item:hover {
         background-color: #1e88e5;
         color: #fff; }
+      .main-collection .collection .collection-item .list-lang {
+        display: inline-block;
+        border: 1px solid transparent;
+        font-size: 0.7rem;
+        margin-left: 1rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        padding: 0.05rem 0.3rem; }
+      .main-collection .collection .collection-item .cm-javascript {
+        background-color: #EDDA68;
+        color: #fff; }
+      .main-collection .collection .collection-item .cm-html {
+        background-color: #D35736;
+        color: #fff;
+        font-weight: bold; }
+      .main-collection .collection .collection-item .cm-css {
+        background-color: #2F50DC;
+        color: #fff; }
 
-.finished-code .tag {
+.finished-code .cm-tag {
   font-size: 0.9rem;
   background-color: #F44336;
   color: white;

@@ -6,7 +6,7 @@ import { fetchCodeLibrary,
 		saveNewCodeObject, 
 		updateCodeObject, 
 		deleteCodeObject } from '../actions/index';
-import { generateID } from '../helpers/Helpers'
+import { generateID, languageIdentifier } from '../helpers/Helpers'
 
 // import CodeObject from '../components/CodeObject';
 
@@ -78,29 +78,72 @@ class CodeEditor extends Component {
 		return tags.map(tag => {
 			let random = generateID();
 			return (
-				<span className="tag" key={`${tag}-${random}`}>{tag}</span>
+				<span className="cm-tag" key={`${tag}-${random}`}>{tag}</span>
 			);
 		})
 	}
 
+	// Render the Code block
 	renderCode() {
 		let codeArray, languageStyle;
 		if(this.state.existing) {
 			codeArray = this.state.existingCodeObject.snipCode;
-			// languageStyle = this.state.existingCodeObject.language
+			languageStyle = this.state.existingCodeObject.language ? this.state.existingCodeObject.language : 'JavaScript';
 		} else {
 			codeArray = this.state.newCodeObject.snipCode;
-			// languageStyle = this.state.newCodeObject.language
+			languageStyle = this.state.newCodeObject.language  ? this.state.newCodeObject.language : 'JavaScript';
 		}
 		if(!codeArray) {
 			return <div>No code...</div>
 		}
+
+		// console.log(languageStyle.toLowerCase());
+
+		let langClass = `language-${languageStyle.toLowerCase()}`;
+		let prismProp;
+		switch(languageStyle) {
+			case 'CSS':
+			case 'css':
+				prismProp = 'css';
+				langClass = "language-css"
+				break;
+			case 'HTML':
+			case 'html':
+				prismProp = 'html';
+				langClass = "language-html"
+				break;
+			case 'JavaScript':
+			case 'Javascript':
+			case 'javaScript':
+				prismProp = "javascript";
+				langClass = "language-javascript";
+				break;
+			case 'PHP':
+			case 'php':
+			case 'Php':
+				prismProp = 'clike';
+				langClass = "language-php";
+				break;
+			case 'Python':
+				prismProp = 'clike';
+				langClass = "language-python";
+				break;
+
+			default:
+				prismProp = 'javascript';
+				langClass = 'language-javascript';
+				break;
+		}
+
+		 
+		// let langClass = "language-javascript";
 		return (
 
 			<pre>
-				<code className="language-javascript">
+				<code className={`${langClass}`}>
 					{codeArray.map((line) => {
-						const html = Prism.highlight(line, Prism.languages.javascript);
+						// const html = Prism.highlight(line, Prism.languages.javascript);
+						const html = Prism.highlight(line, Prism.languages[prismProp]);
 						return (
 
 							<div key={Math.floor(Math.random()*10000000000)}
@@ -110,14 +153,6 @@ class CodeEditor extends Component {
 				</code>
 			</pre>
 		)
-		// return codeArray.map((line) => {
-		// 	const html = Prism.highlight(line, Prism.languages.javascript);
-		// 	return (
-
-		// 		<div key={Math.floor(Math.random()*10000000000)}
-		// 			dangerouslySetInnerHTML={this.createMarkup(html)}></div>
-		// 	);
-		// })
 	}
 
 	saveCodeObject() {
@@ -356,14 +391,21 @@ class CodeEditor extends Component {
 		});
 	}
 
+	// Show list of code concepts in the collections list and sorts by alphabetical order
 	renderCodeList() {
 		if(this.props.my_code) {
 			let sorted = this.props.my_code.library.sort((a,b) => a.term.toLowerCase() > b.term.toLowerCase() ? 1 : b.term.toLowerCase() > a.term.toLowerCase() ? -1 : 0)
 			// this.props.my_code.library
 			return sorted.map(obj => {
+				let language = languageIdentifier(obj.language);
+
 				
 				return (
-					<li className="collection-item" key={obj.id} onClick={() => this.loadExistingCodeObject(obj.id)}>{obj.term} </li>
+					<li className="collection-item" 
+						key={obj.id} 
+						onClick={() => this.loadExistingCodeObject(obj.id)}>{obj.term} 
+						<span className={`list-lang cm-${language}`}>{language}</span>
+					</li>
 				)
 			})	
 		}
