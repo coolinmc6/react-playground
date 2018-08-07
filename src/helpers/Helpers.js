@@ -32,3 +32,24 @@ export const languageIdentifier = (language) => {
 
 	return identifiedLanguage;
 }
+
+export const prismLanguage = (language) => {
+	let prism = 'javascript';
+	switch(language) {
+		case 'css':
+			prism = 'css';
+			break;
+		case 'html':
+			prism = 'html';
+			break;
+		case 'php':
+		case 'python':
+			prism = 'clike';
+			break;
+		default:
+			prism = 'javascript';
+			break;
+	}
+
+	return prism;
+}

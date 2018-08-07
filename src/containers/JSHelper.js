@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { updateSearch, fetchLibrary, changePage, changeFocus } from '../actions/index';
+import { languageIdentifier, prismLanguage } from '../helpers/Helpers'
 
 import '../css/prism.css';
 
@@ -22,34 +23,36 @@ class JSHelper extends Component {
 
 
 
-	renderCode(codeArray) {
-		return codeArray.map((line) => {
-			const html = Prism.highlight(line, Prism.languages.javascript);
+	renderCode(codeBlock) {
+		let language = codeBlock.language ? languageIdentifier(codeBlock.language) : 'javascript';
+		let prism = prismLanguage(language);
+		return codeBlock.snipCode.map((line) => {
+			const html = Prism.highlight(line, Prism.languages[prism]);
 			return (
-				<div key={Math.floor(Math.random()*10000)}
+				<div key={Math.floor(Math.random()*10000000)}
 					dangerouslySetInnerHTML={this.createMarkup(html)}></div>
 			);
 		})
 	}
 
 	renderTags(tags) {
+
 		return tags.map(tag => {
-			return <div className="chip" key={Math.floor(Math.random()*10000)}>{tag}</div>
+			return(
+				<div className="chip" key={Math.floor(Math.random()*10000)}>{tag}</div>
+			) 
 		})
 	}
 
-	renderExamples(snippets) {
-		console.log('Snippets: ', snippets)
-		return snippets.map((snip) => {
-			return (
-				<div key={Math.floor(Math.random()*10000)} className="code-block">
-					<div className="code-tags">{this.renderTags(snip.tags)}</div>
-					<pre><code className="language-javascript">
-						{this.renderCode(snip.code)}
-					</code></pre>
-				</div>
-			)
-		})
+	renderExamples(codeBlock) {
+		return (
+			<div key={Math.floor(Math.random()*10000000)} className="code-block">
+				<pre><code className="language-javascript">
+					{this.renderCode(codeBlock)}
+				</code></pre>
+			</div>
+		)
+		
 	}
 
 	// Renders search results block
@@ -121,13 +124,15 @@ class JSHelper extends Component {
 	renderPage() {
 		if(this.props.javascript.page.length > 0) {
 			const item = this.props.javascript.page[0]
+			console.log(item);
 			return (
 				<div className="concept-page" key={item.id}>
 					<span className="close" onClick={() => this.props.changePage(0)}>&times;</span>
 					<h4>{item.term}</h4>
-					<p className="term-definition">{item.definition}</p>
+					<p className="term-definition">{item.description}</p>
 					<div className="code-examples">
-						{this.renderExamples(item.snippets)}
+						<div className="code-tags">{this.renderTags(item.snipTags)}</div>
+						{this.renderExamples(item)}
 					</div>
 				</div>
 			)	

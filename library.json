@@ -285,11 +285,29 @@
       "term": "Immutability",
       "description": "The snippets below are examples of changing arrays or objects without mutating the original.",
       "language": "JavaScript",
-      "snipRawCode": "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property\nexport const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});",
+      "snipRawCode": "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property\nexport const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});\n\n\n// Update an item and return new array\n// list = the array of items\n// updated = the updated item\nexport const updateTodo = (list, updated) => {\n\tconst updatedIndex = list.findIndex(item => item.id === updated.id)\n\n\t// the return statement slices the array from 0 to the item in the array we are updating, \n\t// puts in the updated item, 'updated', and then adds the rest of the array using the \n\t// spread operator that starts from 1 after the updated array's location to the end\n\treturn [\n\t\t...list.slice(0,updatedIndex),\n\t\tupdated,\n\t\t...list.slice(updatedIndex+1)\n\t]\n}",
       "snipRawTags": "copy object without mutating original, toggle an object, copy object using spread operator",
       "snipCode": [
         "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property",
-        "export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});"
+        "export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});",
+        "",
+        "",
+        "// Update an item and return new array",
+        "// list = the array of items",
+        "// updated = the updated item",
+        "export const updateTodo = (list, updated) => {",
+        "\tconst updatedIndex = list.findIndex(item => item.id === updated.id)",
+        "\n",
+        "\n",
+        "\t// the return statement slices the array from 0 to the item in the array we are updating, ",
+        "\t// puts in the updated item, 'updated', and then adds the rest of the array using the ",
+        "\t// spread operator that starts from 1 after the updated array's location to the end",
+        "\treturn [",
+        "\t\t...list.slice(0,updatedIndex),",
+        "\t\tupdated,",
+        "\t\t...list.slice(updatedIndex+1)",
+        "\t]",
+        "}"
       ],
       "snipTags": [
         "copy object without mutating original",
@@ -462,9 +480,11 @@
         " this.first_name = first_name;",
         " this.last_name = last_name;",
         "};",
-        "",
+        " ",
+        " ",
         "// Method #1: Instantiating a new Person",
         "var dude = new Person(\"asim\", \"hussain\");",
+        "",
         "",
         "// WRONG => this throws an error:",
         "var dude = Person(\"asim\", \"hussain\");",
@@ -750,6 +770,10 @@
         "};",
         " ",
         "",
+        " ",
+        "",
+        " ",
+        "",
         "function Toyota(options) {",
         "\tCar.call(this, options);",
         "\tthis.color = options.color; ",
@@ -862,20 +886,20 @@
       "term": "CSS Positioning",
       "description": "",
       "language": "CSS",
-      "snipRawCode": ".main {\n  position: relative;\n}\n\n\n.btn {\nposition: absolute;\ntop: 1rem;\n}",
+      "snipRawCode": ".main {\n   position: relative;\n}\n\n\n.btn {\n   position: absolute;\n   top: 1rem;\n}",
       "snipRawTags": "",
-      "snipTags": [],
       "snipCode": [
         ".main {",
-        "  position: relative;",
+        "   position: relative;",
         "}",
         "",
         "",
         ".btn {",
-        "position: absolute;",
-        "top: 1rem;",
+        "   position: absolute;",
+        "   top: 1rem;",
         "}"
-      ]
+      ],
+      "snipTags": []
     },
     {
       "id": 362905722899510900000,
@@ -983,6 +1007,39 @@
         "    print(matches)",
         "    # TODO",
         "    return jsonify(matches)"
+      ]
+    },
+    {
+      "id": 696120997087376600000,
+      "term": "Generate a PHP GUID",
+      "description": "",
+      "language": "PHP",
+      "snipRawCode": "function getGUID(){\n    $uuid;\n    if (function_exists('com_create_guid')){\n        $uuid = com_create_guid();\n    }else{\n        mt_srand((double)microtime()*10000);//optional for php 4.2.0 and up.\n        $charid = strtoupper(md5(uniqid(rand(), true)));\n        $hyphen = chr(45);  // \"-\"\n        $uuid = substr($charid, 0, 8).$hyphen\n            .substr($charid, 8, 4).$hyphen\n            .substr($charid,12, 4).$hyphen\n            .substr($charid,16, 4).$hyphen\n            .substr($charid,20,12);\n            \n    }\n\n    $uuid = str_replace('{', '', $uuid);\n    $uuid = str_replace('}', '', $uuid);\n    return $uuid;\n}",
+      "snipRawTags": "GUID generator",
+      "snipTags": [
+        "GUID generator"
+      ],
+      "snipCode": [
+        "function getGUID(){",
+        "    $uuid;",
+        "    if (function_exists('com_create_guid')){",
+        "        $uuid = com_create_guid();",
+        "    }else{",
+        "        mt_srand((double)microtime()*10000);//optional for php 4.2.0 and up.",
+        "        $charid = strtoupper(md5(uniqid(rand(), true)));",
+        "        $hyphen = chr(45);  // \"-\"",
+        "        $uuid = substr($charid, 0, 8).$hyphen",
+        "            .substr($charid, 8, 4).$hyphen",
+        "            .substr($charid,12, 4).$hyphen",
+        "            .substr($charid,16, 4).$hyphen",
+        "            .substr($charid,20,12);",
+        "            ",
+        "    }",
+        "",
+        "    $uuid = str_replace('{', '', $uuid);",
+        "    $uuid = str_replace('}', '', $uuid);",
+        "    return $uuid;",
+        "}"
       ]
     }
   ]
