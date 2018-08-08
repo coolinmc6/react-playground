@@ -13,7 +13,72 @@ nav .brand-logo {
 	}	
 }
 
+/*************************************************************************************************/
+//
+// Universal Styles
+//
+//
+/*************************************************************************************************/
+
+.list-lang {
+	display: inline-block;
+	border: 1px solid transparent;
+	font-size: 0.7rem;
+	margin-left: 1rem;
+	border-radius: 4px;
+	text-transform: uppercase;
+	padding: 0.05rem 0.3rem;
+
+}
+
+.cm-javascript {
+	background-color: #EDDA68;
+	// font-weight: bold;
+	color: #fff;
+}
+
+.cm-html {
+	background-color: #D35736;
+	color: #fff;
+	font-weight: bold;;
+}
+
+.cm-css {
+	background-color: #2F50DC;
+	color: #fff;
+	
+}
+
+.cm-python {
+	background-color: #587C98;
+	// color: #EDDA68;
+	// border: 1px solid #EDDA68;
+	color: #fff;
+	text-transform: lowercase;
+	font-family: Arial;
+	// font-size: 1rem;
+}
+
+.cm-php {
+	background-color: #7C80AD;
+	color: #fff;
+}
+
+.big-tag {
+	font-size: 1.2rem;
+	padding: 0.2rem 0.6rem;
+	margin-left: 0.4rem;
+}
+
+
+/*************************************************************************************************/
+//
 // Counter
+//
+/*************************************************************************************************/
+
+
+
 .counter-main {
 	padding: 1rem;
 	h1 {
@@ -114,6 +179,12 @@ nav .brand-logo {
 	.special {
 		background-color: #ffcc00;
 	}
+
+	.code-tags {
+		display: inline-block;
+	    padding-left: 1.7rem;	
+	}
+	
 	
 	// .results > .search-result > (term + definition + tags + code array)
 	// .code-examples > .code-block 
@@ -153,6 +224,7 @@ nav .brand-logo {
 				border: 2px solid #90caf9;
 				border-radius: 4px;
 				margin-bottom: 0.5rem;
+				margin-top: 0.6rem;
 			}
 
 			.code-tag {
@@ -200,49 +272,49 @@ nav .brand-logo {
 			}
 
 
-			.list-lang {
-				display: inline-block;
-				border: 1px solid transparent;
-				font-size: 0.7rem;
-				margin-left: 1rem;
-				border-radius: 4px;
-				text-transform: uppercase;
-				padding: 0.05rem 0.3rem;
+			// .list-lang {
+			// 	display: inline-block;
+			// 	border: 1px solid transparent;
+			// 	font-size: 0.7rem;
+			// 	margin-left: 1rem;
+			// 	border-radius: 4px;
+			// 	text-transform: uppercase;
+			// 	padding: 0.05rem 0.3rem;
 
-			}
+			// }
 
-			.cm-javascript {
-				background-color: #EDDA68;
-				// font-weight: bold;
-				color: #fff;
-			}
+			// .cm-javascript {
+			// 	background-color: #EDDA68;
+			// 	// font-weight: bold;
+			// 	color: #fff;
+			// }
 
-			.cm-html {
-				background-color: #D35736;
-				color: #fff;
-				font-weight: bold;;
-			}
+			// .cm-html {
+			// 	background-color: #D35736;
+			// 	color: #fff;
+			// 	font-weight: bold;;
+			// }
 
-			.cm-css {
-				background-color: #2F50DC;
-				color: #fff;
+			// .cm-css {
+			// 	background-color: #2F50DC;
+			// 	color: #fff;
 				
-			}
+			// }
 
-			.cm-python {
-				background-color: #587C98;
-				// color: #EDDA68;
-				// border: 1px solid #EDDA68;
-				color: #fff;
-				text-transform: lowercase;
-				font-family: Arial;
-				// font-size: 1rem;
-			}
+			// .cm-python {
+			// 	background-color: #587C98;
+			// 	// color: #EDDA68;
+			// 	// border: 1px solid #EDDA68;
+			// 	color: #fff;
+			// 	text-transform: lowercase;
+			// 	font-family: Arial;
+			// 	// font-size: 1rem;
+			// }
 
-			.cm-php {
-				background-color: #7C80AD;
-				color: #fff;
-			}
+			// .cm-php {
+			// 	background-color: #7C80AD;
+			// 	color: #fff;
+			// }
 
 
 

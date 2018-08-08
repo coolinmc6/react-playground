@@ -21,8 +21,8 @@ export default function(state = defaultJSNotes, action) {
 			console.log(action.payload.data["code"]);
 			return {
 				...state,
-				library: [...action.payload.data["code"]]
-				// library: [...action.payload.data]
+				// library: [...action.payload.data["code"]]
+				library: [...action.payload.data]
 			}
 			
 		case UPDATE_SEARCH:

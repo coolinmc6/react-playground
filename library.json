@@ -282,11 +282,11 @@
     },
     {
       "id": 19,
-      "term": "Immutability",
+      "term": "Immutability (Update)",
       "description": "The snippets below are examples of changing arrays or objects without mutating the original.",
       "language": "JavaScript",
       "snipRawCode": "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property\nexport const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});\n\n\n// Update an item and return new array\n// list = the array of items\n// updated = the updated item\nexport const updateTodo = (list, updated) => {\n\tconst updatedIndex = list.findIndex(item => item.id === updated.id)\n\n\t// the return statement slices the array from 0 to the item in the array we are updating, \n\t// puts in the updated item, 'updated', and then adds the rest of the array using the \n\t// spread operator that starts from 1 after the updated array's location to the end\n\treturn [\n\t\t...list.slice(0,updatedIndex),\n\t\tupdated,\n\t\t...list.slice(updatedIndex+1)\n\t]\n}",
-      "snipRawTags": "copy object without mutating original, toggle an object, copy object using spread operator",
+      "snipRawTags": "copy object without mutating original, toggle an object, copy object using spread operator, update item in array without mutation",
       "snipCode": [
         "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property",
         "export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});",
@@ -297,8 +297,7 @@
         "// updated = the updated item",
         "export const updateTodo = (list, updated) => {",
         "\tconst updatedIndex = list.findIndex(item => item.id === updated.id)",
-        "\n",
-        "\n",
+        "",
         "\t// the return statement slices the array from 0 to the item in the array we are updating, ",
         "\t// puts in the updated item, 'updated', and then adds the rest of the array using the ",
         "\t// spread operator that starts from 1 after the updated array's location to the end",
@@ -312,7 +311,8 @@
       "snipTags": [
         "copy object without mutating original",
         " toggle an object",
-        " copy object using spread operator"
+        " copy object using spread operator",
+        " update item in array without mutation"
       ]
     },
     {
@@ -480,11 +480,9 @@
         " this.first_name = first_name;",
         " this.last_name = last_name;",
         "};",
-        " ",
-        " ",
+        "",
         "// Method #1: Instantiating a new Person",
         "var dude = new Person(\"asim\", \"hussain\");",
-        "",
         "",
         "// WRONG => this throws an error:",
         "var dude = Person(\"asim\", \"hussain\");",
@@ -770,10 +768,6 @@
         "};",
         " ",
         "",
-        " ",
-        "",
-        " ",
-        "",
         "function Toyota(options) {",
         "\tCar.call(this, options);",
         "\tthis.color = options.color; ",
@@ -1040,6 +1034,45 @@
         "    $uuid = str_replace('}', '', $uuid);",
         "    return $uuid;",
         "}"
+      ]
+    },
+    {
+      "id": 225814117538222440000,
+      "term": "Immutability (Delete)",
+      "description": "Delete an item from an array with mutating the array",
+      "language": "JavaScript",
+      "snipRawCode": "// \nexport const removeTodo = (list, id) => {\n\tconst removeIndex = list.findIndex(item => item.id === id)\n\treturn [\n\t\t...list.slice(0, removeIndex),\n\t\t...list.slice(removeIndex+1)\n\t]\n}",
+      "snipRawTags": "delete item without mutating array",
+      "snipTags": [
+        "delete item without mutating array"
+      ],
+      "snipCode": [
+        "// ",
+        "export const removeTodo = (list, id) => {",
+        "\tconst removeIndex = list.findIndex(item => item.id === id)",
+        "\treturn [",
+        "\t\t...list.slice(0, removeIndex),",
+        "\t\t...list.slice(removeIndex+1)",
+        "\t]",
+        "}"
+      ]
+    },
+    {
+      "id": 885314122320049100000,
+      "term": "Immutability (Add)",
+      "description": "Add item to an array without mutating the array",
+      "language": "JavaScript",
+      "snipRawCode": "// ES6\nexport const addTodo = (list, item) => [...list, item];\n\n// ES5\nexport const addTodo = (list, item) => list.concat(item);",
+      "snipRawTags": "add item without mutating array",
+      "snipCode": [
+        "// ES6",
+        "export const addTodo = (list, item) => [...list, item];",
+        "",
+        "// ES5",
+        "export const addTodo = (list, item) => list.concat(item);"
+      ],
+      "snipTags": [
+        "add item without mutating array"
       ]
     }
   ]

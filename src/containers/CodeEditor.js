@@ -248,6 +248,31 @@ class CodeEditor extends Component {
 		}
 	}
 
+	// preventTab(e) {
+	// 	// e.keyCode == 9 && e.preventDefault()
+	// 	if(e.keyCode == 9) {
+	// 		e.preventDefault()
+	// 	}
+	// 	console.log(e);
+	// 	let self = e.target;
+	// 	let val = self.value;
+	// 	let start = self.selectionStart;
+	// 	let end = self.selectionEnd;
+
+	// 	let textValue = val.substring(0, start) + '\t' + val.substring(end);
+	// 	self.selectionStart = self.selectionEnd = start + 1
+	// 	console.log(textValue);
+	// 	if(this.state.existing) {
+	// 		this.setState({
+	// 			...this.state, 
+	// 			existingCodeObject: {
+	// 				...this.state.existingCodeObject,
+	// 				snipRawCode: textValue
+	// 			}
+	// 		})
+	// 	}
+	// }
+
 	renderCodeInputs() {
 		if(!this.state.existing) {
 			let existing = false;

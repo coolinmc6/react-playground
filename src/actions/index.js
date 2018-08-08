@@ -81,8 +81,8 @@ export function updateSearch(text) {
 
 export function fetchLibrary()  {
 	const rand = Math.floor(Math.random()*1000000)
-	const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
-	// const url = `http://localhost:3004/code`
+	// const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
+	const url = `http://localhost:3004/code`
 	const request = axios.get(url);
 
 	return {

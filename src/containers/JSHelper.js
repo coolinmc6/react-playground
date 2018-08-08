@@ -45,9 +45,11 @@ class JSHelper extends Component {
 	}
 
 	renderExamples(codeBlock) {
+		let language = prismLanguage(languageIdentifier(codeBlock.language));
+		console.log(language)
 		return (
 			<div key={Math.floor(Math.random()*10000000)} className="code-block">
-				<pre><code className="language-javascript">
+				<pre><code className={`language-${language}`}>
 					{this.renderCode(codeBlock)}
 				</code></pre>
 			</div>
@@ -124,13 +126,16 @@ class JSHelper extends Component {
 	renderPage() {
 		if(this.props.javascript.page.length > 0) {
 			const item = this.props.javascript.page[0]
-			console.log(item);
+			const languageTag = languageIdentifier(item.language);
+			const langClass = `big-tag list-lang cm-${languageTag}`;
 			return (
 				<div className="concept-page" key={item.id}>
 					<span className="close" onClick={() => this.props.changePage(0)}>&times;</span>
 					<h4>{item.term}</h4>
 					<p className="term-definition">{item.description}</p>
+					
 					<div className="code-examples">
+						<span className={langClass}>{item.language}</span>
 						<div className="code-tags">{this.renderTags(item.snipTags)}</div>
 						{this.renderExamples(item)}
 					</div>
