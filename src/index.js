@@ -10,18 +10,19 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 
 // Components
-import NavBar from './components/NavBar';
-import App from './containers/App';
 import About from './components/About';
+import App from './containers/App';
+import NavBar from './components/NavBar';
 import NoReduxState from './components/NoReduxState';
 
 // Containers
-import Counter from './containers/Counter';
-import TweetBox from './containers/TweetBox';
-import JSHelper from './containers/JSHelper';
-import WorldCup from './containers/WorldCup';
+import Basic from './containers/Basic'
 import CodeEditor from './containers/CodeEditor';
+import Counter from './containers/Counter';
+import JSHelper from './containers/JSHelper';
 import Todos from './containers/Todos'
+import TweetBox from './containers/TweetBox';
+import WorldCup from './containers/WorldCup';
 
 // React Router
 import {
@@ -45,6 +46,7 @@ ReactDOM.render(
 				<NavBar />
 				<Route exact path="/react-playground/" component={App}/>
 				<Route path="/react-playground/about" component={About}/>
+				<Route path="/react-playground/basic" component={Basic}/>
 				<Route path="/react-playground/counter" component={Counter}/>
 				<Route path="/react-playground/tweets" component={TweetBox}/>
 				<Route path="/react-playground/js-cheat-sheet" component={JSHelper}/>
